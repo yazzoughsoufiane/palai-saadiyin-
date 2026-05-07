@@ -1,0 +1,19 @@
+﻿<svg viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="600" fill="#F4EFE7"/>
+  <rect x="16" y="16" width="368" height="568" fill="none" stroke="#E0D5C8" stroke-width="4"/>
+  <!-- Scattered abstract figures -->
+  <circle cx="120" cy="180" r="18" fill="#8B3A2E" opacity="0.55"/>
+  <rect x="230" y="140" width="30" height="12" transform="rotate(25 245 146)" fill="#2E3B4E" opacity="0.5"/>
+  <polygon points="310,260 330,290 290,290" fill="#6B5D4F" opacity="0.45"/>
+  <ellipse cx="80" cy="350" rx="25" ry="10" fill="#8B3A2E" opacity="0.4" transform="rotate(-15 80 350)"/>
+  <!-- Ibex — barely visible -->
+  <path d="M 160 420 Q 170 400 185 415 Q 195 430 180 440 Q 165 440 160 420 Z" fill="#6B5D4F" opacity="0.25"/>
+  <line x1="165" y1="415" x2="155" y2="395" stroke="#6B5D4F" stroke-width="1.5" opacity="0.3"/>
+  <line x1="175" y1="415" x2="185" y2="395" stroke="#6B5D4F" stroke-width="1.5" opacity="0.3"/>
+  <!-- Stars scattered -->
+  <polygon points="290,380 295,393 309,393 298,401 302,415 290,407 278,415 282,401 271,393 285,393" fill="#C8843A" opacity="0.5"/>
+  <polygon points="100,490 103,500 113,500 105,506 108,517 100,511 92,517 95,506 87,500 97,500" fill="#2E3B4E" opacity="0.4"/>
+  <!-- Abstract lines -->
+  <line x1="200" y1="80" x2="350" y2="80" stroke="#6B5D4F" stroke-width="1" opacity="0.3"/>
+  <line x1="50" y1="530" x2="250" y2="530" stroke="#6B5D4F" stroke-width="1" opacity="0.3"/>
+</svg>

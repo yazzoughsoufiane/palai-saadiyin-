@@ -1,0 +1,23 @@
+﻿<svg viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="600" fill="#F8F4EE"/>
+  <!-- Ayala diamond lattice — no border, floats freely -->
+  <g fill="none" stroke="#2A2420" stroke-width="1.5" opacity="0.75">
+    <polygon points="200,60 250,110 200,160 150,110"/>
+    <polygon points="100,160 150,210 100,260 50,210"/>
+    <polygon points="300,160 350,210 300,260 250,210"/>
+    <polygon points="200,260 250,310 200,360 150,310"/>
+    <polygon points="100,360 150,410 100,460 50,410"/>
+    <polygon points="300,360 350,410 300,460 250,410"/>
+    <polygon points="200,460 250,510 200,560 150,510"/>
+  </g>
+  <!-- Warm grey accents (melanotic wool tone) -->
+  <g fill="#C8C0B4" opacity="0.5">
+    <circle cx="200" cy="110" r="4"/>
+    <circle cx="100" cy="210" r="4"/>
+    <circle cx="300" cy="210" r="4"/>
+    <circle cx="200" cy="310" r="4"/>
+    <circle cx="100" cy="410" r="4"/>
+    <circle cx="300" cy="410" r="4"/>
+    <circle cx="200" cy="510" r="4"/>
+  </g>
+</svg>

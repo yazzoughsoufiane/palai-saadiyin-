@@ -1,0 +1,6 @@
+﻿<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" fill="#1E2B3D"/>
+  <polygon points="100,30 145,70 130,120 100,130 70,120 55,70" fill="#F4EFE7" opacity="0.85"/>
+  <rect x="80" y="75" width="18" height="18" transform="rotate(45 89 84)" fill="#8B3A2E" opacity="0.8"/>
+  <rect x="102" y="75" width="18" height="18" transform="rotate(45 111 84)" fill="#C8843A" opacity="0.7"/>
+</svg>

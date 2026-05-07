@@ -1,0 +1,15 @@
+﻿<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" fill="#8B3A2E"/>
+  <!-- Showing the dye variation in close-up -->
+  <rect x="0" y="0" width="200" height="40" fill="#7A2E22" opacity="0.6"/>
+  <rect x="0" y="40" width="200" height="40" fill="#9B4A38" opacity="0.5"/>
+  <rect x="0" y="80" width="200" height="40" fill="#8B3A2E" opacity="0.4"/>
+  <rect x="0" y="120" width="200" height="40" fill="#6B2818" opacity="0.6"/>
+  <rect x="0" y="160" width="200" height="40" fill="#A05040" opacity="0.5"/>
+  <g stroke="#F4EFE7" stroke-width="0.5" fill="none" opacity="0.2">
+    <line x1="0" y1="40" x2="200" y2="40"/>
+    <line x1="0" y1="80" x2="200" y2="80"/>
+    <line x1="0" y1="120" x2="200" y2="120"/>
+    <line x1="0" y1="160" x2="200" y2="160"/>
+  </g>
+</svg>

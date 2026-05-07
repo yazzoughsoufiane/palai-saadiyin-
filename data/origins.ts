@@ -1,0 +1,236 @@
+export interface Origin {
+  id: string
+  name: string
+  nameFr: string
+  nameAr: string
+  region: string
+  tribe?: string
+  description: string
+  descriptionFr: string
+  visualSignature: string
+  visualSignatureFr: string
+  coordinates: { lat: number; lng: number }
+  svgMotif: string
+  collectionFilter: string
+}
+
+export const origins: Origin[] = [
+  {
+    id: 'boujad',
+    name: 'Boujad',
+    nameFr: 'Boujad',
+    nameAr: 'بوجاد',
+    region: 'Khouribga Province, Central Morocco',
+    tribe: 'Beni Zemmour',
+    description:
+      'The town of Boujad, set on the central Moroccan plateau north of Beni Mellal, is the seat of the Beni Zemmour confederation — weavers whose chromatic daring has no equal. Boujad rugs are recognisable by their saturated field colours (cardinal red, saffron, electric rose), their dense all-over pattern, and their habit of treating the entire ground as a single improvised canvas. These are rugs made in a culture of chromatic abundance.',
+    descriptionFr:
+      'La ville de Boujad, sur le plateau central marocain au nord de Beni Mellal, est le siège de la confédération Beni Zemmour — des tisserands dont l\'audace chromatique est sans égale. Les tapis de Boujad se reconnaissent à leurs couleurs de champ saturées (rouge cardinal, safran, rose électrique), à leur motif dense all-over et à leur habitude de traiter tout le fond comme une seule toile improvisée.',
+    visualSignature: 'Dense hooked diamond field, saturated madder and saffron grounds, no border hierarchy.',
+    visualSignatureFr: 'Champ de losanges crochetés denses, fonds garance et safran saturés, sans hiérarchie de bordure.',
+    coordinates: { lat: 32.87, lng: -6.5 },
+    svgMotif: `<svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="22" y="8" width="16" height="16" transform="rotate(45 30 16)" fill="#8B3A2E" opacity="0.8"/>
+      <rect x="22" y="36" width="16" height="16" transform="rotate(45 30 44)" fill="#C8843A" opacity="0.8"/>
+      <line x1="30" y1="0" x2="30" y2="60" stroke="#1A1715" stroke-width="0.5" opacity="0.3"/>
+      <line x1="0" y1="30" x2="60" y2="30" stroke="#1A1715" stroke-width="0.5" opacity="0.3"/>
+    </svg>`,
+    collectionFilter: 'Boujad',
+  },
+  {
+    id: 'azilal',
+    name: 'Azilal',
+    nameFr: 'Azilal',
+    nameAr: 'أزيلال',
+    region: 'Azilal Province, High Atlas foothills',
+    tribe: 'Ait Bou Zid, Ait Bou Oulli',
+    description:
+      'High in the Atlas foothills, the women of the Azilal plateau weave from memory rather than pattern: each rug is a personal archive of dreams, landscapes, and figures accumulated without repetition from selvage to selvage. Their compositions are asymmetric and accumulative — a tradition of freedom that has made them among the most sought-after contemporary tribal textiles globally. The wool is long-staple, the pile high, and the colours shot through with unpredictable insertions.',
+    descriptionFr:
+      'Haut dans les contreforts de l\'Atlas, les femmes du plateau d\'Azilal tissent de mémoire plutôt que de modèle : chaque tapis est une archive personnelle de rêves, de paysages et de figures accumulés sans répétition. Leurs compositions sont asymétriques et accumulatives — une tradition de liberté qui en a fait parmi les textiles tribaux contemporains les plus recherchés au monde.',
+    visualSignature: 'Asymmetric all-over figure drawing, ivory grounds, scattered abstract forms, high pile.',
+    visualSignatureFr: 'Dessin de figures all-over asymétrique, fonds ivoire, formes abstraites dispersées, poil haut.',
+    coordinates: { lat: 31.68, lng: -6.57 },
+    svgMotif: `<svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="15" cy="20" r="4" fill="#8B3A2E" opacity="0.6"/>
+      <circle cx="40" cy="35" r="3" fill="#C8843A" opacity="0.7"/>
+      <line x1="8" y1="45" x2="25" y2="38" stroke="#1A1715" stroke-width="1" opacity="0.5"/>
+      <line x1="35" y1="15" x2="52" y2="22" stroke="#2E3B4E" stroke-width="1" opacity="0.4"/>
+      <rect x="28" y="28" width="5" height="5" transform="rotate(45 30 30)" fill="#6B5D4F" opacity="0.5"/>
+    </svg>`,
+    collectionFilter: 'Azilal',
+  },
+  {
+    id: 'beni-ourain',
+    name: 'Beni Ourain',
+    nameFr: 'Beni Ourain',
+    nameAr: 'بني وارين',
+    region: 'Northeastern High Atlas',
+    tribe: 'Ait Youssi, Ait Warayn',
+    description:
+      'The Beni Ourain tribes inhabit the high plateaux of the northeastern Atlas, where the winters are long, the snow is deep, and the palette is dictated by the landscape itself. Their rugs are woven in undyed natural wool — ivory from pale sheep, warm grey from melanotic breeds — with geometric decoration in a near-black from sumac or oak gall. The lozenge lattice (ayala) is the defining motif: an endlessly repeatable, symmetry-based form that can expand to fill any dimension.',
+    descriptionFr:
+      'Les tribus Beni Ourain habitent les hauts plateaux du nord-est de l\'Atlas, où les hivers sont longs, la neige est profonde et la palette est dictée par le paysage lui-même. Leurs tapis sont tissés en laine naturelle non teinte — ivoire des brebis claires, gris chaud des races mélanotiques — avec une décoration géométrique en quasi-noir au sumac ou au galle de chêne.',
+    visualSignature: 'Undyed ivory and grey, diamond lattice (ayala), long pile, no colour beyond natural tones.',
+    visualSignatureFr: 'Ivoire et gris non teints, treillis de losanges (ayala), long poil, aucune couleur au-delà des tons naturels.',
+    coordinates: { lat: 33.1, lng: -4.5 },
+    svgMotif: `<svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="10" y="10" width="16" height="16" transform="rotate(45 18 18)" stroke="#1A1715" stroke-width="1.5" fill="none" opacity="0.6"/>
+      <rect x="34" y="10" width="16" height="16" transform="rotate(45 42 18)" stroke="#1A1715" stroke-width="1.5" fill="none" opacity="0.6"/>
+      <rect x="10" y="34" width="16" height="16" transform="rotate(45 18 42)" stroke="#1A1715" stroke-width="1.5" fill="none" opacity="0.6"/>
+      <rect x="34" y="34" width="16" height="16" transform="rotate(45 42 42)" stroke="#1A1715" stroke-width="1.5" fill="none" opacity="0.6"/>
+    </svg>`,
+    collectionFilter: 'Beni Ourain',
+  },
+  {
+    id: 'beni-mguild',
+    name: 'Beni M\'Guild',
+    nameFr: 'Beni M\'Guild',
+    nameAr: 'بني مكيلد',
+    region: 'Middle Atlas, Azrou–Khenifra axis',
+    tribe: 'Beni M\'Guild confederation',
+    description:
+      'The Beni M\'Guild occupy the central Middle Atlas — cedar forests, cold springs, and a weaving tradition that channels the formal ambition of the ancient Moroccan palace carpet into a tribal idiom. Their rugs feature stacked medallion compositions, rich indigo grounds, and madder accents that recall the zellij tilework of imperial Fez. A characteristic feature is the intentional flaw: a gap or deliberate asymmetry introduced to honour the tradition that only God achieves perfection.',
+    descriptionFr:
+      'Les Beni M\'Guild occupent le Moyen Atlas central — forêts de cèdres, sources froides et une tradition de tissage qui canalise l\'ambition formelle de l\'ancien tapis de palais marocain dans un idiome tribal. Leurs tapis présentent des compositions à médaillons empilés, de riches fonds indigo et des accents garance qui rappellent le zellij du Fès impérial.',
+    visualSignature: 'Stacked medallion on indigo, madder accents, intentional flaw, formal composition.',
+    visualSignatureFr: 'Médaillon empilé sur indigo, accents garance, défaut intentionnel, composition formelle.',
+    coordinates: { lat: 33.0, lng: -5.5 },
+    svgMotif: `<svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="30" cy="30" rx="14" ry="18" stroke="#2E3B4E" stroke-width="1.5" fill="#2E3B4E" opacity="0.15"/>
+      <ellipse cx="30" cy="30" rx="8" ry="10" stroke="#8B3A2E" stroke-width="1" fill="none" opacity="0.7"/>
+      <line x1="30" y1="12" x2="30" y2="48" stroke="#2E3B4E" stroke-width="0.5" opacity="0.4"/>
+    </svg>`,
+    collectionFilter: 'Beni MGuild',
+  },
+  {
+    id: 'taznakht',
+    name: 'Taznakht',
+    nameFr: 'Taznakht',
+    nameAr: 'تازناخت',
+    region: 'Anti-Atlas, south of the High Atlas',
+    tribe: 'Ait Ouaouzguite',
+    description:
+      'Taznakht, a small market town in the Anti-Atlas foothills south of Ouarzazate, is the centre of a thriving tradition of Ait Ouaouzguite weaving. The rugs are recognisable by their register format — horizontal bands of alternating pattern — and above all by the madder red that seems to belong to a different spectrum than any other Moroccan red. The proximity of the Taliouine saffron fields is reflected in the generous use of ochre and gold as counterpoints.',
+    descriptionFr:
+      'Taznakht, petite ville de marché dans les contreforts de l\'Anti-Atlas au sud d\'Ouarzazate, est le centre d\'une florissante tradition de tissage Ait Ouaouzguite. Les tapis se reconnaissent à leur format en registres — bandes horizontales de motifs alternés — et surtout au rouge garance qui semble appartenir à un spectre différent de tout autre rouge marocain.',
+    visualSignature: 'Horizontal register format, singular madder red, saffron counterpoint, bold fringe.',
+    visualSignatureFr: 'Format à registres horizontaux, rouge garance singulier, contrepoint safran, frange audacieuse.',
+    coordinates: { lat: 30.58, lng: -7.93 },
+    svgMotif: `<svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="5" y="8" width="50" height="8" fill="#8B3A2E" opacity="0.7"/>
+      <rect x="5" y="22" width="50" height="6" fill="#C8843A" opacity="0.6"/>
+      <rect x="5" y="34" width="50" height="8" fill="#8B3A2E" opacity="0.7"/>
+      <rect x="5" y="48" width="50" height="5" fill="#6B5D4F" opacity="0.5"/>
+    </svg>`,
+    collectionFilter: 'Taznakht',
+  },
+  {
+    id: 'mrirt',
+    name: 'Mrirt',
+    nameFr: 'Mrirt',
+    nameAr: 'مريرت',
+    region: 'Western Middle Atlas, near Khenifra',
+    tribe: 'Beni M\'Guild subgroup',
+    description:
+      'Mrirt sits at the western edge of the Beni M\'Guild territory, where the cedar forests give way to open steppe. The rugs from this sub-region are distinguished by an especially deep indigo — achieved through prolonged dyeing at altitude — and a tendency toward boldly contrasting ivory motifs. Where the Beni M\'Guild proper favours formal medallion schemes, Mrirt weavers often work in freer repeat patterns, closer to the instinctive grammar of the Azilal style.',
+    descriptionFr:
+      'Mrirt se situe à la lisière occidentale du territoire Beni M\'Guild, là où les forêts de cèdres cèdent la place à la steppe ouverte. Les tapis de cette sous-région se distinguent par un indigo particulièrement profond — obtenu par une teinture prolongée en altitude — et par une tendance aux motifs ivoire en fort contraste.',
+    visualSignature: 'Deep indigo ground, high-contrast ivory motif, looser repeat pattern, medium-long pile.',
+    visualSignatureFr: 'Fond indigo profond, motif ivoire en fort contraste, motif en répétition plus libre, poil mi-long.',
+    coordinates: { lat: 32.76, lng: -5.93 },
+    svgMotif: `<svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="60" height="60" fill="#2E3B4E" opacity="0.3"/>
+      <polygon points="30,10 42,30 30,50 18,30" stroke="#F4EFE7" stroke-width="1.5" fill="none" opacity="0.8"/>
+      <circle cx="30" cy="30" r="5" fill="#F4EFE7" opacity="0.6"/>
+    </svg>`,
+    collectionFilter: 'Mrirt',
+  },
+  {
+    id: 'zemour',
+    name: 'Zemour',
+    nameFr: 'Zemour',
+    nameAr: 'زمور',
+    region: 'Khenifra Plateau, Middle Atlas',
+    tribe: 'Beni Zemmour',
+    description:
+      'The Zemour (or Zemmour) are flatweave specialists: their kilims, woven in weft-faced plain weave, achieve a chromatic complexity and structural tightness that rivals knotted pile rugs at a fraction of the weight. Their palette draws on cochineal (for crimson), reseda/weld (for a cool yellow), indigo (for blue-grey), and madder (for warm red), and they command the mordant chemistry to hold these colours for generations. The chevron-and-diamond field is the signature composition.',
+    descriptionFr:
+      'Les Zemour (ou Zemmour) sont des spécialistes du tissage à plat : leurs kilims, tissés en armure toile à trame, atteignent une complexité chromatique et une densité structurelle qui rivalisent avec les tapis à poil noué pour une fraction du poids. Leur palette s\'appuie sur la cochenille (pour le cramoisi), la résède (pour un jaune frais), l\'indigo et la garance.',
+    visualSignature: 'Flatweave kilim, chevron-diamond field, cochineal crimson, reversible identical faces.',
+    visualSignatureFr: 'Kilim à tissage plat, champ à chevrons-losanges, cramoisi cochenille, faces réversibles identiques.',
+    coordinates: { lat: 32.75, lng: -5.65 },
+    svgMotif: `<svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polyline points="0,30 10,15 20,30 30,15 40,30 50,15 60,30" stroke="#8B3A2E" stroke-width="2" fill="none" opacity="0.8"/>
+      <polyline points="0,40 10,25 20,40 30,25 40,40 50,25 60,40" stroke="#2E3B4E" stroke-width="2" fill="none" opacity="0.7"/>
+    </svg>`,
+    collectionFilter: 'Zemour',
+  },
+  {
+    id: 'high-atlas',
+    name: 'High Atlas',
+    nameFr: 'Haut Atlas',
+    nameAr: 'الأطلس الكبير',
+    region: 'High Atlas mountain range, central Morocco',
+    tribe: 'Ait Haddidou, Ait Benhaddou, various',
+    description:
+      'The High Atlas is not a single tradition but a family of them, each valley producing its own visual dialect while sharing the raw materials: the same mountain wool, the same altitude-grown saffron, the same walnut groves. Ceremonial rugs from the High Atlas — particularly the bridal textiles of the Ait Haddidou around Imilchil — carry specific symbolic vocabularies: the lozenge for femininity, the hook for protection, the open field for fertility. They are objects of passage as much as objects of design.',
+    descriptionFr:
+      'Le Haut Atlas n\'est pas une tradition unique mais une famille d\'entre elles, chaque vallée produisant son propre dialecte visuel tout en partageant les matières premières. Les tapis cérémoniels du Haut Atlas — en particulier les textiles nuptiaux des Ait Haddidou autour d\'Imilchil — portent des vocabulaires symboliques spécifiques : le losange pour la féminité, le crochet pour la protection, le champ ouvert pour la fertilité.',
+    visualSignature: 'Ceremonial symbolism, bridal lozenge, saffron grounds, valley-specific palette variations.',
+    visualSignatureFr: 'Symbolisme cérémoniel, losange nuptial, fonds safran, variations de palette spécifiques aux vallées.',
+    coordinates: { lat: 31.85, lng: -6.45 },
+    svgMotif: `<svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="15" y="15" width="30" height="30" transform="rotate(45 30 30)" stroke="#C8843A" stroke-width="1.5" fill="#C8843A" opacity="0.15"/>
+      <rect x="20" y="20" width="20" height="20" transform="rotate(45 30 30)" stroke="#C8843A" stroke-width="1" fill="none" opacity="0.6"/>
+      <line x1="30" y1="5" x2="30" y2="55" stroke="#C8843A" stroke-width="0.5" opacity="0.3"/>
+    </svg>`,
+    collectionFilter: 'High Atlas',
+  },
+  {
+    id: 'middle-atlas',
+    name: 'Middle Atlas',
+    nameFr: 'Moyen Atlas',
+    nameAr: 'الأطلس المتوسط',
+    region: 'Middle Atlas range, central-northern Morocco',
+    tribe: 'Various Berber tribes, Boucherouite makers',
+    description:
+      'The Middle Atlas is the source of Morocco\'s most varied textile tradition — from the formal medallion carpets of the Beni M\'Guild to the exuberant rag-woven boucherouite of anonymous makers in the valleys. It is also the birthplace of the Moroccan kilim as a distinct genre. Cedar forests, cold winters, and a long tradition of pastoral semi-nomadism have shaped a textile culture that values both formal geometry and expressive improvisation in equal measure.',
+    descriptionFr:
+      'Le Moyen Atlas est la source de la tradition textile la plus variée du Maroc — des tapis à médaillons formels des Beni M\'Guild aux boucherouite exubérants de tisserands anonymes dans les vallées. C\'est aussi le berceau du kilim marocain comme genre distinct.',
+    visualSignature: 'Diverse: from formal medallion to boucherouite improvisation, cedar-country palette.',
+    visualSignatureFr: 'Divers : du médaillon formel à l\'improvisation boucherouite, palette du pays des cèdres.',
+    coordinates: { lat: 33.2, lng: -5.2 },
+    svgMotif: `<svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="15" cy="15" r="5" fill="#8B3A2E" opacity="0.5"/>
+      <circle cx="45" cy="15" r="3" fill="#C8843A" opacity="0.6"/>
+      <circle cx="30" cy="35" r="6" fill="#2E3B4E" opacity="0.4"/>
+      <circle cx="15" cy="50" r="4" fill="#6B5D4F" opacity="0.5"/>
+      <circle cx="48" cy="45" r="3" fill="#8B3A2E" opacity="0.4"/>
+    </svg>`,
+    collectionFilter: 'Middle Atlas',
+  },
+  {
+    id: 'sahara',
+    name: 'Sahara',
+    nameFr: 'Sahara',
+    nameAr: 'الصحراء',
+    region: 'Southern Morocco and Northern Sahara',
+    tribe: 'Kel Ahaggar Tuareg, Saharan nomads',
+    description:
+      'The Tuareg mats and textiles of the Moroccan Sahara and the Saharan borderlands represent the most elemental tradition in the Palais Saadiyin collection. Woven from rush, palm leaf, and esparto grass — materials of the desert itself — Tuareg tikit mats require no dye; their palette is dictated entirely by nature. The structure is a tight herringbone weave, and panels are joined with leather thong in a process that creates its own seam rhythm. These are objects of pure function that have achieved the status of art.',
+    descriptionFr:
+      'Les nattes et textiles touaregs du Sahara marocain et des marges sahariennes représentent la tradition la plus élémentaire de la collection du Palais Saadiyin. Tissés en jonc, feuilles de palmier et alfa — matériaux du désert lui-même — les nattes tikit touaregs ne nécessitent aucune teinture ; leur palette est entièrement dictée par la nature.',
+    visualSignature: 'Rush and palm herringbone weave, natural desert palette, leather binding seams, Tuareg tikit form.',
+    visualSignatureFr: 'Armure de chevron en jonc et palmier, palette désertique naturelle, coutures en cuir, forme tikit touareg.',
+    coordinates: { lat: 27.0, lng: -8.5 },
+    svgMotif: `<svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="10" x2="60" y2="10" stroke="#C8843A" stroke-width="1" opacity="0.5"/>
+      <line x1="0" y1="20" x2="60" y2="20" stroke="#6B5D4F" stroke-width="1.5" opacity="0.6"/>
+      <line x1="0" y1="30" x2="60" y2="30" stroke="#C8843A" stroke-width="1" opacity="0.5"/>
+      <line x1="0" y1="40" x2="60" y2="40" stroke="#6B5D4F" stroke-width="1.5" opacity="0.6"/>
+      <line x1="0" y1="50" x2="60" y2="50" stroke="#C8843A" stroke-width="1" opacity="0.5"/>
+    </svg>`,
+    collectionFilter: 'Sahara',
+  },
+]

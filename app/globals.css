@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bone: #F4EFE7;
+    --color-ink: #1A1715;
+    --color-saffron: #C8843A;
+    --color-madder: #8B3A2E;
+    --color-indigo: #2E3B4E;
+    --color-shadow: #6B5D4F;
+  }
+
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-bone);
+    color: var(--color-ink);
+    font-family: var(--font-inter), system-ui, sans-serif;
+    line-height: 1.6;
+  }
+
+  ::selection {
+    background-color: var(--color-saffron);
+    color: var(--color-bone);
+  }
+
+  /* Reduce motion */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .label-caps {
+    @apply text-caps font-sans uppercase tracking-[0.12em] text-shadow/70;
+  }
+
+  .label-caps-lg {
+    @apply text-caps-lg font-sans uppercase tracking-[0.14em] text-shadow/70;
+  }
+
+  .hairline-under {
+    @apply border-b border-ink/20 pb-0.5;
+  }
+
+  .serif-display {
+    @apply font-serif font-light leading-none tracking-tight;
+  }
+
+  .prose-body {
+    @apply font-sans text-[1.0625rem] leading-[1.65] text-ink/85;
+  }
+
+  /* Museum label block */
+  .museum-label dt {
+    @apply label-caps text-shadow/60 mb-0.5;
+  }
+
+  .museum-label dd {
+    @apply font-sans text-sm text-ink mb-3;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-shadow);
+    border-radius: 2px;
+  }
+
+  /* Focus */
+  :focus-visible {
+    outline: 1.5px solid var(--color-saffron);
+    outline-offset: 3px;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  /* Print */
+  @media print {
+    .no-print { display: none; }
+    body { background: white; color: black; }
+  }
+}
+
+/* ── Marquee ────────────────────────────────────────── */
+@keyframes marquee-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 42s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
+/* ── Hover link underline sweep ─────────────────────── */
+.link-sweep {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-size: 0% 1px;
+  background-repeat: no-repeat;
+  transition: background-size 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.link-sweep:hover {
+  background-size: 100% 1px;
+}

@@ -1,0 +1,8 @@
+﻿<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" fill="#F4EFE7"/>
+  <!-- Ibex detail -->
+  <path d="M 70 130 Q 90 100 115 120 Q 130 140 110 155 Q 85 158 70 130 Z" fill="#6B5D4F" opacity="0.4"/>
+  <line x1="78" y1="122" x2="60" y2="95" stroke="#6B5D4F" stroke-width="2" opacity="0.4"/>
+  <line x1="95" y1="120" x2="105" y2="90" stroke="#6B5D4F" stroke-width="2" opacity="0.4"/>
+  <circle cx="78" cy="118" r="3" fill="#6B5D4F" opacity="0.5"/>
+</svg>

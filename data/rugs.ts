@@ -36,9 +36,9 @@ export interface Rug {
   weaverNote?: string
   images: {
     primary: string
-    summerSide?: string
-    winterSide?: string
-    details?: string[]
+    summerSide: string
+    winterSide: string
+    details: string[]
   }
   featured?: boolean
 }
@@ -113,6 +113,7 @@ export const rugs: Rug[] = [
     images: {
       primary: '/rugs/ps-2025-001-primary.jpg',
       summerSide: '/rugs/ps-2025-001-summer.jpg',
+      winterSide: '/rugs/ps-2025-001-primary.jpg',
       details: [
         '/rugs/ps-2025-001-detail-1.jpg',
         '/rugs/ps-2025-001-detail-2.jpg',
@@ -162,6 +163,8 @@ export const rugs: Rug[] = [
     images: {
       primary: '/rugs/ps-2025-002-primary.jpg',
       summerSide: '/rugs/ps-2025-002-summer.jpg',
+      winterSide: '/rugs/ps-2025-002-primary.jpg',
+      details: [],
     },
     featured: true,
   },
@@ -201,6 +204,8 @@ export const rugs: Rug[] = [
     ],
     images: {
       primary: '/rugs/ps-2025-003-primary.jpg',
+      summerSide: '/rugs/ps-2025-003-primary.jpg',
+      winterSide: '/rugs/ps-2025-003-primary.jpg',
       details: ['/rugs/ps-2025-003-detail-1.jpg'],
     },
     featured: false,
@@ -243,6 +248,9 @@ export const rugs: Rug[] = [
     ],
     images: {
       primary: '/rugs/ps-2025-004-primary.jpg',
+      summerSide: '/rugs/ps-2025-004-primary.jpg',
+      winterSide: '/rugs/ps-2025-004-primary.jpg',
+      details: [],
     },
     featured: false,
   },
@@ -285,6 +293,9 @@ export const rugs: Rug[] = [
     ],
     images: {
       primary: '/rugs/ps-2025-005-primary.jpg',
+      summerSide: '/rugs/ps-2025-005-primary.jpg',
+      winterSide: '/rugs/ps-2025-005-primary.jpg',
+      details: [],
     },
     featured: false,
   },
@@ -324,6 +335,9 @@ export const rugs: Rug[] = [
     ],
     images: {
       primary: '/rugs/ps-2025-006-primary.jpg',
+      summerSide: '/rugs/ps-2025-006-primary.jpg',
+      winterSide: '/rugs/ps-2025-006-primary.jpg',
+      details: [],
     },
     featured: true,
   },
@@ -366,6 +380,9 @@ export const rugs: Rug[] = [
     weaverNote: 'Khouribga Province. Likely woven by a single female weaver.',
     images: {
       primary: '/rugs/ps-2025-007-primary.jpg',
+      summerSide: '/rugs/ps-2025-007-primary.jpg',
+      winterSide: '/rugs/ps-2025-007-primary.jpg',
+      details: [],
     },
     featured: true,
   },
@@ -409,6 +426,9 @@ export const rugs: Rug[] = [
     ],
     images: {
       primary: '/rugs/ps-2025-008-primary.jpg',
+      summerSide: '/rugs/ps-2025-008-primary.jpg',
+      winterSide: '/rugs/ps-2025-008-primary.jpg',
+      details: [],
     },
     featured: true,
   },

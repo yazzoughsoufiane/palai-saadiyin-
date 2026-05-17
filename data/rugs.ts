@@ -48,7 +48,9 @@ export function getRugBySlug(slug: string): Rug | undefined {
 }
 
 export function getFeaturedRugs(): Rug[] {
-  return rugs.filter((r) => r.featured)
+  return rugs
+    .filter((r) => r.featured)
+    .sort((a, b) => FEATURED_ORDER.indexOf(a.slug) - FEATURED_ORDER.indexOf(b.slug))
 }
 
 export const ALL_REGIONS: Region[] = [
@@ -63,6 +65,18 @@ export const ALL_REGIONS: Region[] = [
   'Middle Atlas',
   'Sahara',
   'Rabat',
+]
+
+
+
+const FEATURED_ORDER = [
+  'tapis-jardin-mamluk-vert',
+  'rabati-medaillon-champ-bleu',
+  'high-atlas-bleu-ciel-minimaliste',
+  'boujad-champ-ecarlate-symboles',
+  'zemmour-grand-kilim-encyclopedique',
+  'zemmour-arbre-de-vie',
+  'zemmour-kilim-patchwork-sature',
 ]
 
 export const rugs: Rug[] = [
@@ -202,7 +216,7 @@ export const rugs: Rug[] = [
       winterSide: '/rugs/ps-2025-003-primary.jpg',
       details: ['/rugs/ps-2025-003-detail-1.jpg'],
     },
-    featured: false,
+    featured: true,
   },
 
   // ── 04 — Royal Cartouche Garden Carpet ───────────────────────────────────
@@ -246,7 +260,7 @@ export const rugs: Rug[] = [
       winterSide: '/rugs/ps-2025-004-primary.jpg',
       details: [],
     },
-    featured: false,
+    featured: true,
   },
 
   // ── 05 — Warm Zemmour Gallery Kilim ──────────────────────────────────────

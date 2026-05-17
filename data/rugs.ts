@@ -43,8 +43,6 @@ export interface Rug {
   featured?: boolean
 }
 
-// ── Helper functions ────────────────────────────────────────────────────────
-
 export function getRugBySlug(slug: string): Rug | undefined {
   return rugs.find((r) => r.slug === slug)
 }
@@ -52,8 +50,6 @@ export function getRugBySlug(slug: string): Rug | undefined {
 export function getFeaturedRugs(): Rug[] {
   return rugs.filter((r) => r.featured)
 }
-
-// ── All regions for filter UI ───────────────────────────────────────────────
 
 export const ALL_REGIONS: Region[] = [
   'Boujad',
@@ -69,44 +65,42 @@ export const ALL_REGIONS: Region[] = [
   'Rabat',
 ]
 
-// ── Rug data ────────────────────────────────────────────────────────────────
-
 export const rugs: Rug[] = [
 
-  // ── 01 ───────────────────────────────────────────────────────────────────
+  // ── 01 — Tuareg Patchwork Kilim ──────────────────────────────────────────
   {
     slug: 'zemmour-grand-kilim-encyclopedique',
-    title: 'Grand Encyclopaedic Zemmour Kilim',
-    titleFr: `Grand Kilim Encyclopédique Zemmour`,
-    region: 'Zemour',
-    tribe: 'Beni Zemmour',
+    title: 'Tuareg Patchwork Kilim — Sand Dunes',
+    titleFr: `Kilim Patchwork Touareg — Dunes de Sable`,
+    region: 'Taznakht',
+    tribe: 'Tuareg',
     technique: 'flatweave',
     era: 'vintage',
     yearRange: 'c. 1970–1985',
     materials: 'Hand-spun live-sheep wool, natural and vegetable dyes',
-    dimensions: { w: 310, h: 430, unit: 'cm' },
+    dimensions: { w: 400, h: 600, unit: 'cm' },
     palette: ['terracotta', 'saffron', 'slate-blue', 'sage', 'madder', 'ivory', 'charcoal'],
     inventoryNumber: 'PS-2025-001',
     oneOfOne: true,
     curatorialNote:
-      'This monumental flatweave functions as a living archive of Zemmour tribal vocabulary. ' +
-      'Hundreds of autonomous motif-panels — diamond lattices, chevrons, stepped lozenges, eye-symbols ' +
-      'and micro-geometric fills — float within horizontal registers on a warm biscuit ground, ' +
-      'each woven in a subtly different palette as if compiled by many hands over many seasons. ' +
-      'A slate-blue selvedge border and a narrow saffron-gold outer band frame the composition with rare restraint. ' +
-      'The flatweave technique creates a reversible textile of equal beauty on both faces. ' +
-      'Few pieces of this scale and encyclopedic richness reach the market.',
+      'A monumental Tuareg flatweave from the Taznakht tradition, entirely reversible. ' +
+      'The composition depicts the undulating sand dunes of the Sahara as understood by the Blue People — ' +
+      'the nomadic Tuareg who have crossed the desert for centuries. ' +
+      'Hundreds of autonomous motif-panels — diamond lattices, chevrons, stepped lozenges and micro-geometric fills — ' +
+      'represent the ever-shifting patterns of desert sand seen from above. ' +
+      'A slate-blue selvedge border and a saffron-gold outer band frame the composition. ' +
+      'Entirely reversible — both faces carry equal visual power.',
     curatorialNoteFr:
-      `Ce kilim monumental fonctionne comme une archive vivante du vocabulaire tribal Zemmour. ` +
-      `Des centaines de panneaux de motifs autonomes — treillis de losanges, chevrons, losanges à gradins, ` +
-      `symboles oculaires et remplissages micro-géométriques — flottent dans des registres horizontaux ` +
-      `sur un fond biscuit chaud, chacun tissé dans une palette subtilement différente. ` +
-      `Un bord bleu ardoise et une bande extérieure or safran encadrent la composition avec une rare retenue.`,
+      `Un kilim Touareg monumental de la tradition de Taznakht, entièrement réversible. ` +
+      `La composition représente les dunes de sable ondulantes du Sahara telles que les comprennent ` +
+      `les Hommes Bleus — les Touaregs nomades qui traversent le désert depuis des siècles. ` +
+      `Des centaines de panneaux de motifs autonomes représentent les motifs sans cesse changeants ` +
+      `du sable du désert vus du ciel. Entièrement réversible — les deux faces portent une égale puissance visuelle.`,
     motifs: [
+      'sand dune pattern',
       'diamond lattice',
       'chevron register',
       'stepped lozenge',
-      'eye symbol',
       'micro-geometric fill',
       'brocaded cartouche',
     ],
@@ -122,35 +116,35 @@ export const rugs: Rug[] = [
     featured: true,
   },
 
-  // ── 02 ───────────────────────────────────────────────────────────────────
+  // ── 02 — Nomadic Tree of Life ────────────────────────────────────────────
   {
     slug: 'zemmour-arbre-de-vie',
-    title: '"Tree of Life" Zemmour Kilim',
-    titleFr: `Kilim Zemmour « Arbre de Vie »`,
-    region: 'Zemour',
-    tribe: 'Beni Zemmour',
-    technique: 'flatweave',
+    title: 'Nomadic Tree of Life — Three Techniques',
+    titleFr: `Tapis Nomade Arbre de Vie — Trois Techniques`,
+    region: 'Taznakht',
+    tribe: 'Nomadic',
+    technique: 'knotted',
     era: 'vintage',
     yearRange: 'c. 1965–1980',
     materials: 'Hand-spun live-sheep wool, natural and vegetable dyes',
-    dimensions: { w: 340, h: 520, unit: 'cm' },
+    dimensions: { w: 400, h: 600, unit: 'cm' },
     palette: ['warm-grey', 'amber', 'charcoal', 'ivory', 'rust', 'navy', 'saffron'],
     inventoryNumber: 'PS-2025-002',
     oneOfOne: true,
     curatorialNote:
-      'A rare monumental composition organised around a bifurcating Tree of Life that spreads ' +
-      'symmetrically across a warm grey-beige ground. Branching limbs are built from stacked tribal ' +
-      'panels — zigzag, diamond, chevron, stepped cross — in amber, black, ivory and rust, creating ' +
-      'a kaleidoscopic canopy that fills the entire field. A deep navy outer border is paired with a ' +
-      'broad saffron-gold inner band, anchoring the design with hieratic solemnity. In Zemmour weaving ' +
-      'tradition the tree motif is associated with cosmological fertility and the link between earth and sky. ' +
-      'At over five metres in length this is an exceptional room-defining piece.',
+      'An extraordinary nomadic carpet combining three distinct weaving techniques in a single piece: ' +
+      'knotted pile, flatweave and embroidery — a feat of rare technical mastery. ' +
+      'The composition is organised around a magnificent bifurcating Tree of Life spreading symmetrically ' +
+      'across a warm grey-beige ground, its branches built from stacked tribal panels in amber, black, ivory and rust. ' +
+      'Entirely reversible, both faces reveal a different facet of the same design. ' +
+      'At four by six metres this is one of the largest and most technically complex pieces in the collection.',
     curatorialNoteFr:
-      `Une rare composition monumentale organisée autour d'un Arbre de Vie bifurquant symétriquement ` +
-      `sur un fond gris-beige chaud. Les branches sont construites à partir de panneaux tribaux empilés ` +
-      `en ambre, noir, ivoire et rouille, créant un feuillage kaléidoscopique qui remplit tout le champ. ` +
-      `Un bord extérieur bleu marine profond est associé à une large bande intérieure or safran. ` +
-      `Dans la tradition Zemmour le motif de l'arbre est associé à la fertilité cosmologique.`,
+      `Un extraordinaire tapis nomade combinant trois techniques de tissage distinctes en une seule pièce : ` +
+      `poil noué, tissage plat et broderie — un exploit de rare maîtrise technique. ` +
+      `La composition est organisée autour d'un magnifique Arbre de Vie bifurquant se déployant ` +
+      `symétriquement sur un fond gris-beige chaud. Entièrement réversible, les deux faces révèlent ` +
+      `une facette différente du même dessin. À quatre par six mètres, c'est l'une des pièces les plus ` +
+      `grandes et les plus complexes de la collection.`,
     motifs: [
       'tree of life',
       'bifurcating branch',
@@ -159,7 +153,7 @@ export const rugs: Rug[] = [
       'stepped cross',
       'chevron fill',
     ],
-    weaverNote: 'Likely woven collaboratively by two or more weavers; a central vertical seam is visible.',
+    weaverNote: 'Three techniques combined: knotted pile, flatweave and embroidery. Reversible.',
     images: {
       primary: '/rugs/ps-2025-002-primary.jpg',
       summerSide: '/rugs/ps-2025-002-summer.jpg',
@@ -169,38 +163,38 @@ export const rugs: Rug[] = [
     featured: true,
   },
 
-  // ── 03 ───────────────────────────────────────────────────────────────────
+  // ── 03 — Royal Arabic Medallion ──────────────────────────────────────────
   {
     slug: 'rabati-medaillon-champ-bleu',
-    title: 'Blue-Field Rabati Medallion Carpet',
-    titleFr: `Tapis Rabati à Médaillon sur Fond Bleu`,
+    title: 'Royal Arabic Medallion Carpet',
+    titleFr: `Tapis Royal Arabesque à Médaillon`,
     region: 'Rabat',
     technique: 'knotted',
     era: 'vintage',
     yearRange: 'c. 1960–1975',
     materials: 'Mercerised wool pile, cotton warp and weft, natural dyes',
-    dimensions: { w: 200, h: 300, unit: 'cm' },
+    dimensions: { w: 300, h: 400, unit: 'cm' },
     palette: ['indigo-blue', 'ivory', 'blush-pink', 'sage-green', 'burgundy'],
     inventoryNumber: 'PS-2025-003',
     oneOfOne: true,
     curatorialNote:
-      'The classic Rabati format — a serene open field punctuated by a single central medallion — ' +
-      'rendered here in deep periwinkle-indigo. The solitary star medallion is composed of ' +
-      'interlocking floral arabesques in ivory, blush and sage, with matching corner spandrel rosettes ' +
-      'echoing the central motif across all four quarters of the field. A dense cream border carries ' +
-      'a continuous arabesque vine in the Persian tradition, faithfully transmitted through generations ' +
-      'of Rabat city workshop weavers. The pile knot count is exceptionally fine. Original fringes intact.',
+      'A masterpiece of the royal Arabic carpet tradition, inspired by the refined architectural ornament ' +
+      'of Moorish palaces and mosques. The serene indigo-blue field is punctuated by a single central ' +
+      'floral star medallion in ivory, blush and sage, with matching corner spandrel rosettes echoing ' +
+      'the central motif across all four quarters. A dense cream arabesque border frames the composition ' +
+      'in the Persian tradition, faithfully transmitted through generations of Rabat city workshop weavers. ' +
+      'Entirely reversible. Pile knot count is exceptionally fine.',
     curatorialNoteFr:
-      `Le format classique Rabati — un champ ouvert et serein ponctué d'un seul médaillon central — ` +
-      `est rendu ici en indigo bleuet profond. Le médaillon étoilé solitaire est composé ` +
-      `d'arabesques florales entrelacées en ivoire, rose et sauge, avec des rosettes d'écoinçon ` +
-      `correspondantes aux quatre coins du champ. Une dense bordure crème porte une vigne arabesque ` +
-      `continue dans la tradition persane, fidèlement transmise par les ateliers de la ville de Rabat.`,
+      `Un chef-d'œuvre de la tradition royale du tapis arabesque, inspiré par l'ornement architectural raffiné ` +
+      `des palais et mosquées mauresques. Le champ bleu indigo serein est ponctué d'un seul médaillon ` +
+      `étoilé central en ivoire, rose et sauge, avec des rosettes d'écoinçon correspondantes aux quatre coins. ` +
+      `Une dense bordure arabesque crème encadre la composition dans la tradition persane, fidèlement ` +
+      `transmise par les ateliers de la ville de Rabat. Entièrement réversible.`,
     motifs: [
       'central star medallion',
       'arabesque vine border',
       'corner spandrel rosette',
-      'floral cartouche',
+      'Moorish floral cartouche',
     ],
     images: {
       primary: '/rugs/ps-2025-003-primary.jpg',
@@ -211,11 +205,11 @@ export const rugs: Rug[] = [
     featured: false,
   },
 
-  // ── 04 ───────────────────────────────────────────────────────────────────
+  // ── 04 — Royal Cartouche Garden Carpet ───────────────────────────────────
   {
     slug: 'tapis-jardin-mamluk-vert',
-    title: 'Green Mamluk-Style Garden Carpet',
-    titleFr: `Tapis Jardin Style Mamluk Vert`,
+    title: 'Royal Cartouche Garden Carpet',
+    titleFr: `Tapis Jardin Royal à Cartouches`,
     region: 'Rabat',
     technique: 'knotted',
     era: 'vintage',
@@ -226,23 +220,23 @@ export const rugs: Rug[] = [
     inventoryNumber: 'PS-2025-004',
     oneOfOne: true,
     curatorialNote:
-      'Structured as a formal garden divided into rows of octagonal cartouches, each containing ' +
-      'a distinct polychrome floral or geometric medallion on a sage-green ground. No two cartouches ' +
-      'repeat: each holds its own miniature universe of botanical and geometric ornament in lavender, ' +
-      'ivory, rust, ochre, blush and navy. The format echoes Mamluk-era garden carpet traditions, ' +
-      'transposed here into the refined Moroccan urban weaving vocabulary of mid-century Rabat. ' +
-      'A multi-band border combines a diamond lattice guard stripe with a continuous floral meander.',
+      'A magnificent formal garden carpet structured as rows of octagonal cartouches, each containing ' +
+      'a distinct polychrome floral or geometric medallion — no two alike. ' +
+      'The design draws on the ancient tradition of representing paradise as a walled garden divided into ' +
+      'geometric sections, each blooming with its own botanical universe in lavender, ivory, rust, ochre and navy. ' +
+      'The multi-band border combines a diamond lattice guard with a continuous floral meander, ' +
+      'giving the piece the gravity of a royal commission. Knotted pile of exceptional fineness.',
     curatorialNoteFr:
-      `Structuré comme un jardin formel divisé en rangées de cartouches octogonaux, chacun contenant ` +
-      `un médaillon floral ou géométrique polychrome distinct sur fond vert sauge. Aucun cartouche ` +
-      `ne se répète : chacun contient son propre univers miniature d'ornements botaniques et ` +
-      `géométriques en lavande, ivoire, rouille, ocre, rose et marine. Le format fait écho aux ` +
-      `traditions de tapis de jardin mamelouks, transposées dans le vocabulaire raffiné du tissage ` +
-      `urbain marocain de Rabat au milieu du siècle.`,
+      `Un magnifique tapis de jardin formel structuré en rangées de cartouches octogonaux, chacun contenant ` +
+      `un médaillon floral ou géométrique polychrome distinct — aucun identique. ` +
+      `Le dessin puise dans l'ancienne tradition de représenter le paradis comme un jardin clos divisé en ` +
+      `sections géométriques, chacune fleurissant avec son propre univers botanique en lavande, ivoire, ` +
+      `rouille, ocre et marine. La bordure multi-bandes combine un garde en treillis de losanges avec ` +
+      `un méandre floral continu, donnant à la pièce la gravité d'une commande royale.`,
     motifs: [
       'octagonal cartouche grid',
       'polychrome floral medallion',
-      'garden layout',
+      'paradise garden layout',
       'diamond lattice guard',
       'arabesque meander border',
     ],
@@ -255,7 +249,7 @@ export const rugs: Rug[] = [
     featured: false,
   },
 
-  // ── 05 ───────────────────────────────────────────────────────────────────
+  // ── 05 — Warm Zemmour Gallery Kilim ──────────────────────────────────────
   {
     slug: 'zemmour-kilim-patchwork-galerie',
     title: 'Warm Zemmour Patchwork Gallery Kilim',
@@ -300,33 +294,35 @@ export const rugs: Rug[] = [
     featured: false,
   },
 
-  // ── 06 ───────────────────────────────────────────────────────────────────
+  // ── 06 — Vintage High Atlas Berber ───────────────────────────────────────
   {
     slug: 'high-atlas-bleu-ciel-minimaliste',
-    title: 'Sky-Blue High Atlas Minimalist Pile',
-    titleFr: `Poil Minimaliste Haut Atlas Bleu Ciel`,
+    title: 'Vintage High Atlas Berber Carpet',
+    titleFr: `Tapis Berbère Vintage du Haut Atlas`,
     region: 'High Atlas',
     technique: 'knotted',
-    era: 'contemporary',
-    yearRange: 'c. 2010–2020',
-    materials: 'Live-sheep wool pile, vegetable-indigo dye, cotton warp',
-    dimensions: { w: 230, h: 310, unit: 'cm' },
+    era: 'vintage',
+    yearRange: 'c. 1960–1980',
+    materials: 'Live-sheep wool pile, vegetable-indigo dye, cotton warp — three weaving techniques',
+    dimensions: { w: 200, h: 300, unit: 'cm' },
     palette: ['sky-blue', 'chalk-white', 'charcoal', 'ivory'],
     inventoryNumber: 'PS-2025-006',
     oneOfOne: true,
     curatorialNote:
-      'Radically spare, this large pile rug distils High Atlas weaving to its essence: a wide open ' +
-      'field of washed indigo-blue streaked with ivory where natural sheep wool shows through the dye, ' +
-      'creating an atmospheric, cloud-like ground. Three parallel vertical bands — each terminated at ' +
-      'the top by a small serrated chevron mark — traverse the field like standing stones or ancient ' +
-      'boundary markers. A narrow black-and-white zigzag border on all four sides provides the only ' +
-      'tonal anchor. Long wool pile with a silky handle and exceptional softness underfoot.',
+      'A rare vintage Berber carpet from the High Atlas combining three distinct weaving techniques. ' +
+      'The vast open field of washed indigo-blue is streaked with ivory where natural sheep wool shows ' +
+      'through the vegetable dye, creating an atmospheric, cloud-like ground. ' +
+      'Three parallel vertical bands — each terminated at the top by a small serrated chevron mark — ' +
+      'traverse the field like standing stones, ancient boundary markers of the mountain tribes. ' +
+      'A narrow black-and-white zigzag border frames all four sides. ' +
+      'The combination of three techniques in one piece makes this an exceptionally rare find.',
     curatorialNoteFr:
-      `Radicalement sobre, ce grand tapis à poil réduit le tissage du Haut Atlas à son essence : ` +
-      `un vaste champ ouvert d'indigo bleu lavé, strié d'ivoire là où la laine naturelle transparaît ` +
-      `à travers la teinture, créant un fond atmosphérique comme un nuage. Trois bandes verticales ` +
-      `parallèles traversent le champ comme des menhirs, chacune terminée par une petite marque ` +
-      `de chevron dentelé. Un étroit bord zigzag noir et blanc fournit le seul ancrage tonal.`,
+      `Un rare tapis berbère vintage du Haut Atlas combinant trois techniques de tissage distinctes. ` +
+      `Le vaste champ ouvert d'indigo bleu lavé est strié d'ivoire là où la laine naturelle transparaît ` +
+      `à travers la teinture végétale, créant un fond atmosphérique comme un nuage. ` +
+      `Trois bandes verticales parallèles traversent le champ comme des menhirs, anciens marqueurs ` +
+      `de frontière des tribus de montagne. La combinaison de trois techniques en une seule pièce ` +
+      `en fait une trouvaille exceptionnellement rare.`,
     motifs: [
       'open indigo field',
       'three vertical stripe bands',
@@ -342,42 +338,44 @@ export const rugs: Rug[] = [
     featured: true,
   },
 
-  // ── 07 ───────────────────────────────────────────────────────────────────
+  // ── 07 — Arabic-Amazigh Fusion ───────────────────────────────────────────
   {
     slug: 'boujad-champ-ecarlate-symboles',
-    title: 'Scarlet-Field Boujad with Tribal Symbols',
-    titleFr: `Boujad Champ Écarlate aux Symboles Tribaux`,
+    title: 'Arabic-Amazigh Fusion Carpet',
+    titleFr: `Tapis Fusion Arabe-Amazigh`,
     region: 'Boujad',
     technique: 'knotted',
     era: 'contemporary',
     yearRange: 'c. 2015–2022',
-    materials: 'Live-sheep wool pile, synthetic scarlet dye, cotton warp',
-    dimensions: { w: 255, h: 365, unit: 'cm' },
+    materials: 'Live-sheep wool pile, natural scarlet dye, cotton warp',
+    dimensions: { w: 200, h: 300, unit: 'cm' },
     palette: ['scarlet', 'vermilion', 'charcoal', 'ivory', 'gold', 'slate-blue'],
     inventoryNumber: 'PS-2025-007',
     oneOfOne: true,
     curatorialNote:
-      'An arresting field of saturated scarlet-vermilion dominates this large Boujad pile rug. ' +
-      'Scattered asymmetrically across the open ground are more than ten small tribal talismans — ' +
-      'nested diamonds, cross-hatch squares, zigzag serpents and framed cartouches — each rendered ' +
-      'in charcoal, ivory, gold and slate-blue. A serrated black border with ivory tooth-marks frames ' +
-      'all four sides. The deliberate irregularity of symbol placement reflects the improvisational ' +
-      'spirit of Boujad women weavers, for whom each piece is a unique autobiographical statement.',
+      'A bold and rare fusion of two distinct cultural traditions in a single carpet. ' +
+      'The knotted pile technique represents the Arabic craft heritage, refined over centuries in the royal ' +
+      'workshops of Morocco. The scattered Amazigh tribal symbols — nested diamonds, cross-hatch squares, ' +
+      'zigzag serpents and framed cartouches — are placed asymmetrically across the blazing scarlet field ' +
+      'in the free, autobiographical spirit of Amazigh women weavers. ' +
+      'Together these two traditions create a dialogue between the structured Arabic aesthetic and ' +
+      'the spontaneous Amazigh visual language — a carpet that carries the story of two cultures.',
     curatorialNoteFr:
-      `Un champ saisissant de rouge écarlate-vermillon domine ce grand tapis à poil Boujad. ` +
-      `Dispersés asymétriquement sur le champ ouvert se trouvent plus de dix petits talismans ` +
-      `tribaux — losanges imbriqués, carrés quadrillés, serpents en zigzag et cartouches encadrés ` +
-      `— chacun rendu en charbon, ivoire, or et bleu ardoise. Un bord noir dentelé encadre les ` +
-      `quatre côtés. L'irrégularité délibérée du placement des symboles reflète l'esprit ` +
-      `d'improvisation des tisseuses Boujad, pour qui chaque pièce est une déclaration autobiographique unique.`,
+      `Une fusion audacieuse et rare de deux traditions culturelles distinctes en un seul tapis. ` +
+      `La technique du poil noué représente le patrimoine artisanal arabe, raffiné au fil des siècles ` +
+      `dans les ateliers royaux du Maroc. Les symboles tribaux amazighs éparpillés — losanges imbriqués, ` +
+      `carrés quadrillés, serpents en zigzag et cartouches encadrés — sont placés asymétriquement sur ` +
+      `le champ écarlate flamboyant dans l'esprit libre et autobiographique des tisseuses amazighes. ` +
+      `Ensemble, ces deux traditions créent un dialogue entre l'esthétique arabe structurée et le ` +
+      `langage visuel spontané amazigh — un tapis qui porte l'histoire de deux cultures.`,
     motifs: [
-      'scattered talisman',
+      'Amazigh tribal talisman',
       'nested diamond',
       'cross-hatch square',
       'zigzag serpent',
-      'serrated border',
+      'serrated Arabic border',
     ],
-    weaverNote: 'Khouribga Province. Likely woven by a single female weaver.',
+    weaverNote: 'A unique fusion of Arabic knotted technique and Amazigh symbolic design vocabulary.',
     images: {
       primary: '/rugs/ps-2025-007-primary.jpg',
       summerSide: '/rugs/ps-2025-007-primary.jpg',
@@ -387,7 +385,7 @@ export const rugs: Rug[] = [
     featured: true,
   },
 
-  // ── 08 ───────────────────────────────────────────────────────────────────
+  // ── 08 — Saturated Zemmour Patchwork ────────────────────────────────────
   {
     slug: 'zemmour-kilim-patchwork-sature',
     title: 'Saturated Zemmour Patchwork Kilim',
@@ -403,18 +401,17 @@ export const rugs: Rug[] = [
     inventoryNumber: 'PS-2025-008',
     oneOfOne: true,
     curatorialNote:
-      'A virtuoso patchwork kilim in a bolder and more saturated palette than the other Zemmour ' +
-      'pieces in the collection. The composition unfolds in large irregular panels — each a distinct ' +
+      'A virtuoso patchwork kilim in a bolder and more saturated palette than any other Zemmour ' +
+      'piece in the collection. The composition unfolds in large irregular panels — each a distinct ' +
       'mini-carpet in its own right — combining deep madder-reds, burnt amber, cobalt navy and ivory ' +
       'in complex geometric sequences: interlocking chevrons, chessboard fields, reciprocal triangles, ' +
       'diagonal stripe lattices and bold arrowhead bands. No panel repeats, yet the whole reads as a ' +
       'masterfully controlled totality. A museum-grade example of the Zemmour patchwork tradition.',
     curatorialNoteFr:
-      `Un kilim patchwork virtuose dans une palette plus audacieuse et plus saturée que les autres ` +
-      `pièces Zemmour de la collection. La composition se déploie en grands panneaux irréguliers ` +
+      `Un kilim patchwork virtuose dans une palette plus audacieuse et plus saturée que toute autre ` +
+      `pièce Zemmour de la collection. La composition se déploie en grands panneaux irréguliers ` +
       `— chacun un mini-tapis distinct en son propre droit — combinant des rouges garance profonds, ` +
-      `de l'ambre brûlé, du marine cobalt et de l'ivoire dans des séquences géométriques complexes : ` +
-      `chevrons entrelacés, damiers, triangles réciproques et bandes en pointe de flèche. ` +
+      `de l'ambre brûlé, du marine cobalt et de l'ivoire dans des séquences géométriques complexes. ` +
       `Aucun panneau ne se répète, mais l'ensemble se lit comme une totalité magistralement contrôlée.`,
     motifs: [
       'interlocking chevron',

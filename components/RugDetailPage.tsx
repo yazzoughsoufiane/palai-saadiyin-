@@ -20,14 +20,14 @@ interface RugDetailPageProps {
 export default function RugDetailPage({ rug, prev, next }: RugDetailPageProps) {
   const { locale, t } = useI18n()
   const [enquireOpen, setEnquireOpen] = useState(false)
-  const [activeImage, setActiveImage] = useState<string>(rug.images.primary)
+  const [activeImage, setActiveImage] = useState<string>(`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${rug.images.primary}`)
   const [activeSide, setActiveSide] = useState<'summer' | 'winter' | null>(null)
 
   const title = locale === 'fr' ? rug.titleFr : rug.title
   const note = locale === 'fr' ? rug.curatorialNoteFr : rug.curatorialNote
 
   const allImages = [
-    { src: rug.images.primary, label: t('Primary view', 'Vue principale'), side: null },
+    { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}${rug.images.primary}`, label: t('Primary view', 'Vue principale'), side: null },
     ...(rug.images.summerSide
       ? [{ src: rug.images.summerSide, label: t('Summer side', 'Face été'), side: 'summer' as const }]
       : []),

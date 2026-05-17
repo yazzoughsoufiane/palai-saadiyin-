@@ -66,7 +66,7 @@ export default function RugCard({ rug, priority = false, className = '' }: RugCa
           }}
         >
           <Image
-            src={rug.images.primary}
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${rug.images.primary}`}
             alt={`${title}. ${rug.region} rug, ${rug.yearRange}. ${rug.dimensions.w} × ${rug.dimensions.h} cm.`}
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"

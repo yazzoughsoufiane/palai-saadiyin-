@@ -1,6 +1,4 @@
 // data/rugs.ts — Palais Saadiyin
-// 8 pieces photographed fully laid flat at the maison.
-// French strings use template literals to avoid apostrophe syntax errors.
 
 export type Region =
   | 'Boujad'
@@ -45,9 +43,37 @@ export interface Rug {
   featured?: boolean
 }
 
+// ── Helper functions ────────────────────────────────────────────────────────
+
+export function getRugBySlug(slug: string): Rug | undefined {
+  return rugs.find((r) => r.slug === slug)
+}
+
+export function getFeaturedRugs(): Rug[] {
+  return rugs.filter((r) => r.featured)
+}
+
+// ── All regions for filter UI ───────────────────────────────────────────────
+
+export const ALL_REGIONS: Region[] = [
+  'Boujad',
+  'Azilal',
+  'Beni Ourain',
+  'Beni MGuild',
+  'Taznakht',
+  'Mrirt',
+  'Zemour',
+  'High Atlas',
+  'Middle Atlas',
+  'Sahara',
+  'Rabat',
+]
+
+// ── Rug data ────────────────────────────────────────────────────────────────
+
 export const rugs: Rug[] = [
 
-  // ── 01 ─────────────────────────────────────────────────────────────────────
+  // ── 01 ───────────────────────────────────────────────────────────────────
   {
     slug: 'zemmour-grand-kilim-encyclopedique',
     title: 'Grand Encyclopaedic Zemmour Kilim',
@@ -95,7 +121,7 @@ export const rugs: Rug[] = [
     featured: true,
   },
 
-  // ── 02 ─────────────────────────────────────────────────────────────────────
+  // ── 02 ───────────────────────────────────────────────────────────────────
   {
     slug: 'zemmour-arbre-de-vie',
     title: '"Tree of Life" Zemmour Kilim',
@@ -140,7 +166,7 @@ export const rugs: Rug[] = [
     featured: true,
   },
 
-  // ── 03 ─────────────────────────────────────────────────────────────────────
+  // ── 03 ───────────────────────────────────────────────────────────────────
   {
     slug: 'rabati-medaillon-champ-bleu',
     title: 'Blue-Field Rabati Medallion Carpet',
@@ -180,7 +206,7 @@ export const rugs: Rug[] = [
     featured: false,
   },
 
-  // ── 04 ─────────────────────────────────────────────────────────────────────
+  // ── 04 ───────────────────────────────────────────────────────────────────
   {
     slug: 'tapis-jardin-mamluk-vert',
     title: 'Green Mamluk-Style Garden Carpet',
@@ -221,7 +247,7 @@ export const rugs: Rug[] = [
     featured: false,
   },
 
-  // ── 05 ─────────────────────────────────────────────────────────────────────
+  // ── 05 ───────────────────────────────────────────────────────────────────
   {
     slug: 'zemmour-kilim-patchwork-galerie',
     title: 'Warm Zemmour Patchwork Gallery Kilim',
@@ -263,7 +289,7 @@ export const rugs: Rug[] = [
     featured: false,
   },
 
-  // ── 06 ─────────────────────────────────────────────────────────────────────
+  // ── 06 ───────────────────────────────────────────────────────────────────
   {
     slug: 'high-atlas-bleu-ciel-minimaliste',
     title: 'Sky-Blue High Atlas Minimalist Pile',
@@ -302,7 +328,7 @@ export const rugs: Rug[] = [
     featured: true,
   },
 
-  // ── 07 ─────────────────────────────────────────────────────────────────────
+  // ── 07 ───────────────────────────────────────────────────────────────────
   {
     slug: 'boujad-champ-ecarlate-symboles',
     title: 'Scarlet-Field Boujad with Tribal Symbols',
@@ -344,7 +370,7 @@ export const rugs: Rug[] = [
     featured: true,
   },
 
-  // ── 08 ─────────────────────────────────────────────────────────────────────
+  // ── 08 ───────────────────────────────────────────────────────────────────
   {
     slug: 'zemmour-kilim-patchwork-sature',
     title: 'Saturated Zemmour Patchwork Kilim',

@@ -28,7 +28,7 @@ export default function HomeHero() {
           src={`${BASE}/rugs/ps-hero-primary.jpg`}
           alt=""
           fill
-          className="object-cover"
+          className="object-cover object-top"
           priority
           sizes="100vw"
         />

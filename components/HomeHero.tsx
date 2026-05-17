@@ -23,7 +23,7 @@ export default function HomeHero() {
         aria-hidden="true"
       >
         <Image
-          src="${process.env.NEXT_PUBLIC_BASE_PATH || ""}/rugs/ps-hero-primary.jpg"
+          src="/rugs/ps-hero-primary.jpg"
           alt=""
           fill
           className="object-cover"

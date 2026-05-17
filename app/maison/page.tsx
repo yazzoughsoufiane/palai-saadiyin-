@@ -6,7 +6,7 @@ import MaisonValues from '@/components/MaisonValues'
 export const metadata: Metadata = {
   title: 'La Maison',
   description:
-    'The story of Palais Saadiyin — a carpet house near Bab Laksour in the ancient Medina of Marrakech, run by Mohammed Khaoulani.',
+    'The story of Palais Saadiyin — a carpet house near Bab Laksour in the ancient Medina of Marrakech, run by Mohamed Soufyane.',
 }
 
 export default function MaisonPage() {
@@ -50,7 +50,7 @@ export default function MaisonPage() {
               served many purposes over the centuries. Today it is a house of carpets.
             </p>
             <p>
-              Mohammed Khaoulani has run the house for decades, building a collection that spans every
+              Mohamed Soufyane has run the house for decades, building a collection that spans every
               major Moroccan weaving tradition — from the undyed ivory Beni Ourain of the northeastern
               Atlas to the saturated cardinal reds of Boujad, from the Azilal plateau&apos;s diary-like
               improvisation to the elemental rush mats of the Tuareg south. His guiding principle is
@@ -70,7 +70,7 @@ export default function MaisonPage() {
             </p>
             <footer className="mt-4">
               <cite className="label-caps text-shadow/70 not-italic">
-                Mohammed Khaoulani<br />
+                Mohamed Soufyane<br />
                 Palais Saadiyin, Marrakech
               </cite>
             </footer>

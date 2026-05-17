@@ -1,6 +1,6 @@
 # Palais Saadiyin
 
-Luxury art-gallery website for **Palais Saadiyin** — a Moroccan carpet house at 16 Rue My Taïb Kssour, Medina, Marrakech, run by Mohammed Khaoulani.
+Luxury art-gallery website for **Palais Saadiyin** — a Moroccan carpet house at 16 Rue My Taïb Kssour, Medina, Marrakech, run by Mohamed Soufyane.
 
 Built with **Next.js 14 (App Router) · TypeScript · Tailwind CSS · Framer Motion**.
 

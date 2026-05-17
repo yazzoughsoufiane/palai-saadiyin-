@@ -107,8 +107,8 @@ export default function EnquireSheet({ isOpen, onClose, rugTitle, inventoryNumbe
                 </h3>
                 <p className="prose-body text-shadow max-w-[280px]">
                   {t(
-                    'Mohammed Khaoulani or a member of our team will reply within 48 hours.',
-                    'Mohammed Khaoulani ou un membre de notre équipe vous répondra sous 48 heures.',
+                    'Mohamed Soufyane or a member of our team will reply within 48 hours.',
+                    'Mohamed Soufyane ou un membre de notre équipe vous répondra sous 48 heures.',
                   )}
                 </p>
                 <button

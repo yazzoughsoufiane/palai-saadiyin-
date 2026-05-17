@@ -4,6 +4,8 @@ import { useRef } from 'react'
 import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion'
 import Image from 'next/image'
 
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
+
 export default function HomeHero() {
   const containerRef = useRef<HTMLDivElement>(null)
   const prefersReduced = useReducedMotion()
@@ -23,7 +25,7 @@ export default function HomeHero() {
         aria-hidden="true"
       >
         <Image
-          src=`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/rugs/ps-hero-primary.jpg`
+          src={`${BASE}/rugs/ps-hero-primary.jpg`}
           alt=""
           fill
           className="object-cover"
@@ -35,8 +37,7 @@ export default function HomeHero() {
 
       {/* Content */}
       <div className="relative z-10 h-full flex flex-col items-start justify-end pb-16 lg:pb-24 px-6 lg:px-12 max-w-[1440px] mx-auto w-full">
-
-        {/* Tagline — slides up from clip */}
+        {/* Tagline */}
         <div className="overflow-hidden mb-5">
           <motion.p
             initial={{ y: '115%' }}
@@ -48,7 +49,7 @@ export default function HomeHero() {
           </motion.p>
         </div>
 
-        {/* Title — each word on its own clipped line */}
+        {/* Title */}
         <h1 className="font-serif font-light text-bone text-display leading-[0.92] tracking-tight">
           {['Palais', 'Saadiyin'].map((word, i) => (
             <div key={word} className="overflow-hidden">

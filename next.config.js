@@ -2,6 +2,7 @@
 const nextConfig = {
   output: 'export',
   basePath: '/palai-saadiyin-',
+  assetPrefix: '/palai-saadiyin-',
   images: {
     unoptimized: true,
   },

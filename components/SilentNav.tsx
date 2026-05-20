@@ -61,7 +61,7 @@ export default function SilentNav() {
             aria-label="Palais Saadiyin — home"
           >
             <Image
-              src="/rugs/imgi_1_AA5AbUA5v1mrw6OTf-T8f7S6VzuhCNQu1NT2VkyMdBBOLWpXr_Ua7fvh3rytEhdk58K86JzU8stK_c4WEB0snenDgJbq8pQi-oJk1vy-CIdHkFPaQcIdfNuuflPwAdhE_XkPoUT7C_xkWQz691ED29WmO7p9m5EFcg1UbtSt5SpvdsXh_IOnBcni.png"
+              src="/rugs/ps-logo.png"
               alt=""
               width={22}
               height={22}

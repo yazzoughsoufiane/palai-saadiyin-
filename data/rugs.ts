@@ -119,7 +119,7 @@ export const rugs: Rug[] = [
       'brocaded cartouche',
     ],
     images: {
-      primary: '/palai-saadiyin-/rugs/ps-2025-001-primary.jpg',
+      primary: '/rugs/ps-2025-001-primary.jpg',
       summerSide: '/palai-saadiyin-/rugs/ps-2025-001-summer.jpg',
       winterSide: '/palai-saadiyin-/rugs/ps-2025-001-winter.jpg',
       details: [
@@ -171,7 +171,7 @@ export const rugs: Rug[] = [
     ],
     weaverNote: 'Three techniques combined: knotted pile, flatweave and embroidery. Reversible.',
     images: {
-      primary: '/palai-saadiyin-/rugs/ps-2025-002-primary.jpg',
+      primary: '/rugs/ps-2025-002-primary.jpg',
       summerSide: '/palai-saadiyin-/rugs/ps-2025-002-summer.jpg',
       winterSide: '/palai-saadiyin-/rugs/ps-2025-002-primary.jpg',
       details: [
@@ -215,7 +215,7 @@ export const rugs: Rug[] = [
       'Moorish floral cartouche',
     ],
     images: {
-      primary: '/palai-saadiyin-/rugs/ps-2025-003-primary.jpg',
+      primary: '/rugs/ps-2025-003-primary.jpg',
       summerSide: '/palai-saadiyin-/rugs/ps-2025-003-primary.jpg',
       winterSide: '/palai-saadiyin-/rugs/ps-2025-003-primary.jpg',
       details: ['/palai-saadiyin-/rugs/ps-2025-003-detail-1.jpg'],
@@ -259,7 +259,7 @@ export const rugs: Rug[] = [
       'arabesque meander border',
     ],
     images: {
-      primary: '/palai-saadiyin-/rugs/ps-2025-004-primary.jpg',
+      primary: '/rugs/ps-2025-004-primary.jpg',
       summerSide: '/palai-saadiyin-/rugs/ps-2025-004-primary.jpg',
       winterSide: '/palai-saadiyin-/rugs/ps-2025-004-primary.jpg',
       details: [],
@@ -304,7 +304,7 @@ export const rugs: Rug[] = [
       'brocaded cartouche',
     ],
     images: {
-      primary: '/palai-saadiyin-/rugs/ps-2025-005-primary.jpg',
+      primary: '/rugs/ps-2025-005-primary.jpg',
       summerSide: '/palai-saadiyin-/rugs/ps-2025-005-primary.jpg',
       winterSide: '/palai-saadiyin-/rugs/ps-2025-005-primary.jpg',
       details: [],
@@ -348,7 +348,7 @@ export const rugs: Rug[] = [
       'zigzag border',
     ],
     images: {
-      primary: '/palai-saadiyin-/rugs/ps-2025-006-primary.jpg',
+      primary: '/rugs/ps-2025-006-primary.jpg',
       summerSide: '/palai-saadiyin-/rugs/ps-2025-006-primary.jpg',
       winterSide: '/palai-saadiyin-/rugs/ps-2025-006-primary.jpg',
       details: [],
@@ -395,7 +395,7 @@ export const rugs: Rug[] = [
     ],
     weaverNote: 'A unique fusion of Arabic knotted technique and Amazigh symbolic design vocabulary.',
     images: {
-      primary: '/palai-saadiyin-/rugs/ps-2025-007-primary.jpg',
+      primary: '/rugs/ps-2025-007-primary.jpg',
       summerSide: '/palai-saadiyin-/rugs/ps-2025-007-primary.jpg',
       winterSide: '/palai-saadiyin-/rugs/ps-2025-007-primary.jpg',
       details: [],
@@ -440,7 +440,7 @@ export const rugs: Rug[] = [
       'large irregular patch panel',
     ],
     images: {
-      primary: '/palai-saadiyin-/rugs/ps-2025-008-primary.jpg',
+      primary: '/rugs/ps-2025-008-primary.jpg',
       summerSide: '/palai-saadiyin-/rugs/ps-2025-008-primary.jpg',
       winterSide: '/palai-saadiyin-/rugs/ps-2025-008-primary.jpg',
       details: [],

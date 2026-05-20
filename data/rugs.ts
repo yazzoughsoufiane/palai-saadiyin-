@@ -347,9 +347,9 @@ export const rugs: Rug[] = [
     ],
     images: {
       primary: '/rugs/ps-2025-006-primary.jpg',
-      summerSide: '/rugs/ps-2025-006-primary.jpg',
+      summerSide: '/rugs/ps-2025-006-detail-1.jpg',
       winterSide: '/rugs/ps-2025-006-primary.jpg',
-      details: [],
+      details: ['/rugs/ps-2025-006-detail-1.jpg'],
     },
     featured: true,
   },

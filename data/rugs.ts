@@ -477,7 +477,7 @@ export const rugs: Rug[] = [
     ],
     images: {
       primary: '/rugs/ps-2025-010-primary.jpg',
-      summerSide: '/rugs/ps-2025-010-primary.jpg',
+      summerSide: '/rugs/ps-2025-010-summer.jpg',
       winterSide: '/rugs/ps-2025-010-primary.jpg',
       details: [],
     },
@@ -523,7 +523,7 @@ export const rugs: Rug[] = [
     ],
     images: {
       primary: '/rugs/ps-2025-011-primary.jpg',
-      summerSide: '/rugs/ps-2025-011-primary.jpg',
+      summerSide: '/rugs/ps-2025-011-summer.jpg',
       winterSide: '/rugs/ps-2025-011-primary.jpg',
       details: [],
     },
@@ -567,7 +567,7 @@ export const rugs: Rug[] = [
     ],
     images: {
       primary: '/rugs/ps-2025-012-primary.jpg',
-      summerSide: '/rugs/ps-2025-012-primary.jpg',
+      summerSide: '/rugs/ps-2025-012-summer.jpg',
       winterSide: '/rugs/ps-2025-012-primary.jpg',
       details: [],
     },

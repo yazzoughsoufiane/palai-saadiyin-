@@ -436,7 +436,7 @@ export const rugs: Rug[] = [
     ],
     images: {
       primary: '/rugs/ps-2025-009-primary.jpg',
-      summerSide: '/rugs/ps-2025-009-primary.jpg',
+      summerSide: '/rugs/ps-2025-009-summer.jpg',
       winterSide: '/rugs/ps-2025-009-primary.jpg',
       details: [],
     },

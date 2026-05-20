@@ -65,10 +65,7 @@ export default function SilentNav() {
               alt=""
               width={22}
               height={22}
-              className={clsx(
-                'object-contain shrink-0 transition-all duration-300',
-                scrolled || !isHome ? 'brightness-0' : 'brightness-0 invert',
-              )}
+              className="object-contain shrink-0"
             />
             <span
               className={clsx(

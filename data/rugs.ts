@@ -121,12 +121,10 @@ export const rugs: Rug[] = [
     images: {
       primary: '/rugs/ps-2025-001-primary.jpg',
       summerSide: '/rugs/ps-2025-001-summer.jpg',
-      winterSide: '/rugs/ps-2025-001-winter.jpg',
+      winterSide: '/rugs/ps-2025-001-summer.jpg',
       details: [
         '/rugs/ps-2025-001-detail-1.jpg',
         '/rugs/ps-2025-001-detail-2.jpg',
-        '/rugs/ps-2025-001-detail-3.jpg',
-        '/rugs/ps-2025-001-detail-4.jpg',
       ],
     },
     featured: true,
@@ -448,3 +446,4 @@ export const rugs: Rug[] = [
     featured: true,
   },
 ]
+

@@ -25,7 +25,7 @@ export default function MaisonPage() {
       {/* Hero image placeholder */}
       <div className="relative h-[50vw] min-h-[300px] max-h-[600px] overflow-hidden mb-20 bg-bone-dark">
         <Image
-          src="/rugs/ps-2024-004-primary.svg"
+          src="/palai-saadiyin-/rugs/ps-maison-hero.jpg"
           alt="Interior of Palais Saadiyin — stacked folded rugs against raw plaster walls."
           fill
           className="object-cover"

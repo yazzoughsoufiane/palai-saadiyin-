@@ -399,4 +399,178 @@ export const rugs: Rug[] = [
     },
     featured: true,
   },
+
+  // ── 09 — Azilal Abstract Ivory ───────────────────────────────────────────
+  {
+    slug: 'azilal-abstrait-ivoire-couleurs',
+    title: 'Azilal Abstract Ivory — Colour Field',
+    titleFr: `Azilal Abstrait Ivoire — Champ de Couleur`,
+    region: 'Azilal',
+    technique: 'knotted',
+    era: 'vintage',
+    yearRange: 'c. 1975–1990',
+    materials: 'Hand-spun live-sheep wool, natural and vegetable dyes',
+    dimensions: { w: 250, h: 310, unit: 'cm' },
+    palette: ['ivory', 'crimson', 'sky-blue', 'olive', 'peach', 'teal', 'charcoal', 'ochre'],
+    inventoryNumber: 'PS-2025-009',
+    oneOfOne: true,
+    curatorialNote:
+      'A bold contemporary Azilal carpet in the autobiographical tradition of the High Atlas Berber weavers. ' +
+      'Against a vast ivory field, irregular colour blocks — crimson, sky-blue, olive, peach and teal — ' +
+      'float freely across the composition, connected by sinuous black outline contours that divide the ground ' +
+      'like the tributaries of a river seen from above. ' +
+      'The overall effect recalls abstract expressionist painting yet remains entirely rooted in the ' +
+      'improvisational visual language of Amazigh women weavers. Long original fringes on both ends intact.',
+    curatorialNoteFr:
+      `Un audacieux tapis Azilal dans la tradition autobiographique des tisseuses berbères du Haut Atlas. ` +
+      `Sur un vaste champ ivoire, des blocs de couleur irréguliers — cramoisi, bleu ciel, olive, pêche et sarcelle — ` +
+      `flottent librement sur la composition, reliés par des contours sinueux noirs qui divisent le fond ` +
+      `comme les affluents d'une rivière vue du ciel. L'effet d'ensemble rappelle la peinture expressionniste ` +
+      `abstraite tout en restant entièrement ancré dans le langage visuel improvisé des tisseuses amazighes.`,
+    motifs: [
+      'free-form colour block',
+      'sinuous outline contour',
+      'floating diamond',
+      'irregular geometric patch',
+      'open ivory field',
+    ],
+    images: {
+      primary: '/rugs/ps-2025-009-primary.jpg',
+      summerSide: '/rugs/ps-2025-009-primary.jpg',
+      winterSide: '/rugs/ps-2025-009-primary.jpg',
+      details: [],
+    },
+    featured: false,
+  },
+
+  // ── 10 — Mrirt Wavy Stripe ──────────────────────────────────────────────
+  {
+    slug: 'mrirt-ondulations-terre',
+    title: 'Mrirt Wave Carpet — Earth Frequencies',
+    titleFr: `Tapis Mrirt Vagues — Fréquences Terrestres`,
+    region: 'Mrirt',
+    technique: 'knotted',
+    era: 'vintage',
+    yearRange: 'c. 1970–1985',
+    materials: 'Hand-spun live-sheep wool, natural and vegetable dyes',
+    dimensions: { w: 180, h: 240, unit: 'cm' },
+    palette: ['charcoal', 'dusty-rose', 'sage-green', 'terracotta', 'ivory', 'warm-grey'],
+    inventoryNumber: 'PS-2025-010',
+    oneOfOne: true,
+    curatorialNote:
+      'A hypnotic Mrirt carpet in which undulating vertical wave bands traverse the entire field from ' +
+      'selvedge to selvedge, creating a sense of rhythmic movement reminiscent of geological strata or ' +
+      'topographic contour lines. The palette is earthy and restrained — charcoal black, dusty rose, ' +
+      'sage green, terracotta and ivory — yet the interplay of warm and cool tones gives the surface ' +
+      'an unexpected luminosity. A rare example of the Mrirt wave tradition at its most refined.',
+    curatorialNoteFr:
+      `Un tapis Mrirt hypnotique dans lequel des bandes de vagues verticales ondulantes traversent tout ` +
+      `le champ d'une lisière à l'autre, créant un sens du mouvement rythmique rappelant les strates ` +
+      `géologiques ou les courbes de niveau topographiques. La palette est terreuse et retenue — noir ` +
+      `charbon, rose poussiéreux, vert sauge, terracotta et ivoire — pourtant l'interaction des tons ` +
+      `chauds et froids donne à la surface une luminosité inattendue.`,
+    motifs: [
+      'undulating wave band',
+      'vertical stripe flow',
+      'geological strata pattern',
+      'irregular contour line',
+    ],
+    images: {
+      primary: '/rugs/ps-2025-010-primary.jpg',
+      summerSide: '/rugs/ps-2025-010-primary.jpg',
+      winterSide: '/rugs/ps-2025-010-primary.jpg',
+      details: [],
+    },
+    featured: false,
+  },
+
+  // ── 11 — Middle Atlas Amazigh Encyclopaedia ──────────────────────────────
+  {
+    slug: 'middle-atlas-encyclopedie-amazigh',
+    title: 'Middle Atlas Amazigh Encyclopaedia Carpet',
+    titleFr: `Tapis Encyclopédie Amazigh du Moyen Atlas`,
+    region: 'Middle Atlas',
+    technique: 'knotted',
+    era: 'vintage',
+    yearRange: 'c. 1965–1980',
+    materials: 'Hand-spun live-sheep wool, natural and vegetable dyes',
+    dimensions: { w: 220, h: 290, unit: 'cm' },
+    palette: ['sage-green', 'terracotta', 'charcoal', 'ivory', 'ochre', 'olive', 'rust'],
+    inventoryNumber: 'PS-2025-011',
+    oneOfOne: true,
+    curatorialNote:
+      'An extraordinary Middle Atlas carpet functioning as a visual encyclopaedia of Amazigh tribal symbols. ' +
+      'Against a washed sage-green field, hundreds of autonomous motifs are scattered freely: tent forms, ' +
+      'arrowheads, zigzag serpents, diamond registers, human and animal silhouettes, tool forms and ' +
+      'architectural outlines — each a glyph in the weaver\'s personal visual language. ' +
+      'A dense geometric border of alternating coloured panels frames all four sides. ' +
+      'No two readings of this carpet are the same; every viewing reveals new hidden symbols.',
+    curatorialNoteFr:
+      `Un extraordinaire tapis du Moyen Atlas fonctionnant comme une encyclopédie visuelle des symboles ` +
+      `tribaux amazighs. Sur un champ vert sauge lavé, des centaines de motifs autonomes sont éparpillés ` +
+      `librement : formes de tente, pointes de flèche, serpents en zigzag, registres de losanges, ` +
+      `silhouettes humaines et animales, formes d'outils et contours architecturaux — chacun un glyphe ` +
+      `dans le langage visuel personnel de la tisseuse. Aucune lecture de ce tapis n'est identique.`,
+    motifs: [
+      'tent form',
+      'arrowhead glyph',
+      'zigzag serpent',
+      'human silhouette',
+      'animal form',
+      'architectural outline',
+      'diamond register',
+      'scattered field composition',
+    ],
+    images: {
+      primary: '/rugs/ps-2025-011-primary.jpg',
+      summerSide: '/rugs/ps-2025-011-primary.jpg',
+      winterSide: '/rugs/ps-2025-011-primary.jpg',
+      details: [],
+    },
+    featured: false,
+  },
+
+  // ── 12 — Zemour Silver Diamond ───────────────────────────────────────────
+  {
+    slug: 'zemour-diamant-argent-blanc',
+    title: 'Zemour Silver Diamond Flatweave',
+    titleFr: `Kilim Zemour Diamant Argent`,
+    region: 'Zemour',
+    tribe: 'Beni Zemmour',
+    technique: 'flatweave',
+    era: 'vintage',
+    yearRange: 'c. 1970–1985',
+    materials: 'Hand-spun wool, natural undyed fleece, silver-grey and ivory tones',
+    dimensions: { w: 200, h: 320, unit: 'cm' },
+    palette: ['silver-grey', 'ivory', 'warm-white', 'taupe', 'charcoal'],
+    inventoryNumber: 'PS-2025-012',
+    oneOfOne: true,
+    curatorialNote:
+      'A rare tonal Zemour flatweave in an almost entirely neutral palette of silver-grey, ivory and warm white — ' +
+      'exceptional in a tradition more commonly associated with vivid colour. ' +
+      'The field is structured around a formal grid of nested diamond medallions and dense geometric fill panels, ' +
+      'alternating between silver-grey and ivory grounds in a quiet, breathing rhythm. ' +
+      'Multiple horizontal register bands of intricate small-scale pattern frame the central field. ' +
+      'The restraint of the palette throws the extraordinary precision of the weaving into sharp relief.',
+    curatorialNoteFr:
+      `Un rare kilim Zemour tonal dans une palette presque entièrement neutre de gris argenté, ivoire ` +
+      `et blanc chaud — exceptionnel dans une tradition plus communément associée aux couleurs vives. ` +
+      `Le champ est structuré autour d'une grille formelle de médaillons losangés imbriqués et de panneaux ` +
+      `de remplissage géométriques denses, alternant entre fonds gris argenté et ivoire dans un rythme ` +
+      `tranquille. La retenue de la palette met en relief la précision extraordinaire du tissage.`,
+    motifs: [
+      'nested diamond medallion',
+      'geometric fill panel',
+      'alternating ground grid',
+      'horizontal register band',
+      'small-scale intricate pattern',
+    ],
+    images: {
+      primary: '/rugs/ps-2025-012-primary.jpg',
+      summerSide: '/rugs/ps-2025-012-primary.jpg',
+      winterSide: '/rugs/ps-2025-012-primary.jpg',
+      details: [],
+    },
+    featured: false,
+  },
 ]

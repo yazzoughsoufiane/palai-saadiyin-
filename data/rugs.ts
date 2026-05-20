@@ -393,7 +393,7 @@ export const rugs: Rug[] = [
     ],
     images: {
       primary: '/rugs/ps-2025-008-primary.jpg',
-      summerSide: '/rugs/ps-2025-008-primary.jpg',
+      summerSide: '/rugs/WhatsApp Image 2026-05-17 at 07.03.04.jpeg',
       winterSide: '/rugs/ps-2025-008-primary.jpg',
       details: [],
     },

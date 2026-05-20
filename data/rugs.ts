@@ -79,6 +79,7 @@ const FEATURED_ORDER = [
   'zemmour-kilim-patchwork-sature',
 ]
 
+
 export const rugs: Rug[] = [
 
   // ── 01 — Tuareg Patchwork Kilim ──────────────────────────────────────────
@@ -261,51 +262,6 @@ export const rugs: Rug[] = [
       details: ['/rugs/ps-2025-004-detail-1.jpg'],
     },
     featured: true,
-  },
-
-  // ── 05 — Warm Zemmour Gallery Kilim ──────────────────────────────────────
-  {
-    slug: 'zemmour-kilim-patchwork-galerie',
-    title: 'Warm Zemmour Patchwork Gallery Kilim',
-    titleFr: `Kilim Galerie Zemmour Patchwork aux Tons Chauds`,
-    region: 'Zemour',
-    tribe: 'Beni Zemmour',
-    technique: 'flatweave',
-    era: 'vintage',
-    yearRange: 'c. 1975–1990',
-    materials: 'Hand-spun live-sheep wool, vegetable and natural dyes',
-    dimensions: { w: 200, h: 430, unit: 'cm' },
-    palette: ['madder-red', 'amber', 'navy', 'ivory', 'saffron', 'charcoal', 'sage'],
-    inventoryNumber: 'PS-2025-005',
-    oneOfOne: true,
-    curatorialNote:
-      'A long gallery-format patchwork kilim in which every horizontal band carries a different ' +
-      'pairing of motifs and colour. Deep madder-reds and amber warm the dominant panels; navy and ' +
-      'charcoal cool the eye in the denser geometric passages. Ivory and sage illuminate individual ' +
-      'brocaded cartouches scattered throughout the field. The classical Zemmour vocabulary deployed ' +
-      'with exceptional chromatic variety and weaving confidence. Long original fringes on both short ' +
-      'ends undamaged. Ideal for a corridor, hallway or as a dramatic wall hanging.',
-    curatorialNoteFr:
-      `Un long kilim patchwork en format galerie dans lequel chaque bande horizontale porte un ` +
-      `appariement différent de motifs et de couleurs. Les rouges garance profonds et l'ambre ` +
-      `réchauffent les panneaux dominants ; le marine et le charbon refroidissent le regard dans ` +
-      `les passages géométriques plus denses. L'ivoire et la sauge illuminent des cartouches ` +
-      `brocadés individuels dispersés dans le champ. Idéal pour un couloir ou comme tenture murale.`,
-    motifs: [
-      'checkerboard panel',
-      'arrowhead register',
-      'stepped diamond',
-      'chevron serpentine',
-      'zigzag band',
-      'brocaded cartouche',
-    ],
-    images: {
-      primary: '/rugs/ps-2025-005-primary.jpg',
-      summerSide: '/rugs/ps-2025-005-primary.jpg',
-      winterSide: '/rugs/ps-2025-005-primary.jpg',
-      details: [],
-    },
-    featured: false,
   },
 
   // ── 06 — Vintage High Atlas Berber ───────────────────────────────────────

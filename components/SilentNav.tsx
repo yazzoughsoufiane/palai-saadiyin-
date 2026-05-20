@@ -8,6 +8,8 @@ import { useI18n } from '@/lib/i18n'
 import { motion, AnimatePresence } from 'framer-motion'
 import clsx from 'clsx'
 
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
+
 const navLinks = [
   { href: '/collection', en: 'Collection', fr: 'Collection', ar: 'المجموعة' },
   { href: '/origins', en: 'Origins', fr: 'Origines', ar: 'الأصول' },
@@ -61,7 +63,7 @@ export default function SilentNav() {
             aria-label="Palais Saadiyin — home"
           >
             <Image
-              src="/rugs/ps-logo.png"
+              src={`${BASE}/rugs/ps-logo.png`}
               alt=""
               width={22}
               height={22}

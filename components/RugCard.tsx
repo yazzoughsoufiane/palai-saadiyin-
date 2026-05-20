@@ -70,7 +70,7 @@ export default function RugCard({ rug, priority = false, className = '' }: RugCa
             alt={`${title}. ${rug.region} rug, ${rug.yearRange}. ${rug.dimensions.w} × ${rug.dimensions.h} cm.`}
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="object-cover transition-transform duration-1000 ease-out group-hover:scale-[1.025]"
+            className={`object-cover transition-transform duration-1000 ease-out group-hover:scale-[1.025]${rug.region === 'Rabat' ? ' rotate-90 scale-[0.7]' : ''}`}
             priority={priority}
             placeholder="blur"
             blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iNjAwIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjYwMCIgZmlsbD0iI0U4RTBEMyIvPjwvc3ZnPg=="

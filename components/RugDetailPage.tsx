@@ -17,25 +17,39 @@ interface RugDetailPageProps {
   next: Rug | null
 }
 
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH || ''
+
 export default function RugDetailPage({ rug, prev, next }: RugDetailPageProps) {
   const { locale, t } = useI18n()
   const [enquireOpen, setEnquireOpen] = useState(false)
-  const [activeImage, setActiveImage] = useState<string>(`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${rug.images.primary}`)
+  const [activeImage, setActiveImage] = useState<string>(`${BASE}${rug.images.primary}`)
   const [activeSide, setActiveSide] = useState<'summer' | 'winter' | null>(null)
 
   const title = locale === 'fr' ? rug.titleFr : rug.title
   const note = locale === 'fr' ? rug.curatorialNoteFr : rug.curatorialNote
 
   const allImages = [
-    { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}${rug.images.primary}`, label: t('Primary view', 'Vue principale'), side: null },
+    {
+      src: `${BASE}${rug.images.primary}`,
+      label: t('Primary view', 'Vue principale'),
+      side: null,
+    },
     ...(rug.images.summerSide
-      ? [{ src: rug.images.summerSide, label: t('Summer side', 'Face été'), side: 'summer' as const }]
+      ? [{
+          src: `${BASE}${rug.images.summerSide}`,
+          label: t('Summer side', 'Face été'),
+          side: 'summer' as const,
+        }]
       : []),
     ...(rug.images.winterSide
-      ? [{ src: rug.images.winterSide, label: t('Winter side', 'Face hiver'), side: 'winter' as const }]
+      ? [{
+          src: `${BASE}${rug.images.winterSide}`,
+          label: t('Winter side', 'Face hiver'),
+          side: 'winter' as const,
+        }]
       : []),
     ...rug.images.details.map((src, i) => ({
-      src,
+      src: `${BASE}${src}`,
       label: `${t('Detail', 'Détail')} ${i + 1}`,
       side: null,
     })),
@@ -163,7 +177,7 @@ export default function RugDetailPage({ rug, prev, next }: RugDetailPageProps) {
                 <div className="flex gap-4">
                   <button
                     onClick={() => {
-                      setActiveImage(rug.images.summerSide!)
+                      setActiveImage(`${BASE}${rug.images.summerSide}`)
                       setActiveSide('summer')
                     }}
                     className={`label-caps border-b pb-0.5 transition-colors ${
@@ -176,7 +190,7 @@ export default function RugDetailPage({ rug, prev, next }: RugDetailPageProps) {
                   </button>
                   <button
                     onClick={() => {
-                      setActiveImage(rug.images.winterSide!)
+                      setActiveImage(`${BASE}${rug.images.winterSide}`)
                       setActiveSide('winter')
                     }}
                     className={`label-caps border-b pb-0.5 transition-colors ${

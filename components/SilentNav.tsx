@@ -57,22 +57,22 @@ export default function SilentNav() {
           {/* Logo + Text */}
           <Link
             href="/"
-            className="flex items-center gap-3 no-print"
+            className="flex items-center gap-2 no-print shrink-0"
             aria-label="Palais Saadiyin — home"
           >
             <Image
               src="/rugs/imgi_1_AA5AbUA5v1mrw6OTf-T8f7S6VzuhCNQu1NT2VkyMdBBOLWpXr_Ua7fvh3rytEhdk58K86JzU8stK_c4WEB0snenDgJbq8pQi-oJk1vy-CIdHkFPaQcIdfNuuflPwAdhE_XkPoUT7C_xkWQz691ED29WmO7p9m5EFcg1UbtSt5SpvdsXh_IOnBcni.png"
-              alt="Palais Saadiyin"
-              width={36}
-              height={36}
+              alt=""
+              width={22}
+              height={22}
               className={clsx(
-                'object-contain transition-all duration-300',
+                'object-contain shrink-0 transition-all duration-300',
                 scrolled || !isHome ? 'brightness-0' : 'brightness-0 invert',
               )}
             />
             <span
               className={clsx(
-                'font-serif font-light tracking-wide transition-all duration-300',
+                'font-serif font-light tracking-wide whitespace-nowrap transition-all duration-300',
                 scrolled || !isHome
                   ? 'text-[1.1rem] text-ink'
                   : 'text-[1.25rem] text-bone',
@@ -106,7 +106,6 @@ export default function SilentNav() {
 
           {/* Right: locale toggle + mobile menu */}
           <div className="flex items-center gap-4">
-            {/* Locale */}
             <div className="flex items-center gap-1.5" role="group" aria-label="Language selection">
               {locales.map((loc, i) => (
                 <span key={loc.code} className="flex items-center gap-1.5">
@@ -130,7 +129,6 @@ export default function SilentNav() {
               ))}
             </div>
 
-            {/* Mobile menu button */}
             <button
               className="lg:hidden flex flex-col gap-[5px] p-2"
               onClick={() => setMenuOpen((v) => !v)}
@@ -145,7 +143,6 @@ export default function SilentNav() {
         </nav>
       </header>
 
-      {/* Mobile menu overlay */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div

@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { useI18n } from '@/lib/i18n'
@@ -53,18 +54,32 @@ export default function SilentNav() {
           className="max-w-[1440px] mx-auto px-6 lg:px-12 flex items-center justify-between"
           aria-label="Main navigation"
         >
-          {/* Logo */}
+          {/* Logo + Text */}
           <Link
             href="/"
-            className={clsx(
-              'font-serif font-light tracking-wide transition-all duration-300 no-print',
-              scrolled || !isHome
-                ? 'text-[1.1rem] text-ink'
-                : 'text-[1.25rem] text-bone',
-            )}
+            className="flex items-center gap-3 no-print"
             aria-label="Palais Saadiyin — home"
           >
-            Palais Saadiyin
+            <Image
+              src="/rugs/imgi_1_AA5AbUA5v1mrw6OTf-T8f7S6VzuhCNQu1NT2VkyMdBBOLWpXr_Ua7fvh3rytEhdk58K86JzU8stK_c4WEB0snenDgJbq8pQi-oJk1vy-CIdHkFPaQcIdfNuuflPwAdhE_XkPoUT7C_xkWQz691ED29WmO7p9m5EFcg1UbtSt5SpvdsXh_IOnBcni.png"
+              alt="Palais Saadiyin"
+              width={36}
+              height={36}
+              className={clsx(
+                'object-contain transition-all duration-300',
+                scrolled || !isHome ? 'brightness-0' : 'brightness-0 invert',
+              )}
+            />
+            <span
+              className={clsx(
+                'font-serif font-light tracking-wide transition-all duration-300',
+                scrolled || !isHome
+                  ? 'text-[1.1rem] text-ink'
+                  : 'text-[1.25rem] text-bone',
+              )}
+            >
+              Palais Saadiyin
+            </span>
           </Link>
 
           {/* Desktop links */}
@@ -122,27 +137,9 @@ export default function SilentNav() {
               aria-expanded={menuOpen}
               aria-label={menuOpen ? 'Close menu' : 'Open menu'}
             >
-              <span
-                className={clsx(
-                  'block w-5 h-px transition-all duration-300',
-                  isHome && !scrolled ? 'bg-bone' : 'bg-ink',
-                  menuOpen && 'translate-y-[7px] rotate-45',
-                )}
-              />
-              <span
-                className={clsx(
-                  'block w-5 h-px transition-all duration-300',
-                  isHome && !scrolled ? 'bg-bone' : 'bg-ink',
-                  menuOpen && 'opacity-0',
-                )}
-              />
-              <span
-                className={clsx(
-                  'block w-5 h-px transition-all duration-300',
-                  isHome && !scrolled ? 'bg-bone' : 'bg-ink',
-                  menuOpen && '-translate-y-[7px] -rotate-45',
-                )}
-              />
+              <span className={clsx('block w-5 h-px transition-all duration-300', isHome && !scrolled ? 'bg-bone' : 'bg-ink', menuOpen && 'translate-y-[7px] rotate-45')} />
+              <span className={clsx('block w-5 h-px transition-all duration-300', isHome && !scrolled ? 'bg-bone' : 'bg-ink', menuOpen && 'opacity-0')} />
+              <span className={clsx('block w-5 h-px transition-all duration-300', isHome && !scrolled ? 'bg-bone' : 'bg-ink', menuOpen && '-translate-y-[7px] -rotate-45')} />
             </button>
           </div>
         </nav>
@@ -168,11 +165,7 @@ export default function SilentNav() {
                     initial={{ y: '110%' }}
                     animate={{ y: 0 }}
                     exit={{ y: '115%' }}
-                    transition={{
-                      duration: 0.65,
-                      ease: [0.16, 1, 0.3, 1],
-                      delay: 0.08 + i * 0.07,
-                    }}
+                    transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1], delay: 0.08 + i * 0.07 }}
                   >
                     <Link
                       href={link.href}

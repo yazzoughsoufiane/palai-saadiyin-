@@ -60,7 +60,7 @@ export default function SilentNav() {
           <Link
             href="/"
             className="flex items-center gap-2 no-print shrink-0"
-            aria-label="Palais Saadiyin — home"
+            aria-label="CRAC — home"
           >
             <Image
               src={`${BASE}/rugs/ps-logo.png`}
@@ -77,7 +77,7 @@ export default function SilentNav() {
                   : 'text-[1.25rem] text-bone',
               )}
             >
-              Palais Saadiyin
+              CRAC
             </span>
           </Link>
 

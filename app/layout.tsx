@@ -23,19 +23,19 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Palais Saadiyin — Maison de Tapis, Marrakech',
-    template: '%s — Palais Saadiyin',
+    default: 'CRAC — Cosy Rug Art Collection, Marrakech',
+    template: '%s — CRAC',
   },
   description:
-    'A living archive of Moroccan weaving. Berber, Arabic, and Saharan rugs of exceptional provenance. 16 Rue My Taïb Kssour, Medina, Marrakech.',
+    'Your trusted destination for authentic Moroccan rugs in Marrakech. Handwoven Berber, Arabic, and Saharan carpets with expert guidance on every purchase. 16 Rue My Taïb Kssour, Medina, Marrakech.',
   keywords: [
-    'Moroccan rugs', 'Berber carpets', 'Marrakech', 'Palais Saadiyin',
+    'Moroccan rugs', 'Berber carpets', 'Marrakech', 'CRAC', 'Cosy Rug Art Collection',
     'Beni Ourain', 'Azilal', 'Boujad', 'kilim', 'handwoven', 'vegetable dyes',
   ],
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    siteName: 'Palais Saadiyin',
+    siteName: 'CRAC — Cosy Rug Art Collection',
   },
   robots: {
     index: true,

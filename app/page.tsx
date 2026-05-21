@@ -7,9 +7,9 @@ import { getFeaturedRugs } from '@/data/rugs'
 import { origins } from '@/data/origins'
 
 export const metadata: Metadata = {
-  title: 'Palais Saadiyin — Maison de Tapis, Marrakech',
+  title: 'CRAC — Cosy Rug Art Collection, Marrakech',
   description:
-    'A living archive of Moroccan weaving. Berber, Arabic, and Saharan rugs of singular provenance, vegetable-dyed and reversible. 16 Rue My Taïb Kssour, Medina, Marrakech.',
+    'Your trusted destination for authentic Moroccan rugs. Discover handwoven Berber, Arabic, and Saharan carpets with expert guidance on every purchase. 16 Rue My Taïb Kssour, Medina, Marrakech.',
 }
 
 export default function HomePage() {
@@ -25,9 +25,12 @@ export default function HomePage() {
         <div className="grid grid-cols-12 gap-6">
           <div className="col-span-12 lg:col-start-2 lg:col-span-7">
             <p className="font-serif text-[1.25rem] lg:text-[1.5rem] font-light text-ink leading-[1.55] text-pretty">
-              Palais Saadiyin is a living archive of Moroccan weaving — a house that treats every
-              rug as an authored work: a record of a woman&apos;s visual intelligence, her
-              landscape, and the silent language that passes through the loom.
+              At Cosy Rug Art Collection, we are dedicated to offering an exceptional rug-buying
+              experience rooted in knowledge, authenticity, and care. Our gallery presents a
+              curated selection of handwoven Moroccan rugs — each one unique, each one with a
+              story. We provide detailed documentation for every carpet you acquire: its origin,
+              weaving tradition, materials, and cultural significance. Whether you are a first-time
+              buyer or a seasoned collector, we are here to guide you at every step.
             </p>
           </div>
           <div className="col-span-12 lg:col-start-10 lg:col-span-3 flex items-end">

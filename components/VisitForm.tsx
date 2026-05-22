@@ -23,16 +23,18 @@ export default function VisitForm() {
 
     setStatus('sending')
 
+    const form = e.currentTarget
+
     try {
       await emailjs.sendForm(
         SERVICE_ID,
         TEMPLATE_ID,
-        e.currentTarget,
+        form,
         PUBLIC_KEY
       )
 
+      form.reset()
       setStatus('sent')
-      e.currentTarget.reset()
     } catch (error) {
       console.error('EmailJS Error:', error)
       setStatus('error')

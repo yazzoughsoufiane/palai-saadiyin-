@@ -2,16 +2,28 @@
 
 import { useState } from 'react'
 import { useI18n } from '@/lib/i18n'
+import emailjs from '@emailjs/browser'
+
+const PUBLIC_KEY   = 'ifObhtmllyV-ckei9'
+const SERVICE_ID   = 'service_hzi0ico'
+const TEMPLATE_ID  = 'template_u6s7mgy'
 
 export default function VisitForm() {
   const { t } = useI18n()
-  const [status, setStatus] = useState<'idle' | 'sending' | 'sent'>('idle')
+  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setStatus('sending')
-    await new Promise((r) => setTimeout(r, 900))
-    setStatus('sent')
+    const form = e.currentTarget
+
+    try {
+      await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form, { publicKey: PUBLIC_KEY })
+      setStatus('sent')
+    } catch (err) {
+      console.error(err)
+      setStatus('error')
+    }
   }
 
   if (status === 'sent') {
@@ -33,14 +45,13 @@ export default function VisitForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-7" noValidate>
-      {/* Name */}
       <div className="flex flex-col gap-1.5">
         <label htmlFor="visit-name" className="label-caps text-shadow/70">
           {t('Name', 'Nom')} <span className="text-madder" aria-hidden="true">*</span>
         </label>
         <input
           id="visit-name"
-          name="name"
+          name="from_name"
           type="text"
           required
           autoComplete="name"
@@ -49,14 +60,13 @@ export default function VisitForm() {
         />
       </div>
 
-      {/* Email */}
       <div className="flex flex-col gap-1.5">
         <label htmlFor="visit-email" className="label-caps text-shadow/70">
           {t('Email', 'E-mail')} <span className="text-madder" aria-hidden="true">*</span>
         </label>
         <input
           id="visit-email"
-          name="email"
+          name="from_email"
           type="email"
           required
           autoComplete="email"
@@ -65,10 +75,9 @@ export default function VisitForm() {
         />
       </div>
 
-      {/* Preferred dates */}
       <div className="flex flex-col gap-1.5">
         <label htmlFor="visit-dates" className="label-caps text-shadow/70">
-          {t('Preferred dates', 'Dates prÃ©fÃ©rÃ©es')}
+          {t('Preferred dates', 'Dates préférées')}
         </label>
         <input
           id="visit-dates"
@@ -79,21 +88,19 @@ export default function VisitForm() {
         />
       </div>
 
-      {/* Rug reference */}
       <div className="flex flex-col gap-1.5">
         <label htmlFor="visit-rug" className="label-caps text-shadow/70">
-          {t('Rug reference (optional)', 'RÃ©fÃ©rence tapis (optionnel)')}
+          {t('Rug reference (optional)', 'Référence tapis (optionnel)')}
         </label>
         <input
           id="visit-rug"
-          name="rug"
+          name="rug_ref"
           type="text"
           className="bg-transparent border-b border-ink/25 py-2.5 font-sans text-sm text-ink placeholder-shadow/40 focus:outline-none focus:border-ink/60 transition-colors"
-          placeholder={t('Inventory â„– or title', 'NÂ° d\'inventaire ou titre')}
+          placeholder={t('Inventory ? or title', 'N° inventaire ou titre')}
         />
       </div>
 
-      {/* Message */}
       <div className="flex flex-col gap-1.5">
         <label htmlFor="visit-message" className="label-caps text-shadow/70">
           {t('Message', 'Message')}
@@ -104,13 +111,18 @@ export default function VisitForm() {
           rows={4}
           className="bg-transparent border-b border-ink/25 py-2.5 font-sans text-sm text-ink placeholder-shadow/40 focus:outline-none focus:border-ink/60 transition-colors resize-none"
           placeholder={t(
-            'Tell us what brings you â€” a particular region, technique, or a specific pieceâ€¦',
-            'Dites-nous ce qui vous amÃ¨ne â€” une rÃ©gion, une technique, ou une piÃ¨ce particuliÃ¨reâ€¦',
+            'Tell us what brings you — a particular region, technique, or a specific piece…',
+            'Dites-nous ce qui vous amène…',
           )}
         />
       </div>
 
-      {/* Submit */}
+      {status === 'error' && (
+        <p className="text-madder text-sm text-center">
+          {t('Something went wrong. Please try again.', 'Une erreur est survenue. Veuillez réessayer.')}
+        </p>
+      )}
+
       <div className="pt-2">
         <button
           type="submit"
@@ -118,15 +130,15 @@ export default function VisitForm() {
           className="w-full py-4 border border-ink/30 font-sans text-[0.75rem] uppercase tracking-widest text-ink hover:bg-ink hover:text-bone transition-colors duration-300 disabled:opacity-50"
         >
           {status === 'sending'
-            ? t('Sendingâ€¦', 'Envoiâ€¦')
+            ? t('Sending…', 'Envoi…')
             : t('Send Enquiry', 'Envoyer la demande')}
         </button>
       </div>
 
       <p className="label-caps text-shadow/40 text-center leading-relaxed">
         {t(
-          'We respond within 48 hours Â· No automated replies',
-          'RÃ©ponse sous 48 heures Â· Aucune rÃ©ponse automatique',
+          'We respond within 48 hours · No automated replies',
+          'Réponse sous 48 heures · Aucune réponse automatique',
         )}
       </p>
     </form>

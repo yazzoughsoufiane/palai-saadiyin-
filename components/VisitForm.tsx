@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { useState } from 'react'
 import { useI18n } from '@/lib/i18n'
@@ -12,7 +12,7 @@ export default function VisitForm() {
   const { t } = useI18n()
   const [status, setStatus] = useState('idle')
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setStatus('sending')
     const form = e.currentTarget

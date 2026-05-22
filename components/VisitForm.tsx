@@ -1,37 +1,169 @@
-<div style="font-family: Georgia, serif; font-size: 15px; background-color: #f5f0eb; padding: 40px 20px;">
-<div style="max-width: 580px; margin: auto; background-color: #faf7f4; border: 1px solid #e0d8cf; padding: 40px;">
-<div style="text-align: center; margin-bottom: 32px;">
-<p style="font-family: Arial, sans-serif; letter-spacing: 4px; font-size: 11px; text-transform: uppercase; color: #8a7d6b; margin: 0;">C R A C</p>
-<p style="font-family: Arial, sans-serif; letter-spacing: 2px; font-size: 10px; text-transform: uppercase; color: #b0a090; margin: 4px 0 0 0;">Marrakech</p>
-</div>
-<h2 style="font-size: 22px; font-weight: normal; color: #2c2820; margin: 0 0 8px 0;">New Appointment Enquiry</h2>
-<p style="font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #8a7d6b; margin: 0 0 32px 0;">Private Viewing Request</p>
-<hr style="border: none; border-top: 1px solid #e0d8cf; margin: 0 0 28px 0;">
-<table style="width: 100%; border-collapse: collapse; font-size: 14px; color: #2c2820;">
-<tbody>
-<tr>
-<td style="padding: 10px 0; border-bottom: 1px solid #ece7e0; width: 38%; color: #8a7d6b; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; vertical-align: top;">Name</td>
-<td style="padding: 10px 0; border-bottom: 1px solid #ece7e0; color: #2c2820;">{{name}}</td>
-</tr>
-<tr>
-<td style="padding: 10px 0; border-bottom: 1px solid #ece7e0; color: #8a7d6b; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; vertical-align: top;">Email</td>
-<td style="padding: 10px 0; border-bottom: 1px solid #ece7e0; color: #2c2820;">{{email}}</td>
-</tr>
-<tr>
-<td style="padding: 10px 0; border-bottom: 1px solid #ece7e0; color: #8a7d6b; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; vertical-align: top;">Preferred Dates</td>
-<td style="padding: 10px 0; border-bottom: 1px solid #ece7e0; color: #2c2820;">{{preferred_dates}}</td>
-</tr>
-<tr>
-<td style="padding: 10px 0; border-bottom: 1px solid #ece7e0; color: #8a7d6b; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; vertical-align: top;">Rug Reference</td>
-<td style="padding: 10px 0; border-bottom: 1px solid #ece7e0; color: #2c2820;">{{rug_reference}}</td>
-</tr>
-<tr>
-<td style="padding: 10px 0; color: #8a7d6b; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; vertical-align: top;">Message</td>
-<td style="padding: 10px 0; color: #2c2820; line-height: 1.6;">{{message}}</td>
-</tr>
-</tbody>
-</table>
-<hr style="border: none; border-top: 1px solid #e0d8cf; margin: 28px 0;">
-<p style="font-size: 11px; color: #b0a090; text-align: center; letter-spacing: 1px; margin: 0;">CRAC &middot; Palais Saadiyin, Rue My Taib Kssour &middot; Marrakech Medina<br>Sat-Thu 09:00-19:00 &middot; Free by appointment</p>
-</div>
-</div>
+'use client'
+
+import type React from 'react'
+import { useState } from 'react'
+import { useI18n } from '@/lib/i18n'
+import emailjs from '@emailjs/browser'
+
+const PUBLIC_KEY = 'ifObhtmllyV-ckei9'
+const SERVICE_ID = 'service_0zwxue9'
+const TEMPLATE_ID = 'template_nxemj5l'
+
+export default function VisitForm() {
+  const { t } = useI18n()
+  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setStatus('sending')
+
+    try {
+      await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.currentTarget, PUBLIC_KEY)
+      setStatus('sent')
+      e.currentTarget.reset()
+    } catch (error) {
+      console.error('EmailJS Error:', error)
+      setStatus('error')
+    }
+  }
+
+  if (status === 'sent') {
+    return (
+      <div className="py-20 flex flex-col items-center text-center">
+        <div className="w-12 h-px bg-saffron mb-5" />
+
+        <p className="label-caps text-shadow/60 mb-3">
+          {t('Appointment Request Sent', 'Demande envoyee')}
+        </p>
+
+        <h3 className="font-serif text-[2rem] leading-tight font-light text-ink max-w-[520px]">
+          {t('Thank you for your enquiry.', 'Merci pour votre demande.')}
+        </h3>
+
+        <p className="mt-5 prose-body text-shadow max-w-[420px] leading-relaxed">
+          {t(
+            'Our team will contact you within 48 hours to arrange your private viewing.',
+            'Notre equipe vous contactera sous 48 heures pour organiser votre visite privee.'
+          )}
+        </p>
+      </div>
+    )
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-8" noValidate>
+      <div className="flex flex-col gap-2">
+        <label htmlFor="visit-name" className="label-caps text-shadow/70">
+          {t('Name', 'Nom')}
+          <span className="text-madder ml-1">*</span>
+        </label>
+
+        <input
+          id="visit-name"
+          name="name"
+          type="text"
+          required
+          autoComplete="name"
+          placeholder={t('Your full name', 'Votre nom complet')}
+          className="bg-transparent border-b border-ink/20 py-3 font-sans text-sm text-ink placeholder:text-shadow/40 focus:outline-none focus:border-ink/60 transition-colors duration-300"
+        />
+      </div>
+
+      <div className="flex flex-col gap-2">
+        <label htmlFor="visit-email" className="label-caps text-shadow/70">
+          {t('Email', 'E-mail')}
+          <span className="text-madder ml-1">*</span>
+        </label>
+
+        <input
+          id="visit-email"
+          name="email"
+          type="email"
+          required
+          autoComplete="email"
+          placeholder="your@email.com"
+          className="bg-transparent border-b border-ink/20 py-3 font-sans text-sm text-ink placeholder:text-shadow/40 focus:outline-none focus:border-ink/60 transition-colors duration-300"
+        />
+      </div>
+
+      <div className="flex flex-col gap-2">
+        <label htmlFor="visit-dates" className="label-caps text-shadow/70">
+          {t('Preferred Dates', 'Dates preferees')}
+        </label>
+
+        <input
+          id="visit-dates"
+          name="preferred_dates"
+          type="text"
+          placeholder={t('e.g. late March, flexible', 'ex. fin mars, flexible')}
+          className="bg-transparent border-b border-ink/20 py-3 font-sans text-sm text-ink placeholder:text-shadow/40 focus:outline-none focus:border-ink/60 transition-colors duration-300"
+        />
+      </div>
+
+      <div className="flex flex-col gap-2">
+        <label htmlFor="visit-rug" className="label-caps text-shadow/70">
+          {t('Rug Reference (optional)', 'Reference tapis (optionnel)')}
+        </label>
+
+        <input
+          id="visit-rug"
+          name="rug_reference"
+          type="text"
+          placeholder={t('Inventory number or title', 'Numero inventaire ou titre')}
+          className="bg-transparent border-b border-ink/20 py-3 font-sans text-sm text-ink placeholder:text-shadow/40 focus:outline-none focus:border-ink/60 transition-colors duration-300"
+        />
+      </div>
+
+      <div className="flex flex-col gap-2">
+        <label htmlFor="visit-message" className="label-caps text-shadow/70">
+          {t('Message', 'Message')}
+        </label>
+
+        <textarea
+          id="visit-message"
+          name="message"
+          rows={5}
+          placeholder={t(
+            'Tell us what brings you to CRAC...',
+            'Dites-nous ce qui vous amene chez CRAC...'
+          )}
+          className="bg-transparent border-b border-ink/20 py-3 font-sans text-sm text-ink placeholder:text-shadow/40 focus:outline-none focus:border-ink/60 transition-colors duration-300 resize-none"
+        />
+      </div>
+
+      {status === 'error' && (
+        <div className="border border-madder/20 bg-madder/5 px-5 py-4 text-center">
+          <p className="text-sm text-madder tracking-wide">
+            {t(
+              'Something went wrong. Please try again.',
+              'Une erreur est survenue. Veuillez reessayer.'
+            )}
+          </p>
+        </div>
+      )}
+
+      <div className="pt-4">
+        <button
+          type="submit"
+          disabled={status === 'sending'}
+          className="group relative w-full overflow-hidden border border-ink/25 py-4 transition-all duration-500 hover:bg-ink disabled:opacity-50"
+        >
+          <span className="relative z-10 font-sans text-[0.72rem] uppercase tracking-[0.28em] text-ink transition-colors duration-500 group-hover:text-bone">
+            {status === 'sending'
+              ? t('Sending...', 'Envoi...')
+              : t('Send Enquiry', 'Envoyer la demande')}
+          </span>
+        </button>
+      </div>
+
+      <div className="pt-1 text-center">
+        <p className="label-caps text-shadow/40 leading-relaxed">
+          {t(
+            'Private appointments · Response within 48 hours',
+            'Visites privees · Reponse sous 48 heures'
+          )}
+        </p>
+      </div>
+    </form>
+  )
+}

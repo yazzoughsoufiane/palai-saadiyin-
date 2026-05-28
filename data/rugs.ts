@@ -595,10 +595,10 @@ export const rugs: Rug[] = [
       'composition a sculptural, almost topographic quality. Classic hand-knotted fringes on both ends ' +
       'complete this quietly monumental piece.',
     curatorialNoteFr:
-      'Un grand Beni Ourain serein en laine ivoire naturelle non teinte, structuré autour d'une série ' +
-      'de lignes de contour angulaires concentriques qui rayonnent à partir d'une colonne centrale en ' +
-      'chevron. La technique de sculpture en relief crée un jeu d'ombres subtil sur le poil profond, ' +
-      'conférant à la composition une qualité sculpturale et presque topographique.',
+      "Un grand Beni Ourain serein en laine ivoire naturelle non teinte, structuré autour d'une série " +
+      "de lignes de contour angulaires concentriques qui rayonnent à partir d'une colonne centrale en " +
+      "chevron. La technique de sculpture en relief crée un jeu d'ombres subtil sur le poil profond, " +
+      "conférant à la composition une qualité sculpturale et presque topographique.",
     motifs: [
       'concentric angular contour',
       'chevron spine',
@@ -606,9 +606,9 @@ export const rugs: Rug[] = [
       'sculptural relief carving',
     ],
     images: {
-      primary: '/rugs/211211211.04.jpeg',
-      summerSide: '/rugs/ChatGPT Image May 25, 2026, 05_37_39 PM.png',
-      winterSide: '/rugs/211211211.04.jpeg',
+      primary: '/rugs/ps-2025-013-primary.jpg',
+      summerSide: '/rugs/ps-2025-013-summer.jpg',
+      winterSide: '/rugs/ps-2025-013-primary.jpg',
       details: [],
     },
     featured: false,

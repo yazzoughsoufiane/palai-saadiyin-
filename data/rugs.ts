@@ -573,4 +573,44 @@ export const rugs: Rug[] = [
     },
     featured: false,
   },
+
+  // ── 13 — Beni Ourain Ivory Geometric ────────────────────────────────────
+  {
+    slug: 'beni-ourain-ivoire-geometrique',
+    title: 'Beni Ourain Ivory — Geometric Contours',
+    titleFr: 'Beni Ourain Ivoire — Contours Géométriques',
+    region: 'Beni Ourain',
+    technique: 'knotted',
+    era: 'contemporary',
+    yearRange: 'c. 2020–2025',
+    materials: 'Live-sheep wool, natural undyed ivory fleece',
+    dimensions: { w: 250, h: 310, unit: 'cm' },
+    palette: ['ivory', 'warm-white', 'natural-grey'],
+    inventoryNumber: 'PS-2025-013',
+    oneOfOne: true,
+    curatorialNote:
+      'A serene large-format Beni Ourain in natural undyed ivory wool, structured around a series of ' +
+      'concentric angular contour lines that radiate outward from a central chevron spine. ' +
+      'The relief carving technique creates subtle shadow play across the deep pile, giving the ' +
+      'composition a sculptural, almost topographic quality. Classic hand-knotted fringes on both ends ' +
+      'complete this quietly monumental piece.',
+    curatorialNoteFr:
+      'Un grand Beni Ourain serein en laine ivoire naturelle non teinte, structuré autour d'une série ' +
+      'de lignes de contour angulaires concentriques qui rayonnent à partir d'une colonne centrale en ' +
+      'chevron. La technique de sculpture en relief crée un jeu d'ombres subtil sur le poil profond, ' +
+      'conférant à la composition une qualité sculpturale et presque topographique.',
+    motifs: [
+      'concentric angular contour',
+      'chevron spine',
+      'radial geometric band',
+      'sculptural relief carving',
+    ],
+    images: {
+      primary: '/rugs/211211211.04.jpeg',
+      summerSide: '/rugs/ChatGPT Image May 25, 2026, 05_37_39 PM.png',
+      winterSide: '/rugs/211211211.04.jpeg',
+      details: [],
+    },
+    featured: false,
+  },
 ]

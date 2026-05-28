@@ -606,9 +606,9 @@ export const rugs: Rug[] = [
       'sculptural relief carving',
     ],
     images: {
-      primary: '/rugs/ps-2025-013-primary.jpg.jpeg',
-      summerSide: '/rugs/ps-2025-013-summer.jpg.png',
-      winterSide: '/rugs/ps-2025-013-primary.jpg.jpeg',
+      primary: '/rugs/ps-2025-013-primary.jpg.png',
+      summerSide: '/rugs/ps-2025-013-summer.jpg.jpeg',
+      winterSide: '/rugs/ps-2025-013-primary.jpg.png',
       details: [],
     },
     featured: false,

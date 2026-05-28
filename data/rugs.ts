@@ -613,4 +613,45 @@ export const rugs: Rug[] = [
     },
     featured: false,
   },
+
+  // ── 14 — Beni Ourain Ivory Tree ──────────────────────────────────────────
+  {
+    slug: 'beni-ourain-ivoire-losanges',
+    title: 'Beni Ourain Ivory — Diamond Lattice',
+    titleFr: 'Beni Ourain Ivoire — Treillis de Losanges',
+    region: 'Beni Ourain',
+    technique: 'knotted',
+    era: 'contemporary',
+    yearRange: 'c. 2020–2025',
+    materials: 'Live-sheep wool, natural undyed ivory fleece, charcoal wool',
+    dimensions: { w: 250, h: 310, unit: 'cm' },
+    palette: ['ivory', 'warm-white', 'charcoal'],
+    inventoryNumber: 'PS-2025-014',
+    oneOfOne: true,
+    curatorialNote:
+      'A quintessential Beni Ourain in the classic diamond lattice tradition — the most iconic motif ' +
+      'of the Middle Atlas Berber weaving heritage. Against a vast field of natural undyed ivory wool, ' +
+      'a continuous diagonal grid of charcoal lines forms large open diamonds across the entire surface. ' +
+      'The deep, cloud-soft pile and the purity of the two-tone palette give this piece a timeless, ' +
+      'almost meditative presence. Decorative knotted fringes with a fine striped border on both ends.',
+    curatorialNoteFr:
+      "Un Beni Ourain quintessentiel dans la tradition classique du treillis de losanges — le motif le " +
+      "plus iconique du patrimoine de tissage berbère du Moyen Atlas. Sur un vaste champ de laine ivoire " +
+      "naturelle non teinte, un treillis diagonal continu de lignes charbon forme de grands losanges ouverts " +
+      "sur toute la surface. Le poil profond et doux comme un nuage et la pureté de la palette bicolore " +
+      "confèrent à cette pièce une présence intemporelle, presque méditative.",
+    motifs: [
+      'diamond lattice',
+      'diagonal grid',
+      'open lozenge field',
+      'striped fringe border',
+    ],
+    images: {
+      primary: '/rugs/ps-2025-014-primary.jpg',
+      summerSide: '/rugs/ps-2025-014-summer.jpg',
+      winterSide: '/rugs/ps-2025-014-primary.jpg',
+      details: [],
+    },
+    featured: false,
+  },
 ]

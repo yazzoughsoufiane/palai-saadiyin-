@@ -49,6 +49,47 @@ export default function HomePage() {
       {/* Origins strip */}
       <HomeOriginStrip origins={origins} />
 
+      {/* Worldwide delivery strip */}
+      <section className="border-t border-ink/10 bg-bone-dark/30">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-12 py-14 lg:py-16">
+          <div className="grid grid-cols-12 gap-6 items-center">
+            <div className="col-span-12 lg:col-span-4">
+              <p className="label-caps text-shadow/50 mb-2">Worldwide Delivery</p>
+              <h2 className="font-serif text-[1.75rem] font-light text-ink leading-tight">
+                We ship to any<br />
+                <span className="italic">country in the world.</span>
+              </h2>
+            </div>
+            <div className="col-span-12 lg:col-start-6 lg:col-span-7">
+              <p className="font-sans text-sm text-shadow leading-relaxed mb-6">
+                Every rug is carefully wrapped and dispatched from Marrakech. We work with trusted
+                international carriers to ensure your piece arrives safely, wherever you are.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                {[
+                  { name: 'DHL', desc: 'Express international' },
+                  { name: 'UPS', desc: 'Worldwide courier' },
+                  { name: 'Bus Freight', desc: 'Large format & Europe' },
+                ].map((carrier) => (
+                  <div
+                    key={carrier.name}
+                    className="border border-ink/15 px-5 py-3 flex flex-col gap-0.5"
+                  >
+                    <span className="font-sans text-[0.8rem] font-medium uppercase tracking-widest text-ink">
+                      {carrier.name}
+                    </span>
+                    <span className="label-caps text-shadow/50">{carrier.desc}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="mt-5 font-sans text-xs text-shadow/60 italic">
+                Mention your country when enquiring — we will include a shipping quote within 24 hours.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer prelude */}
       <section className="max-w-[1440px] mx-auto px-6 lg:px-12 py-20 lg:py-28 border-t border-ink/10">
         <div className="grid grid-cols-12 gap-6">

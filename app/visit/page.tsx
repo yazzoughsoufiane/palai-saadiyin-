@@ -4,7 +4,7 @@ import VisitForm from '@/components/VisitForm'
 export const metadata: Metadata = {
   title: 'Visit & Enquire',
   description:
-    'Visit Palais Saadiyin at 16 Rue My Taïb Kssour, Bab El Ksour, Medina, Marrakech. By appointment for private viewings.',
+    'Visit Palais Saadiyin at 16 Rue My Taïb Kssour, Bab El Ksour, Medina, Marrakech. By appointment for private viewings. Worldwide shipping via DHL and UPS.',
 }
 
 export default function VisitPage() {
@@ -77,12 +77,37 @@ export default function VisitPage() {
           </div>
 
           {/* Languages */}
-          <div>
+          <div className="mb-10">
             <p className="label-caps text-shadow/60 mb-4">Languages spoken</p>
             <div className="flex flex-wrap gap-3">
               {['Arabic', 'French', 'English', 'Spanish', 'Italian'].map((lang) => (
                 <span key={lang} className="label-caps border border-ink/15 px-2.5 py-1">
                   {lang}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Shipping */}
+          <div>
+            <p className="label-caps text-shadow/60 mb-4">Worldwide Shipping</p>
+            <div className="font-sans text-sm text-shadow leading-relaxed space-y-3">
+              <p className="text-ink font-medium">We ship to any country in the world.</p>
+              <p>
+                Every rug is carefully wrapped and shipped via{' '}
+                <span className="text-ink">DHL</span>,{' '}
+                <span className="text-ink">UPS</span>, or overland bus freight —
+                depending on destination and rug dimensions.
+              </p>
+              <p>
+                Mention your country in the enquiry form and we will provide
+                a shipping quote within 24 hours.
+              </p>
+            </div>
+            <div className="mt-4 flex flex-wrap gap-3">
+              {['DHL', 'UPS', 'Bus Freight'].map((carrier) => (
+                <span key={carrier} className="label-caps border border-ink/15 px-2.5 py-1">
+                  {carrier}
                 </span>
               ))}
             </div>

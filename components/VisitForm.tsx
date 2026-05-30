@@ -3,6 +3,11 @@
 import type React from 'react'
 import { useState } from 'react'
 import { useI18n } from '@/lib/i18n'
+import emailjs from '@emailjs/browser'
+
+const PUBLIC_KEY = 'ifObhtmllyV-ckei9'
+const SERVICE_ID = 'service_hzi0ico'
+const TEMPLATE_ID = 'template_nxemj5l'
 
 export default function VisitForm() {
   const { t } = useI18n()
@@ -15,25 +20,23 @@ export default function VisitForm() {
     e: React.FormEvent<HTMLFormElement>
   ) => {
     e.preventDefault()
+
     setStatus('sending')
 
     const form = e.currentTarget
-    const data = new FormData(form)
 
     try {
-      const res = await fetch('https://formspree.io/f/mvzynpbr', {
-        method: 'POST',
-        body: data,
-        headers: { Accept: 'application/json' },
-      })
+      await emailjs.sendForm(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        form,
+        PUBLIC_KEY
+      )
 
-      if (res.ok) {
-        form.reset()
-        setStatus('sent')
-      } else {
-        setStatus('error')
-      }
-    } catch {
+      form.reset()
+      setStatus('sent')
+    } catch (error) {
+      console.error('EmailJS Error:', error)
       setStatus('error')
     }
   }
@@ -44,11 +47,17 @@ export default function VisitForm() {
         <div className="w-12 h-px bg-saffron mb-5" />
 
         <p className="label-caps text-shadow/60 mb-3">
-          {t('Appointment Request Sent', 'Demande envoyee')}
+          {t(
+            'Appointment Request Sent',
+            'Demande envoyee'
+          )}
         </p>
 
         <h3 className="font-serif text-[2rem] leading-tight font-light text-ink max-w-[520px]">
-          {t('Thank you for your enquiry.', 'Merci pour votre demande.')}
+          {t(
+            'Thank you for your enquiry.',
+            'Merci pour votre demande.'
+          )}
         </h3>
 
         <p className="mt-5 prose-body text-shadow max-w-[420px] leading-relaxed">
@@ -62,28 +71,43 @@ export default function VisitForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-8" noValidate>
+    <form
+      onSubmit={handleSubmit}
+      className="space-y-8"
+      noValidate
+    >
       <div className="flex flex-col gap-2">
-        <label htmlFor="visit-name" className="label-caps text-shadow/70">
+        <label
+          htmlFor="visit-name"
+          className="label-caps text-shadow/70"
+        >
           {t('Name', 'Nom')}
           <span className="text-madder ml-1">*</span>
         </label>
+
         <input
           id="visit-name"
           name="name"
           type="text"
           required
           autoComplete="name"
-          placeholder={t('Your full name', 'Votre nom complet')}
+          placeholder={t(
+            'Your full name',
+            'Votre nom complet'
+          )}
           className="bg-transparent border-b border-ink/20 py-3 font-sans text-sm text-ink placeholder:text-shadow/40 focus:outline-none focus:border-ink/60 transition-colors duration-300"
         />
       </div>
 
       <div className="flex flex-col gap-2">
-        <label htmlFor="visit-email" className="label-caps text-shadow/70">
+        <label
+          htmlFor="visit-email"
+          className="label-caps text-shadow/70"
+        >
           {t('Email', 'E-mail')}
           <span className="text-madder ml-1">*</span>
         </label>
+
         <input
           id="visit-email"
           name="email"
@@ -96,48 +120,59 @@ export default function VisitForm() {
       </div>
 
       <div className="flex flex-col gap-2">
-        <label htmlFor="visit-country" className="label-caps text-shadow/70">
-          {t('Country', 'Pays')}
+        <label
+          htmlFor="visit-dates"
+          className="label-caps text-shadow/70"
+        >
+          {t(
+            'Preferred Dates',
+            'Dates preferees'
+          )}
         </label>
-        <input
-          id="visit-country"
-          name="country"
-          type="text"
-          placeholder={t('Your country', 'Votre pays')}
-          className="bg-transparent border-b border-ink/20 py-3 font-sans text-sm text-ink placeholder:text-shadow/40 focus:outline-none focus:border-ink/60 transition-colors duration-300"
-        />
-      </div>
 
-      <div className="flex flex-col gap-2">
-        <label htmlFor="visit-dates" className="label-caps text-shadow/70">
-          {t('Preferred Dates', 'Dates preferees')}
-        </label>
         <input
           id="visit-dates"
           name="preferred_dates"
           type="text"
-          placeholder={t('e.g. late March, flexible', 'ex. fin mars, flexible')}
+          placeholder={t(
+            'e.g. late March, flexible',
+            'ex. fin mars, flexible'
+          )}
           className="bg-transparent border-b border-ink/20 py-3 font-sans text-sm text-ink placeholder:text-shadow/40 focus:outline-none focus:border-ink/60 transition-colors duration-300"
         />
       </div>
 
       <div className="flex flex-col gap-2">
-        <label htmlFor="visit-rug" className="label-caps text-shadow/70">
-          {t('Rug Reference (optional)', 'Reference tapis (optionnel)')}
+        <label
+          htmlFor="visit-rug"
+          className="label-caps text-shadow/70"
+        >
+          {t(
+            'Rug Reference (optional)',
+            'Reference tapis (optionnel)'
+          )}
         </label>
+
         <input
           id="visit-rug"
           name="rug_reference"
           type="text"
-          placeholder={t('Inventory number or title', 'Numero inventaire ou titre')}
+          placeholder={t(
+            'Inventory number or title',
+            'Numero inventaire ou titre'
+          )}
           className="bg-transparent border-b border-ink/20 py-3 font-sans text-sm text-ink placeholder:text-shadow/40 focus:outline-none focus:border-ink/60 transition-colors duration-300"
         />
       </div>
 
       <div className="flex flex-col gap-2">
-        <label htmlFor="visit-message" className="label-caps text-shadow/70">
+        <label
+          htmlFor="visit-message"
+          className="label-caps text-shadow/70"
+        >
           {t('Message', 'Message')}
         </label>
+
         <textarea
           id="visit-message"
           name="message"
@@ -170,7 +205,10 @@ export default function VisitForm() {
           <span className="relative z-10 font-sans text-[0.72rem] uppercase tracking-[0.28em] text-ink transition-colors duration-500 group-hover:text-bone">
             {status === 'sending'
               ? t('Sending...', 'Envoi...')
-              : t('Send Enquiry', 'Envoyer la demande')}
+              : t(
+                  'Send Enquiry',
+                  'Envoyer la demande'
+                )}
           </span>
         </button>
       </div>

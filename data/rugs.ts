@@ -53,25 +53,6 @@ export function getFeaturedRugs(): Rug[] {
     .sort((a, b) => FEATURED_ORDER.indexOf(a.slug) - FEATURED_ORDER.indexOf(b.slug))
 }
 
-// Pricing — every piece sits within the house range; the exact figure
-// scales with surface area (the larger the rug, the higher the price).
-// Final price is confirmed on enquiry, since it depends on exact measurements.
-export const PRICE_MIN_USD = 1200
-export const PRICE_MAX_USD = 1700
-
-export function getPriceUSD(rug: Rug): number {
-  const area = (rug.dimensions.w * rug.dimensions.h) / 10000 // m²
-  const AREA_MIN = 4.3 // smallest piece in the collection (~m²)
-  const AREA_MAX = 24 // largest piece in the collection (~m²)
-  const t = Math.min(1, Math.max(0, (area - AREA_MIN) / (AREA_MAX - AREA_MIN)))
-  const raw = PRICE_MIN_USD + t * (PRICE_MAX_USD - PRICE_MIN_USD)
-  return Math.round(raw / 10) * 10
-}
-
-export function formatPriceUSD(rug: Rug): string {
-  return '$' + getPriceUSD(rug).toLocaleString('en-US')
-}
-
 export const ALL_REGIONS: Region[] = [
   'Boujad',
   'Azilal',

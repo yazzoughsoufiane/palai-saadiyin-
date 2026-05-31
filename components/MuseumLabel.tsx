@@ -1,4 +1,4 @@
-import { formatPriceUSD, type Rug } from '@/data/rugs'
+import type { Rug } from '@/data/rugs'
 
 interface MuseumLabelProps {
   rug: Rug
@@ -59,14 +59,6 @@ export default function MuseumLabel({ rug, locale = 'en' }: MuseumLabelProps) {
     {
       label: locale === 'fr' ? 'Édition' : 'Edition',
       value: locale === 'fr' ? 'Pièce unique' : 'One of one',
-    },
-    {
-      label: locale === 'fr' ? 'Prix' : 'Price',
-      value:
-        formatPriceUSD(rug) +
-        (locale === 'fr'
-          ? ' · prix final selon les dimensions exactes'
-          : ' · final price depends on exact measurements'),
     },
   ]
 

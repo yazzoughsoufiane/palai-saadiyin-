@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import { formatPriceUSD, type Rug } from '@/data/rugs'
+import type { Rug } from '@/data/rugs'
 import MuseumLabel from './MuseumLabel'
 import EnquireSheet from './EnquireSheet'
 import { useI18n } from '@/lib/i18n'
@@ -20,8 +20,8 @@ interface RugDetailPageProps {
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH || ''
 const WHATSAPP_NUMBER = '212669940551'
 
-function getWhatsAppUrl(rugTitle: string, inventoryNumber: string, price: string) {
-  const message = `Hi, I'm interested in the *${rugTitle}* (${inventoryNumber}), listed at ${price}. Could you please confirm the final price for its exact dimensions and tell me more?`
+function getWhatsAppUrl(rugTitle: string, inventoryNumber: string) {
+  const message = `Hi, I'm interested in the *${rugTitle}* (${inventoryNumber}). Could you please give me more information?`
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`
 }
 
@@ -239,7 +239,7 @@ export default function RugDetailPage({ rug, prev, next }: RugDetailPageProps) {
 
               {/* WhatsApp button */}
               <a
-                href={getWhatsAppUrl(title, rug.inventoryNumber, formatPriceUSD(rug))}
+                href={getWhatsAppUrl(title, rug.inventoryNumber)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-3.5 flex items-center justify-center gap-2.5 border border-[#25D366]/40 bg-[#25D366]/8 font-sans text-[0.75rem] uppercase tracking-widest text-ink hover:bg-[#25D366] hover:text-white hover:border-[#25D366] transition-colors duration-300"

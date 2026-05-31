@@ -11,7 +11,7 @@ const values = [
   {
     number: '02',
     title: 'Vegetable dyes',
-    body: 'No synthetic dye enters our collection. The palette is drawn entirely from madder root, indigo, saffron, pomegranate rind, walnut hull, and henna — mordanted and fixed using traditional Atlas methods. These colours deepen rather than fade; a rug from 1955 is not faded. It has become itself.',
+    body: 'Our palette is drawn almost entirely from madder root, indigo, saffron, pomegranate rind, walnut hull, and henna — mordanted and fixed using traditional Atlas methods. A few older pieces carry early synthetic colours from their own period, which we always note in their description. These natural colours deepen rather than fade; a rug from 1955 is not faded. It has become itself.',
   },
   {
     number: '03',

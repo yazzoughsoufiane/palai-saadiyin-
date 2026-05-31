@@ -24,11 +24,11 @@ export default function MaisonPage() {
         </div>
       </div>
 
-      {/* Hero image placeholder */}
+      {/* Hero image */}
       <div className="relative h-[50vw] min-h-[300px] max-h-[600px] overflow-hidden mb-20 bg-bone-dark">
         <Image
           src={`${BASE}/rugs/ps-hero-primary.jpg`}
-          alt="Interior of Cosyrac — stacked folded rugs against raw plaster walls."
+          alt="Folded rugs stacked at Cosyrac in the Marrakech Medina."
           fill
           className="object-cover"
           sizes="100vw"
@@ -57,7 +57,7 @@ export default function MaisonPage() {
               every major Moroccan weaving tradition — from the undyed ivory Beni Ourain of the
               northeastern Atlas to the saturated cardinal reds of Boujad, from the Azilal plateau&apos;s
               diary-like improvisation to the elemental rush mats of the Tuareg south. The guiding
-              principle is simple: every piece must be one of one, vegetable-dyed, reversible, and
+              principle is simple: every piece must be one of one, hand-woven, and
               worthy of the name artwork.
             </p>
           </div>
@@ -88,10 +88,10 @@ export default function MaisonPage() {
         <div className="col-span-12 lg:col-span-5">
           <div className="relative aspect-[4/5] bg-bone-dark overflow-hidden">
             <Image
-              src="/rugs/ps-2024-009-primary.svg"
-              alt="Detail of a hand-knotted pile — the knots visible at the selvage edge."
+              src={`${BASE}/rugs/ps-2025-002-detail-1.jpg`}
+              alt="A hand-knotted pile seen close — knots at the selvage edge."
               fill
-              className="object-cover grayscale"
+              className="object-cover"
               sizes="(max-width: 1024px) 100vw, 42vw"
             />
           </div>
@@ -99,19 +99,19 @@ export default function MaisonPage() {
         <div className="col-span-12 lg:col-start-7 lg:col-span-6 flex flex-col gap-4">
           <div className="relative aspect-video bg-bone-dark overflow-hidden">
             <Image
-              src="/rugs/ps-2024-012-primary.svg"
-              alt="Stacks of folded Boujad rugs in the Cosyrac storeroom."
+              src={`${BASE}/rugs/ps-2025-007-primary.jpg`}
+              alt="A Boujad rug from the collection — saturated madder and saffron field."
               fill
-              className="object-cover grayscale"
+              className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
           <div className="relative aspect-video bg-bone-dark overflow-hidden">
             <Image
-              src="/rugs/ps-2024-007-primary.svg"
-              alt="A Zemour kilim hung against the carved plaster arcade of the palais."
+              src={`${BASE}/rugs/ps-2025-008-primary.jpg`}
+              alt="A Zemour flatweave kilim from the collection."
               fill
-              className="object-cover grayscale"
+              className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>

@@ -6,7 +6,7 @@ import { rugs } from '@/data/rugs'
 export const metadata: Metadata = {
   title: 'Collection',
   description:
-    'Browse the Palais Saadiyin collection of Moroccan rugs — Berber, kilim, Boucherouite, and Tuareg. Filter by region, technique, and era.',
+    'Browse the Cosyrac collection of Moroccan rugs — Berber, kilim, Boucherouite, and Tuareg. Filter by region, technique, and era.',
 }
 
 export default function CollectionPage() {

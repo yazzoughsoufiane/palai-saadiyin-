@@ -16,9 +16,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!rug) return {}
   return {
     title: rug.title,
-    description: `${rug.region} rug, ${rug.yearRange}. ${rug.materials}. ${rug.inventoryNumber}. One of one. Palais Saadiyin, Marrakech.`,
+    description: `${rug.region} rug, ${rug.yearRange}. ${rug.materials}. ${rug.inventoryNumber}. One of one. Cosyrac, Marrakech.`,
     openGraph: {
-      title: `${rug.title} — Palais Saadiyin`,
+      title: `${rug.title} — Cosyrac`,
       description: rug.curatorialNote.slice(0, 200),
     },
   }

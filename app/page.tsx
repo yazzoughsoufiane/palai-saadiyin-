@@ -7,7 +7,7 @@ import { getFeaturedRugs } from '@/data/rugs'
 import { origins } from '@/data/origins'
 
 export const metadata: Metadata = {
-  title: 'CRAC — Cosy Rug Art Collection, Marrakech',
+  title: 'Cosyrac — Cosy Rug Art Collection, Marrakech',
   description:
     'Your trusted destination for authentic Moroccan rugs. Discover handwoven Berber, Arabic, and Saharan carpets with expert guidance on every purchase. 16 Rue My Taïb Kssour, Medina, Marrakech.',
 }
@@ -106,7 +106,7 @@ export default function HomePage() {
               Médina, Marrakech 40000, Maroc
             </p>
             <p className="font-sans text-sm text-shadow" lang="ar" dir="rtl">
-              ١٦ درب موسى طيب كصور · باب القصور · المدينة القديمة
+              ١٦ درب مولاي الطيب القصور · باب القصور · المدينة القديمة
             </p>
           </div>
         </div>

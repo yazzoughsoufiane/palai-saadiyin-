@@ -1,4 +1,4 @@
-// data/rugs.ts — Palais Saadiyin
+// data/rugs.ts — Cosyrac
 
 export type Region =
   | 'Boujad'
@@ -51,6 +51,25 @@ export function getFeaturedRugs(): Rug[] {
   return rugs
     .filter((r) => r.featured)
     .sort((a, b) => FEATURED_ORDER.indexOf(a.slug) - FEATURED_ORDER.indexOf(b.slug))
+}
+
+// Pricing — every piece sits within the house range; the exact figure
+// scales with surface area (the larger the rug, the higher the price).
+// Final price is confirmed on enquiry, since it depends on exact measurements.
+export const PRICE_MIN_USD = 1200
+export const PRICE_MAX_USD = 1700
+
+export function getPriceUSD(rug: Rug): number {
+  const area = (rug.dimensions.w * rug.dimensions.h) / 10000 // m²
+  const AREA_MIN = 4.3 // smallest piece in the collection (~m²)
+  const AREA_MAX = 24 // largest piece in the collection (~m²)
+  const t = Math.min(1, Math.max(0, (area - AREA_MIN) / (AREA_MAX - AREA_MIN)))
+  const raw = PRICE_MIN_USD + t * (PRICE_MAX_USD - PRICE_MIN_USD)
+  return Math.round(raw / 10) * 10
+}
+
+export function formatPriceUSD(rug: Rug): string {
+  return '$' + getPriceUSD(rug).toLocaleString('en-US')
 }
 
 export const ALL_REGIONS: Region[] = [
@@ -655,3 +674,18 @@ export const rugs: Rug[] = [
     featured: false,
   },
 ]
+
+// --- Image integrity: de-duplicate reversible faces -------------------------
+// A piece is only shown as "reversible / two faces" when it genuinely has a
+// distinct summer face AND a distinct winter face. Historically some entries
+// reused the primary image as the winter (or summer) side, which made the
+// detail-page toggle show the same photo twice. Here we blank any side image
+// that merely repeats another, so the UI hides the toggle unless the faces
+// are real and different.
+for (const r of rugs) {
+  const primary = r.images.primary
+  if (r.images.summerSide === primary) r.images.summerSide = ''
+  if (r.images.winterSide === primary || r.images.winterSide === r.images.summerSide) {
+    r.images.winterSide = ''
+  }
+}

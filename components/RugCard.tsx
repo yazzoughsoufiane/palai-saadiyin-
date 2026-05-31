@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { useRef } from 'react'
 import { motion, useMotionValue, useSpring, useReducedMotion } from 'framer-motion'
 import { useI18n } from '@/lib/i18n'
-import type { Rug } from '@/data/rugs'
+import { formatPriceUSD, type Rug } from '@/data/rugs'
 import RegionTag from './RegionTag'
 import { fadeRise } from '@/lib/motion'
 
@@ -90,6 +90,9 @@ export default function RugCard({ rug, priority = false, className = '' }: RugCa
               <span className="text-shadow/40 text-[0.625rem]">·</span>
               <span className="label-caps text-shadow/60">{rug.yearRange}</span>
             </div>
+            <p className="mt-1.5 font-sans text-[0.8125rem] text-ink/80">
+              {formatPriceUSD(rug)}
+            </p>
           </div>
           <span className="label-caps text-shadow/40 shrink-0 pt-0.5">{rug.inventoryNumber}</span>
         </div>

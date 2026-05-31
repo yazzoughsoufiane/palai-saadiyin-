@@ -37,7 +37,7 @@ export default function NotFound() {
 
         <div className="col-span-12 lg:col-start-10 lg:col-span-3 flex items-end pb-4">
           <p className="label-caps text-shadow/35 leading-relaxed">
-            Palais Saadiyin<br />
+            Cosyrac<br />
             16 Rue My Taïb Kssour<br />
             Marrakech, Médina
           </p>

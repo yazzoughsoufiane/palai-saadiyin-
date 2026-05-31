@@ -60,7 +60,7 @@ export default function SilentNav() {
           <Link
             href="/"
             className="flex items-center gap-2 no-print shrink-0"
-            aria-label="CRAC — home"
+            aria-label="Cosyrac — home"
           >
             <Image
               src={`${BASE}/rugs/ps-logo.png`}
@@ -77,7 +77,7 @@ export default function SilentNav() {
                   : 'text-[1.25rem] text-bone',
               )}
             >
-              CRAC
+              Cosyrac
             </span>
           </Link>
 
@@ -181,7 +181,7 @@ export default function SilentNav() {
               className="px-8 pb-12"
             >
               <p className="label-caps text-shadow/50">
-                {t('16 Rue My Taïb Kssour · Marrakech', '16 Rue My Taïb Kssour · Marrakech', '١٦ درب موسى طيب كصور · مراكش')}
+                {t('16 Rue My Taïb Kssour · Marrakech', '16 Rue My Taïb Kssour · Marrakech', '١٦ درب مولاي الطيب القصور · مراكش')}
               </p>
             </motion.div>
           </motion.div>

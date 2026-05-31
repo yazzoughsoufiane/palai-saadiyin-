@@ -6,7 +6,7 @@ import MaisonValues from '@/components/MaisonValues'
 export const metadata: Metadata = {
   title: 'La Maison',
   description:
-    'The story of Palais Saadiyin — a carpet house near Bab Laksour in the ancient Medina of Marrakech, run by Mohamed Soufyane.',
+    'The story of Cosyrac — a carpet house near Bab Laksour in the ancient Medina of Marrakech, run by Mohamed Soufyane.',
 }
 
 export default function MaisonPage() {
@@ -17,7 +17,7 @@ export default function MaisonPage() {
         <div className="col-span-12 lg:col-span-8">
           <p className="label-caps text-shadow/60 mb-3">La Maison · The House</p>
           <h1 className="font-serif text-headline font-light text-ink leading-tight">
-            Palais Saadiyin
+            Cosyrac
           </h1>
         </div>
       </div>
@@ -26,7 +26,7 @@ export default function MaisonPage() {
       <div className="relative h-[50vw] min-h-[300px] max-h-[600px] overflow-hidden mb-20 bg-bone-dark">
         <Image
           src="/palai-saadiyin-/rugs/ps-maison-hero.jpg"
-          alt="Interior of Palais Saadiyin — stacked folded rugs against raw plaster walls."
+          alt="Interior of Cosyrac — stacked folded rugs against raw plaster walls."
           fill
           className="object-cover"
           sizes="100vw"
@@ -44,7 +44,7 @@ export default function MaisonPage() {
 
           <div className="prose-body space-y-5 text-pretty">
             <p>
-              Palais Saadiyin occupies a former palace in the heart of the ancient Medina of Marrakech,
+              Cosyrac occupies a former palace in the heart of the ancient Medina of Marrakech,
               a few steps from Bab El Ksour — one of the oldest gates of the imperial city. The building
               dates to the Saadian period; its courtyard, with its cedar columns and carved stucco, has
               served many purposes over the centuries. Today it is a house of carpets.
@@ -71,7 +71,7 @@ export default function MaisonPage() {
             <footer className="mt-4">
               <cite className="label-caps text-shadow/70 not-italic">
                 Mohamed Soufyane<br />
-                Palais Saadiyin, Marrakech
+                Cosyrac, Marrakech
               </cite>
             </footer>
           </blockquote>
@@ -97,7 +97,7 @@ export default function MaisonPage() {
           <div className="relative aspect-video bg-bone-dark overflow-hidden">
             <Image
               src="/rugs/ps-2024-012-primary.svg"
-              alt="Stacks of folded Boujad rugs in the Palais Saadiyin storeroom."
+              alt="Stacks of folded Boujad rugs in the Cosyrac storeroom."
               fill
               className="object-cover grayscale"
               sizes="(max-width: 1024px) 100vw, 50vw"

@@ -16,7 +16,7 @@ export default function HomeHero() {
     <section
       ref={containerRef}
       className="relative h-screen min-h-[700px] overflow-hidden"
-      aria-label="Hero — CRAC"
+      aria-label="Hero — Cosyrac"
     >
       {/* Background with subtle parallax */}
       <motion.div
@@ -60,7 +60,7 @@ export default function HomeHero() {
               transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
               className="block font-bold"
             >
-              Cosy
+              Cosyrac
             </motion.span>
           </div>
           <div className="overflow-hidden">
@@ -70,7 +70,7 @@ export default function HomeHero() {
               transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1], delay: 0.48 }}
               className="block font-light italic text-[0.45em] tracking-[0.12em] mt-2"
             >
-              Rug Art Collection
+              Cosy Rug Art Collection
             </motion.span>
           </div>
         </h1>

@@ -178,8 +178,8 @@ export default function VisitForm() {
           name="message"
           rows={5}
           placeholder={t(
-            'Tell us what brings you to CRAC...',
-            'Dites-nous ce qui vous amene chez CRAC...'
+            'Tell us what brings you to Cosyrac...',
+            'Dites-nous ce qui vous amene chez Cosyrac...'
           )}
           className="bg-transparent border-b border-ink/20 py-3 font-sans text-sm text-ink placeholder:text-shadow/40 focus:outline-none focus:border-ink/60 transition-colors duration-300 resize-none"
         />

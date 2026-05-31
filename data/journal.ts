@@ -43,13 +43,13 @@ Il existe une phrase berbère que les chercheurs en histoire textile ont notée 
     slug: 'the-seasonal-carpet',
     title: 'The Seasonal Carpet',
     titleFr: 'Le tapis des saisons',
-    subtitle: 'Why every rug from Palais Saadiyin has a summer face and a winter face',
-    subtitleFr: 'Pourquoi chaque tapis du Palais Saadiyin a une face été et une face hiver',
+    subtitle: 'Why every rug from Cosyrac has a summer face and a winter face',
+    subtitleFr: 'Pourquoi chaque tapis du Cosyrac a une face été et une face hiver',
     date: '2024-01-20',
     readingTime: 6,
     body: `It is one of the most practical ideas in the history of textile craft, and one of the least known outside of Morocco: the reversible rug. Not a rug that merely has a serviceable reverse — most knotted rugs do — but a rug conceived from the beginning as having two faces, each complete, each considered, each suited to a different season and a different light.
 
-At Palais Saadiyin, every rug we acquire must meet this standard. The winter face is typically the pile face: dense, deep, warm underfoot, the colours saturated. The summer face is the foundation — the warp and weft structure that supports the pile — but it is not merely structural. In the best examples, the summer face is woven with a complementary palette and pattern that works as an independent composition.
+At Cosyrac, every rug we acquire must meet this standard. The winter face is typically the pile face: dense, deep, warm underfoot, the colours saturated. The summer face is the foundation — the warp and weft structure that supports the pile — but it is not merely structural. In the best examples, the summer face is woven with a complementary palette and pattern that works as an independent composition.
 
 The logic of this is atmospheric. Moroccan winters in the interior — in Marrakech, in the Atlas, in the valleys — can be cold enough to require wool underfoot and wool hanging from the walls. The dense pile of a knotted rug insulates a tile floor; it absorbs the cold radiating from the stone. In summer, the same floor needs to breathe. The flat, smooth foundation of the summer face draws less heat; it is easier to clean; it feels different to the foot. The rug is turned, and the room changes its character.
 
@@ -61,7 +61,7 @@ When you receive a rug from us, we ask you to live with both faces. Give the win
 
     bodyFr: `C'est l'une des idées les plus pratiques de l'histoire de l'artisanat textile, et l'une des moins connues en dehors du Maroc : le tapis réversible. Non pas un tapis qui a simplement un revers acceptable — la plupart des tapis noués en ont un — mais un tapis conçu dès le début comme ayant deux faces, chacune complète, chacune réfléchie, chacune adaptée à une saison différente et à une lumière différente.
 
-Au Palais Saadiyin, chaque tapis que nous acquérons doit répondre à ce critère. La face hiver est généralement la face à poil : dense, profonde, chaude sous les pieds, les couleurs saturées. La face été est la fondation — la structure chaîne et trame qui supporte le poil — mais elle n'est pas simplement structurelle. Dans les meilleurs exemples, la face été est tissée avec une palette et un motif complémentaires qui fonctionnent comme une composition indépendante.
+Au Cosyrac, chaque tapis que nous acquérons doit répondre à ce critère. La face hiver est généralement la face à poil : dense, profonde, chaude sous les pieds, les couleurs saturées. La face été est la fondation — la structure chaîne et trame qui supporte le poil — mais elle n'est pas simplement structurelle. Dans les meilleurs exemples, la face été est tissée avec une palette et un motif complémentaires qui fonctionnent comme une composition indépendante.
 
 La logique de cela est atmosphérique. Les hivers marocains dans l'intérieur — à Marrakech, dans l'Atlas, dans les vallées — peuvent être assez froids pour nécessiter de la laine sous les pieds et de la laine suspendue aux murs. En été, le même sol doit respirer. La face plate et lisse de la face été dégage moins de chaleur ; elle est plus facile à nettoyer ; elle est différente au toucher. Le tapis est retourné, et la pièce change de caractère.
 
@@ -91,7 +91,7 @@ And then there is henna (lawsonia inermis): an orange-red with a different quali
 
 The return to vegetable dyes in contemporary Moroccan weaving is not nostalgia. It is a recognition that these colours behave differently from synthetics — they age rather than fade, they interact with natural wool fibres in ways that synthetic dyes do not, and they carry a precision of palette that synthetic approximations have not matched.
 
-All rugs at Palais Saadiyin are dyed exclusively with vegetable and natural dyes. We verify this through handling — the hand of the wool, the behaviour of the colour in different lights, the particular quality of age that only natural dyes produce.`,
+All rugs at Cosyrac are dyed exclusively with vegetable and natural dyes. We verify this through handling — the hand of the wool, the behaviour of the colour in different lights, the particular quality of age that only natural dyes produce.`,
 
     bodyFr: `La tradition tinctoriale marocaine est l'une des plus anciennes et des plus sophistiquées au monde. Avant l'introduction des colorants synthétiques à l'aniline au milieu du XIXe siècle — qui se sont répandus au Maroc par le commerce européen dans les années 1870 — tous les textiles marocains étaient colorés avec des substances tirées du monde naturel : plantes, insectes, minéraux, écorce et racine. Le vocabulaire chromatique de l'Atlas est, au sens le plus littéral, une écologie.
 

@@ -4,7 +4,7 @@ import VisitForm from '@/components/VisitForm'
 export const metadata: Metadata = {
   title: 'Visit & Enquire',
   description:
-    'Visit Palais Saadiyin at 16 Rue My Taïb Kssour, Bab El Ksour, Medina, Marrakech. By appointment for private viewings. Worldwide shipping via DHL and UPS.',
+    'Visit Cosyrac at 16 Rue My Taïb Kssour, Bab El Ksour, Medina, Marrakech. By appointment for private viewings. Worldwide shipping via DHL and UPS.',
 }
 
 export default function VisitPage() {
@@ -28,7 +28,7 @@ export default function VisitPage() {
             <p className="label-caps text-shadow/60 mb-4">Address</p>
             <address className="not-italic">
               <p className="font-serif text-[1.5rem] font-light text-ink leading-snug mb-2">
-                Palais Saadiyin
+                Cosyrac
               </p>
               <p className="font-sans text-sm text-shadow leading-relaxed mb-1">
                 16 Rue My Taïb Kssour<br />
@@ -37,7 +37,7 @@ export default function VisitPage() {
                 Royaume du Maroc
               </p>
               <p className="font-sans text-sm text-shadow" lang="ar" dir="rtl">
-                ١٦ درب موسى طيب كصور · باب القصور<br />
+                ١٦ درب مولاي الطيب القصور · باب القصور<br />
                 المدينة القديمة · مراكش
               </p>
             </address>
@@ -136,7 +136,7 @@ function MedinalMap() {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
-      aria-label="Schematic map showing Palais Saadiyin near Bab El Ksour in the Marrakech Medina"
+      aria-label="Schematic map showing Cosyrac near Bab El Ksour in the Marrakech Medina"
       className="w-full h-auto"
     >
       <rect width="400" height="280" fill="#EDE7DC" />
@@ -163,7 +163,7 @@ function MedinalMap() {
         Rue My Taïb Kssour
       </text>
 
-      {/* Palais Saadiyin marker */}
+      {/* Cosyrac marker */}
       <circle cx="195" cy="143" r="6" fill="#C8843A" />
       <circle cx="195" cy="143" r="12" fill="#C8843A" opacity="0.2" />
       <text x="210" y="135" fontFamily="Georgia, serif" fontSize="10" fill="#1A1715" fontWeight="400">

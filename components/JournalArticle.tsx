@@ -97,7 +97,7 @@ export default function JournalArticle({ entry, prev, next }: JournalArticleProp
                 {t('From the archive', "De l'archive")}
               </p>
               <p className="text-xs text-shadow/55 leading-relaxed">
-                Palais Saadiyin<br />
+                Cosyrac<br />
                 Marrakech, Médina<br />
                 16 Rue My Taïb Kssour
               </p>

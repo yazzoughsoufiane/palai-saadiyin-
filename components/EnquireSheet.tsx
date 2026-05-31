@@ -73,7 +73,7 @@ export default function EnquireSheet({ isOpen, onClose, rugTitle, inventoryNumbe
             <div className="flex items-start justify-between px-8 pt-10 pb-6 border-b border-ink/10">
               <div>
                 <p className="label-caps text-shadow/60 mb-1">
-                  {t('Palais Saadiyin', 'Palais Saadiyin')}
+                  {t('Cosyrac', 'Cosyrac')}
                 </p>
                 <h2 className="font-serif text-[1.5rem] font-light text-ink">
                   {t('Enquire', 'S\'enquérir')}

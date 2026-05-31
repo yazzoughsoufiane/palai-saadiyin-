@@ -21,7 +21,7 @@ export default function SiteFooter() {
           <p className="label-caps text-shadow/60 mb-4">{t('Address', 'Adresse', 'العنوان')}</p>
           <address className="not-italic">
             <p className="font-serif text-[1.5rem] font-light text-ink leading-snug" lang="ar" dir="rtl">
-              قصر السعديين
+              كوزيراك
             </p>
             <p className="font-sans text-sm text-shadow mt-2 leading-relaxed">
               16 Rue My Taïb Kssour<br />
@@ -90,9 +90,9 @@ export default function SiteFooter() {
       <div className="border-t border-ink/10 px-6 lg:px-12 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 max-w-[1440px] mx-auto">
         <p className="label-caps text-shadow/50">
           {t(
-            '© Palais Saadiyin · All pieces are one of one',
-            '© Palais Saadiyin · Chaque pièce est unique',
-            '© قصر السعديين · كل قطعة فريدة',
+            '© Cosyrac · All pieces are one of one',
+            '© Cosyrac · Chaque pièce est unique',
+            '© كوزيراك · كل قطعة فريدة',
           )}
         </p>
         <p className="label-caps text-shadow/40">

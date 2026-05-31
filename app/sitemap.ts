@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import { rugs } from '@/data/rugs'
 import { journal } from '@/data/journal'
 
-const BASE = 'https://palaissaadiyin.com'
+const BASE = 'https://cosyrac.com'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [

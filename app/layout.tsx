@@ -23,19 +23,19 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: 'CRAC — Cosy Rug Art Collection, Marrakech',
-    template: '%s — CRAC',
+    default: 'Cosyrac — Cosy Rug Art Collection, Marrakech',
+    template: '%s — Cosyrac',
   },
   description:
     'Your trusted destination for authentic Moroccan rugs in Marrakech. Handwoven Berber, Arabic, and Saharan carpets with expert guidance on every purchase. 16 Rue My Taïb Kssour, Medina, Marrakech.',
   keywords: [
-    'Moroccan rugs', 'Berber carpets', 'Marrakech', 'CRAC', 'Cosy Rug Art Collection',
+    'Moroccan rugs', 'Berber carpets', 'Marrakech', 'Cosyrac', 'Cosy Rug Art Collection',
     'Beni Ourain', 'Azilal', 'Boujad', 'kilim', 'handwoven', 'vegetable dyes',
   ],
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    siteName: 'CRAC — Cosy Rug Art Collection',
+    siteName: 'Cosyrac — Cosy Rug Art Collection',
   },
   robots: {
     index: true,

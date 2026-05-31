@@ -5,7 +5,7 @@ import JournalList from '@/components/JournalList'
 export const metadata: Metadata = {
   title: 'Journal',
   description:
-    'Essays from Palais Saadiyin — on Berber visual language, the reversible carpet, vegetable dyes of the Atlas, and the art of weaving.',
+    'Essays from Cosyrac — on Berber visual language, the reversible carpet, vegetable dyes of the Atlas, and the art of weaving.',
 }
 
 export default function JournalPage() {

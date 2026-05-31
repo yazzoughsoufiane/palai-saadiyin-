@@ -218,9 +218,9 @@ export const origins: Origin[] = [
     region: 'Southern Morocco and Northern Sahara',
     tribe: 'Kel Ahaggar Tuareg, Saharan nomads',
     description:
-      'The Tuareg mats and textiles of the Moroccan Sahara and the Saharan borderlands represent the most elemental tradition in the Palais Saadiyin collection. Woven from rush, palm leaf, and esparto grass — materials of the desert itself — Tuareg tikit mats require no dye; their palette is dictated entirely by nature. The structure is a tight herringbone weave, and panels are joined with leather thong in a process that creates its own seam rhythm. These are objects of pure function that have achieved the status of art.',
+      'The Tuareg mats and textiles of the Moroccan Sahara and the Saharan borderlands represent the most elemental tradition in the Cosyrac collection. Woven from rush, palm leaf, and esparto grass — materials of the desert itself — Tuareg tikit mats require no dye; their palette is dictated entirely by nature. The structure is a tight herringbone weave, and panels are joined with leather thong in a process that creates its own seam rhythm. These are objects of pure function that have achieved the status of art.',
     descriptionFr:
-      'Les nattes et textiles touaregs du Sahara marocain et des marges sahariennes représentent la tradition la plus élémentaire de la collection du Palais Saadiyin. Tissés en jonc, feuilles de palmier et alfa — matériaux du désert lui-même — les nattes tikit touaregs ne nécessitent aucune teinture ; leur palette est entièrement dictée par la nature.',
+      'Les nattes et textiles touaregs du Sahara marocain et des marges sahariennes représentent la tradition la plus élémentaire de la collection du Cosyrac. Tissés en jonc, feuilles de palmier et alfa — matériaux du désert lui-même — les nattes tikit touaregs ne nécessitent aucune teinture ; leur palette est entièrement dictée par la nature.',
     visualSignature: 'Rush and palm herringbone weave, natural desert palette, leather binding seams, Tuareg tikit form.',
     visualSignatureFr: 'Armure de chevron en jonc et palmier, palette désertique naturelle, coutures en cuir, forme tikit touareg.',
     coordinates: { lat: 27.0, lng: -8.5 },

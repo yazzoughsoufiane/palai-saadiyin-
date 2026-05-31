@@ -5,6 +5,11 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { X } from 'lucide-react'
 import { sheetVariants } from '@/lib/motion'
 import { useI18n } from '@/lib/i18n'
+import emailjs from '@emailjs/browser'
+
+const PUBLIC_KEY = 'ifObhtmllyV-ckei9'
+const SERVICE_ID = 'service_hzi0ico'
+const TEMPLATE_ID = 'template_nxemj5l'
 
 interface EnquireSheetProps {
   isOpen: boolean
@@ -15,7 +20,7 @@ interface EnquireSheetProps {
 
 export default function EnquireSheet({ isOpen, onClose, rugTitle, inventoryNumber }: EnquireSheetProps) {
   const { t } = useI18n()
-  const [status, setStatus] = useState<'idle' | 'sending' | 'sent'>('idle')
+  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
   const firstInputRef = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
@@ -38,9 +43,16 @@ export default function EnquireSheet({ isOpen, onClose, rugTitle, inventoryNumbe
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    const form = e.currentTarget
     setStatus('sending')
-    await new Promise((r) => setTimeout(r, 900))
-    setStatus('sent')
+    try {
+      await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form, PUBLIC_KEY)
+      form.reset()
+      setStatus('sent')
+    } catch (error) {
+      console.error('EmailJS Error:', error)
+      setStatus('error')
+    }
   }
 
   return (
@@ -120,6 +132,13 @@ export default function EnquireSheet({ isOpen, onClose, rugTitle, inventoryNumbe
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="flex-1 flex flex-col px-8 py-8 gap-6" noValidate>
+                {/* Which piece this enquiry is about (sent in the email) */}
+                <input
+                  type="hidden"
+                  name="rug_reference"
+                  value={rugTitle ? `${rugTitle}${inventoryNumber ? ` (${inventoryNumber})` : ''}` : 'General enquiry'}
+                  readOnly
+                />
                 {/* Name */}
                 <div className="flex flex-col gap-1.5">
                   <label htmlFor="name" className="label-caps text-shadow/70">
@@ -182,6 +201,17 @@ export default function EnquireSheet({ isOpen, onClose, rugTitle, inventoryNumbe
                     {t('I would like to arrange a private viewing in Marrakech', 'Je souhaite organiser une visite privée à Marrakech')}
                   </label>
                 </div>
+
+                {status === 'error' && (
+                  <div className="border border-madder/20 bg-madder/5 px-4 py-3 text-center">
+                    <p className="text-sm text-madder tracking-wide">
+                      {t(
+                        'Something went wrong. Please try again, or message us on WhatsApp.',
+                        'Une erreur est survenue. Réessayez ou écrivez-nous sur WhatsApp.',
+                      )}
+                    </p>
+                  </div>
+                )}
 
                 <div className="pt-2">
                   <button

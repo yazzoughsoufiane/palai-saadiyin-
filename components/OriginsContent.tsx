@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useI18n } from '@/lib/i18n'
 import type { Origin } from '@/data/origins'
+import { rugs } from '@/data/rugs'
 
 interface OriginsContentProps {
   origins: Origin[]
@@ -10,6 +11,7 @@ interface OriginsContentProps {
 
 export default function OriginsContent({ origins }: OriginsContentProps) {
   const { locale, t } = useI18n()
+  const regionsInStock = new Set(rugs.map((r) => r.region as string))
 
   return (
     <div className="space-y-0">
@@ -68,13 +70,19 @@ export default function OriginsContent({ origins }: OriginsContentProps) {
 
           {/* Link */}
           <div className="col-span-12 lg:col-span-3 flex items-start justify-end">
-            <Link
-              href={`/collection?region=${encodeURIComponent(origin.collectionFilter)}`}
-              className="label-caps border-b border-shadow/25 pb-0.5 hover:text-ink hover:border-ink/50 transition-colors"
-              aria-label={`${t('View', 'Voir')} ${locale === 'fr' ? origin.nameFr : origin.name} ${t('rugs in the collection', 'tapis dans la collection')}`}
-            >
-              {t('View works', 'Voir les œuvres')} →
-            </Link>
+            {regionsInStock.has(origin.collectionFilter) ? (
+              <Link
+                href={`/collection?region=${encodeURIComponent(origin.collectionFilter)}`}
+                className="label-caps border-b border-shadow/25 pb-0.5 hover:text-ink hover:border-ink/50 transition-colors"
+                aria-label={`${t('View', 'Voir')} ${locale === 'fr' ? origin.nameFr : origin.name} ${t('rugs in the collection', 'tapis dans la collection')}`}
+              >
+                {t('View works', 'Voir les œuvres')} →
+              </Link>
+            ) : (
+              <p className="label-caps text-shadow/45 text-right lg:max-w-[10rem]">
+                {t('Not currently in the collection — enquire', 'Pas encore dans la collection — nous contacter')}
+              </p>
+            )}
           </div>
         </div>
       ))}

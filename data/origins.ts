@@ -233,4 +233,26 @@ export const origins: Origin[] = [
     </svg>`,
     collectionFilter: 'Sahara',
   },
+  {
+    id: 'rabat',
+    name: 'Rabat',
+    nameFr: 'Rabat',
+    nameAr: 'الرباط',
+    region: 'Rabat–Salé, Atlantic coast',
+    tribe: 'Urban manufactory tradition',
+    description:
+      'Unlike the tribal traditions of the Atlas, the Rabat carpet is an urban art, woven in the city workshops of Rabat and Salé since the eighteenth century. It is Morocco\'s most formal knotted carpet: a central medallion or a grid of cartouches set on a deep field, framed by several concentric borders. The vocabulary descends from Ottoman and Anatolian models and, in the finest pieces, from the paradise-garden layouts of the imperial workshops — polychrome floral medallions in madder, indigo, ivory and ochre, knotted with a fineness rarely seen in rural work. These are the carpets of city houses and palace reception rooms.',
+    descriptionFr:
+      'Contrairement aux traditions tribales de l\'Atlas, le tapis de Rabat est un art urbain, tissé dans les ateliers de Rabat et Salé depuis le XVIIIe siècle. C\'est le tapis noué le plus formel du Maroc : un médaillon central ou une grille de cartouches sur un champ profond, encadré de plusieurs bordures concentriques. Le vocabulaire descend des modèles ottomans et anatoliens et, dans les plus belles pièces, des jardins de paradis des ateliers impériaux — médaillons floraux polychromes en garance, indigo, ivoire et ocre, noués avec une finesse rare.',
+    visualSignature: 'Central medallion or cartouche grid, multiple concentric borders, polychrome floral field, fine urban knotting.',
+    visualSignatureFr: 'Médaillon central ou grille de cartouches, bordures concentriques multiples, champ floral polychrome, nouage urbain fin.',
+    coordinates: { lat: 34.02, lng: -6.83 },
+    svgMotif: `<svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="6" y="6" width="48" height="48" stroke="#2A3550" stroke-width="1" opacity="0.4"/>
+      <rect x="14" y="14" width="32" height="32" stroke="#8B3A2E" stroke-width="1" opacity="0.5"/>
+      <path d="M30 18 L42 30 L30 42 L18 30 Z" fill="#C8843A" opacity="0.7"/>
+      <circle cx="30" cy="30" r="5" fill="#2A3550" opacity="0.7"/>
+    </svg>`,
+    collectionFilter: 'Rabat',
+  },
 ]

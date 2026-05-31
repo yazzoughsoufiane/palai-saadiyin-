@@ -5,7 +5,7 @@ import OriginsContent from '@/components/OriginsContent'
 export const metadata: Metadata = {
   title: 'Origins',
   description:
-    "A map of the weaving regions Cosyrac sources from — Boujad, Azilal, Beni Ourain, Beni M'Guild, Taznakht, Mrirt, Zemour, High Atlas, Middle Atlas, Sahara.",
+    "A map of the weaving regions Cosyrac sources from — Boujad, Azilal, Beni Ourain, Beni M'Guild, Taznakht, Mrirt, Zemour, High Atlas, Middle Atlas, Sahara, Rabat.",
 }
 
 export default function OriginsPage() {
@@ -20,7 +20,7 @@ export default function OriginsPage() {
           </h1>
           <p className="prose-body max-w-prose text-pretty">
             Morocco&apos;s textile traditions are not monolithic. Each region produces a distinct visual grammar,
-            shaped by landscape, tribe, available dyes, and ceremony. What follows is a guide to the ten regions
+            shaped by landscape, tribe, available dyes, and ceremony. What follows is a guide to the eleven regions
             from which Cosyrac sources its collection.
           </p>
         </div>
@@ -89,6 +89,7 @@ function MoroccoSchematic() {
         { x: 440, y: 310, label: 'Taznakht', id: 'taznakht' },
         { x: 300, y: 380, label: 'Sahara', id: 'sahara' },
         { x: 360, y: 230, label: 'Middle Atlas', id: 'middle-atlas' },
+        { x: 215, y: 150, label: 'Rabat', id: 'rabat' },
       ].map((region) => (
         <g key={region.id}>
           <a href={`#${region.id}`}>

@@ -3,6 +3,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import MaisonValues from '@/components/MaisonValues'
 
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
+
 export const metadata: Metadata = {
   title: 'La Maison',
   description:
@@ -25,7 +27,7 @@ export default function MaisonPage() {
       {/* Hero image placeholder */}
       <div className="relative h-[50vw] min-h-[300px] max-h-[600px] overflow-hidden mb-20 bg-bone-dark">
         <Image
-          src="/palai-saadiyin-/rugs/ps-maison-hero.jpg"
+          src={`${BASE}/rugs/ps-hero-primary.jpg`}
           alt="Interior of Cosyrac — stacked folded rugs against raw plaster walls."
           fill
           className="object-cover"

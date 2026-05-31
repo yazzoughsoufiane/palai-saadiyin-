@@ -8,7 +8,7 @@ const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
 export const metadata: Metadata = {
   title: 'La Maison',
   description:
-    'The story of Cosyrac — a carpet house near Bab Laksour in the ancient Medina of Marrakech, run by Mohamed Soufyane.',
+    'The story of Cosyrac — a Marrakech rug house working with Palais Saadien, a former palace near Bab Laksour in the ancient Medina.',
 }
 
 export default function MaisonPage() {
@@ -46,18 +46,19 @@ export default function MaisonPage() {
 
           <div className="prose-body space-y-5 text-pretty">
             <p>
-              Cosyrac occupies a former palace in the heart of the ancient Medina of Marrakech,
-              a few steps from Bab El Ksour — one of the oldest gates of the imperial city. The building
-              dates to the Saadian period; its courtyard, with its cedar columns and carved stucco, has
-              served many purposes over the centuries. Today it is a house of carpets.
+              Cosyrac works with Palais Saadien, a former palace in the heart of the ancient
+              Medina of Marrakech, a few steps from Bab El Ksour — one of the oldest gates of the
+              imperial city. The building dates to the Saadian period; its courtyard, with its cedar
+              columns and carved stucco, has served many purposes over the centuries. Today it is a
+              house of carpets.
             </p>
             <p>
-              Mohamed Soufyane has run the house for decades, building a collection that spans every
-              major Moroccan weaving tradition — from the undyed ivory Beni Ourain of the northeastern
-              Atlas to the saturated cardinal reds of Boujad, from the Azilal plateau&apos;s diary-like
-              improvisation to the elemental rush mats of the Tuareg south. His guiding principle is
-              simple: every piece must be one of one, vegetable-dyed, reversible, and worthy of the
-              name artwork.
+              Cosyrac has worked with Palais Saadien for decades, drawing on a collection that spans
+              every major Moroccan weaving tradition — from the undyed ivory Beni Ourain of the
+              northeastern Atlas to the saturated cardinal reds of Boujad, from the Azilal plateau&apos;s
+              diary-like improvisation to the elemental rush mats of the Tuareg south. The guiding
+              principle is simple: every piece must be one of one, vegetable-dyed, reversible, and
+              worthy of the name artwork.
             </p>
           </div>
         </div>
@@ -72,8 +73,8 @@ export default function MaisonPage() {
             </p>
             <footer className="mt-4">
               <cite className="label-caps text-shadow/70 not-italic">
-                Mohamed Soufyane<br />
-                Cosyrac, Marrakech
+                Palais Saadien<br />
+                Marrakech
               </cite>
             </footer>
           </blockquote>

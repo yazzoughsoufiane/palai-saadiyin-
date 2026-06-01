@@ -58,7 +58,7 @@ export default function RugCard({ rug, priority = false, className = '' }: RugCa
       >
         {/* Image wrapper */}
         <motion.div
-          className="relative overflow-hidden bg-bone-dark"
+          className="relative overflow-hidden bg-bone-dark shadow-frame ring-1 ring-ink/[0.04] transition-shadow duration-700 ease-silk group-hover:shadow-frame-hover"
           style={{
             x: springX,
             y: springY,
@@ -70,13 +70,13 @@ export default function RugCard({ rug, priority = false, className = '' }: RugCa
             alt={`${title}. ${rug.region} rug, ${rug.yearRange}. ${rug.dimensions.w} × ${rug.dimensions.h} cm.`}
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="object-cover transition-transform duration-1000 ease-out group-hover:scale-[1.025]"
+            className="object-cover transition-transform duration-1000 ease-out group-hover:scale-[1.04]"
             priority={priority}
             placeholder="blur"
             blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iNjAwIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjYwMCIgZmlsbD0iI0U4RTBEMyIvPjwvc3ZnPg=="
           />
-          {/* Subtle overlay on hover */}
-          <div className="absolute inset-0 bg-ink/0 group-hover:bg-ink/5 transition-colors duration-700" />
+          {/* Soft warmth wash on hover */}
+          <div className="absolute inset-0 bg-gradient-to-t from-ink/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
         </motion.div>
 
         {/* Caption — floats in margin-like position */}
@@ -85,6 +85,7 @@ export default function RugCard({ rug, priority = false, className = '' }: RugCa
             <p className="font-serif text-[1.0625rem] font-light text-ink leading-tight truncate">
               {title}
             </p>
+            <span className="block h-px w-0 bg-saffron/70 mt-1 transition-all duration-500 ease-silk group-hover:w-8" />
             <div className="mt-1 flex items-center gap-2">
               <RegionTag region={rug.region} />
               <span className="text-shadow/40 text-[0.625rem]">·</span>

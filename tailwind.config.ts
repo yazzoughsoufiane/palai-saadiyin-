@@ -69,6 +69,12 @@ const config: Config = {
       transitionTimingFunction: {
         'gallery': 'cubic-bezier(0.25, 0.1, 0.25, 1)',
         'reveal': 'cubic-bezier(0.16, 1, 0.3, 1)',
+        'silk': 'cubic-bezier(0.22, 1, 0.36, 1)',
+      },
+      boxShadow: {
+        'frame': '0 1px 2px rgba(26,23,21,0.05), 0 10px 34px -14px rgba(26,23,21,0.22)',
+        'frame-hover': '0 2px 8px rgba(26,23,21,0.07), 0 30px 70px -20px rgba(26,23,21,0.34)',
+        'lift': '0 20px 50px -24px rgba(26,23,21,0.30)',
       },
       transitionDuration: {
         '800': '800ms',

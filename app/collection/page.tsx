@@ -23,7 +23,7 @@ export default function CollectionPage() {
           </div>
           <div className="col-span-12 lg:col-start-9 lg:col-span-4 flex items-end pb-2">
             <p className="font-sans text-sm text-shadow leading-relaxed">
-              {rugs.length} works · All one of one<br />
+              {rugs.length} works<br />
               Vegetable-dyed · Reversible
             </p>
           </div>

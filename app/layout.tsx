@@ -22,6 +22,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://cosyrac.com'),
   title: {
     default: 'Cosyrac — Cosy Rug Art Collection, Marrakech',
     template: '%s — Cosyrac',
@@ -36,6 +37,13 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: 'Cosyrac — Cosy Rug Art Collection',
+    images: [{ url: '/rugs/ps-hero-primary.jpg', width: 1200, height: 630, alt: 'Cosyrac — Cosy Rug Art Collection, Marrakech' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Cosyrac — Cosy Rug Art Collection, Marrakech',
+    description: 'Authentic handwoven Moroccan rugs, by appointment in the Marrakech Medina.',
+    images: ['/rugs/ps-hero-primary.jpg'],
   },
   robots: {
     index: true,

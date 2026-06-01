@@ -264,11 +264,11 @@ export const rugs: Rug[] = [
     featured: true,
   },
 
-  // ── 06 — Vintage High Atlas Berber ───────────────────────────────────────
+  // ── 06 — High Atlas Berber ───────────────────────────────────────
   {
     slug: 'high-atlas-bleu-ciel-minimaliste',
-    title: 'Vintage High Atlas Berber Carpet',
-    titleFr: `Tapis Berbère Vintage du Haut Atlas`,
+    title: 'High Atlas Berber Carpet',
+    titleFr: `Tapis Berbère du Haut Atlas`,
     region: 'High Atlas',
     technique: 'knotted',
     era: 'vintage',
@@ -279,7 +279,7 @@ export const rugs: Rug[] = [
     inventoryNumber: 'PS-2025-006',
     oneOfOne: true,
     curatorialNote:
-      'A rare vintage Berber carpet from the High Atlas combining three distinct weaving techniques. ' +
+      'A rare Berber carpet from the High Atlas combining three distinct weaving techniques. ' +
       'The vast open field of washed indigo-blue is streaked with ivory where natural sheep wool shows ' +
       'through the vegetable dye, creating an atmospheric, cloud-like ground. ' +
       'Three parallel vertical bands — each terminated at the top by a small serrated chevron mark — ' +
@@ -287,7 +287,7 @@ export const rugs: Rug[] = [
       'A narrow black-and-white zigzag border frames all four sides. ' +
       'The combination of three techniques in one piece makes this an exceptionally rare find.',
     curatorialNoteFr:
-      `Un rare tapis berbère vintage du Haut Atlas combinant trois techniques de tissage distinctes. ` +
+      `Un rare tapis berbère du Haut Atlas combinant trois techniques de tissage distinctes. ` +
       `Le vaste champ ouvert d'indigo bleu lavé est strié d'ivoire là où la laine naturelle transparaît ` +
       `à travers la teinture végétale, créant un fond atmosphérique comme un nuage. ` +
       `Trois bandes verticales parallèles traversent le champ comme des menhirs, anciens marqueurs ` +

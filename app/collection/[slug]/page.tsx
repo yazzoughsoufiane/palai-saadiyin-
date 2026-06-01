@@ -16,10 +16,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!rug) return {}
   return {
     title: rug.title,
-    description: `${rug.region} rug, ${rug.yearRange}. ${rug.materials}. ${rug.inventoryNumber}. One of one. Cosyrac, Marrakech.`,
+    description: `${rug.region} rug, ${rug.yearRange}. ${rug.materials}. ${rug.inventoryNumber}. Cosyrac, Marrakech.`,
     openGraph: {
       title: `${rug.title} — Cosyrac`,
       description: rug.curatorialNote.slice(0, 200),
+      images: [{ url: rug.images.primary, alt: `${rug.title}. ${rug.region} rug, ${rug.yearRange}.` }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${rug.title} — Cosyrac`,
+      description: rug.curatorialNote.slice(0, 200),
+      images: [rug.images.primary],
     },
   }
 }

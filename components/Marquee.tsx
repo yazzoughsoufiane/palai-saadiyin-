@@ -1,5 +1,5 @@
 const STRIP =
-  'زرابي · Berber · Kilim · Boucherouite · Azilal · Beni Ourain · Tuareg · Boujad · Taznakht · All one of one · Vegetable dyes · Reversible · Live-sheep wool · زرابي'
+  'زرابي · Berber · Kilim · Boucherouite · Azilal · Beni Ourain · Tuareg · Boujad · Taznakht · Vegetable dyes · Reversible · Live-sheep wool · زرابي'
 
 export default function Marquee() {
   return (

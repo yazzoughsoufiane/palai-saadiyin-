@@ -65,7 +65,6 @@ export default function CollectionGallery({ rugs }: CollectionGalleryProps) {
   ]
 
   const eras: Array<{ value: Era; en: string; fr: string }> = [
-    { value: 'vintage', en: 'Vintage', fr: 'Vintage' },
     { value: 'contemporary', en: 'Contemporary', fr: 'Contemporain' },
   ]
 

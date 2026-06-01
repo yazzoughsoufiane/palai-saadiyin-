@@ -12,7 +12,6 @@ const techniqueLabel: Record<string, { en: string; fr: string }> = {
 }
 
 const eraLabel: Record<string, { en: string; fr: string }> = {
-  vintage: { en: 'Vintage', fr: 'Vintage' },
   contemporary: { en: 'Contemporary', fr: 'Contemporain' },
 }
 
@@ -55,10 +54,6 @@ export default function MuseumLabel({ rug, locale = 'en' }: MuseumLabelProps) {
     {
       label: locale === 'fr' ? 'Inventaire №' : 'Inventory №',
       value: rug.inventoryNumber,
-    },
-    {
-      label: locale === 'fr' ? 'Édition' : 'Edition',
-      value: locale === 'fr' ? 'Pièce unique' : 'One of one',
     },
   ]
 

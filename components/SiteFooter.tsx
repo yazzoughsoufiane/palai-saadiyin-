@@ -90,7 +90,7 @@ export default function SiteFooter() {
       <div className="border-t border-ink/10 px-6 lg:px-12 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 max-w-[1440px] mx-auto">
         <p className="label-caps text-shadow/50">
           {t(
-            '© Cosyrac · All pieces are one of one',
+            '© Cosyrac',
             '© Cosyrac · Chaque pièce est unique',
             '© كوزيراك · كل قطعة فريدة',
           )}

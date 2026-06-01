@@ -57,7 +57,7 @@ export default function MaisonPage() {
               every major Moroccan weaving tradition — from the undyed ivory Beni Ourain of the
               northeastern Atlas to the saturated cardinal reds of Boujad, from the Azilal plateau&apos;s
               diary-like improvisation to the elemental rush mats of the Tuareg south. The guiding
-              principle is simple: every piece must be one of one, hand-woven, and
+              principle is simple: every piece must be hand-woven, and
               worthy of the name artwork.
             </p>
           </div>

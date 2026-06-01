@@ -18,25 +18,8 @@ const eraLabel: Record<string, { en: string; fr: string }> = {
 export default function MuseumLabel({ rug, locale = 'en' }: MuseumLabelProps) {
   const title = locale === 'fr' ? rug.titleFr : rug.title
   const technique = techniqueLabel[rug.technique]?.[locale === 'fr' ? 'fr' : 'en'] ?? rug.technique
-  const era = eraLabel[rug.era]?.[locale === 'fr' ? 'fr' : 'en'] ?? rug.era
 
   const rows: Array<{ label: string; value: string }> = [
-    {
-      label: locale === 'fr' ? 'Région' : 'Region',
-      value: rug.tribe ? `${rug.region} — ${rug.tribe}` : rug.region,
-    },
-    {
-      label: locale === 'fr' ? 'Datation' : 'Date',
-      value: rug.yearRange,
-    },
-    {
-      label: locale === 'fr' ? 'Technique' : 'Technique',
-      value: technique,
-    },
-    {
-      label: locale === 'fr' ? 'Ère' : 'Era',
-      value: era,
-    },
     {
       label: locale === 'fr' ? 'Matériaux' : 'Materials',
       value: rug.materials,

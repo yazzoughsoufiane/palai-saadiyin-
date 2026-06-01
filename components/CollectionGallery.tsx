@@ -4,7 +4,7 @@ import { useCallback, useMemo, useState } from 'react'
 import { useSearchParams, useRouter, usePathname } from 'next/navigation'
 import { SlidersHorizontal, X } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
-import type { Rug, Region, Technique, Era } from '@/data/rugs'
+import type { Rug, Region, Technique } from '@/data/rugs'
 import { ALL_REGIONS } from '@/data/rugs'
 import RugCard from './RugCard'
 import { useI18n } from '@/lib/i18n'
@@ -17,7 +17,6 @@ interface CollectionGalleryProps {
 type Filter = {
   region?: Region
   technique?: Technique
-  era?: Era
 }
 
 export default function CollectionGallery({ rugs }: CollectionGalleryProps) {
@@ -30,7 +29,6 @@ export default function CollectionGallery({ rugs }: CollectionGalleryProps) {
   const activeFilters: Filter = useMemo(() => ({
     region: (searchParams.get('region') as Region) || undefined,
     technique: (searchParams.get('technique') as Technique) || undefined,
-    era: (searchParams.get('era') as Era) || undefined,
   }), [searchParams])
 
   const setFilter = useCallback((key: keyof Filter, value: string | undefined) => {
@@ -51,7 +49,6 @@ export default function CollectionGallery({ rugs }: CollectionGalleryProps) {
     return rugs.filter((r) => {
       if (activeFilters.region && r.region !== activeFilters.region) return false
       if (activeFilters.technique && r.technique !== activeFilters.technique) return false
-      if (activeFilters.era && r.era !== activeFilters.era) return false
       return true
     })
   }, [rugs, activeFilters])
@@ -62,10 +59,6 @@ export default function CollectionGallery({ rugs }: CollectionGalleryProps) {
     { value: 'knotted', en: 'Hand-knotted', fr: 'Noué main' },
     { value: 'flatweave', en: 'Flatweave / Kilim', fr: 'Tissage plat' },
     { value: 'rag', en: 'Boucherouite', fr: 'Boucherouite' },
-  ]
-
-  const eras: Array<{ value: Era; en: string; fr: string }> = [
-    { value: 'contemporary', en: 'Contemporary', fr: 'Contemporain' },
   ]
 
   return (
@@ -81,9 +74,6 @@ export default function CollectionGallery({ rugs }: CollectionGalleryProps) {
               )}
               {activeFilters.technique && (
                 <FilterTag label={activeFilters.technique} onRemove={() => setFilter('technique', undefined)} />
-              )}
-              {activeFilters.era && (
-                <FilterTag label={activeFilters.era} onRemove={() => setFilter('era', undefined)} />
               )}
               <button
                 onClick={clearAll}
@@ -140,14 +130,6 @@ export default function CollectionGallery({ rugs }: CollectionGalleryProps) {
                   active={activeFilters.technique}
                   onSelect={(v) => setFilter('technique', v === activeFilters.technique ? undefined : v as Technique)}
                 />
-
-                {/* Era */}
-                <FilterGroup
-                  label={t('Era', 'Ère')}
-                  items={eras.map((e) => ({ value: e.value, label: t(e.en, e.fr) }))}
-                  active={activeFilters.era}
-                  onSelect={(v) => setFilter('era', v === activeFilters.era ? undefined : v as Era)}
-                />
               </div>
             </motion.aside>
           )}
@@ -167,7 +149,7 @@ export default function CollectionGallery({ rugs }: CollectionGalleryProps) {
           ) : (
             <AnimatePresence mode="wait">
               <motion.div
-                key={`${activeFilters.region ?? ''}-${activeFilters.technique ?? ''}-${activeFilters.era ?? ''}`}
+                key={`${activeFilters.region ?? ''}-${activeFilters.technique ?? ''}`}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}

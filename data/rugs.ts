@@ -14,7 +14,6 @@ export type Region =
   | 'Rabat'
 
 export type Technique = 'knotted' | 'flatweave' | 'rag'
-export type Era = 'vintage' | 'contemporary'
 
 export interface Rug {
   slug: string
@@ -23,7 +22,6 @@ export interface Rug {
   region: Region
   tribe?: string
   technique: Technique
-  era: Era
   yearRange: string
   materials: string
   dimensions: { w: number; h: number; unit: 'cm' }
@@ -90,7 +88,6 @@ export const rugs: Rug[] = [
     region: 'Taznakht',
     tribe: 'Tuareg',
     technique: 'flatweave',
-    era: 'vintage',
     yearRange: 'c. 1970–1985',
     materials: 'Hand-spun live-sheep wool, natural and vegetable dyes',
     dimensions: { w: 400, h: 600, unit: 'cm' },
@@ -139,7 +136,6 @@ export const rugs: Rug[] = [
     region: 'Taznakht',
     tribe: 'Nomadic',
     technique: 'knotted',
-    era: 'vintage',
     yearRange: 'c. 1965–1980',
     materials: 'Hand-spun live-sheep wool, natural and vegetable dyes',
     dimensions: { w: 400, h: 600, unit: 'cm' },
@@ -185,7 +181,6 @@ export const rugs: Rug[] = [
     titleFr: `Tapis Royal Arabesque à Médaillon`,
     region: 'Rabat',
     technique: 'knotted',
-    era: 'vintage',
     yearRange: 'c. 1960–1975',
     materials: 'Mercerised wool pile, cotton warp and weft, natural dyes',
     dimensions: { w: 300, h: 400, unit: 'cm' },
@@ -227,7 +222,6 @@ export const rugs: Rug[] = [
     titleFr: `Tapis Jardin Royal à Cartouches`,
     region: 'Rabat',
     technique: 'knotted',
-    era: 'vintage',
     yearRange: 'c. 1955–1970',
     materials: 'Wool pile on cotton foundation, natural and early synthetic dyes',
     dimensions: { w: 200, h: 290, unit: 'cm' },
@@ -271,7 +265,6 @@ export const rugs: Rug[] = [
     titleFr: `Tapis Berbère du Haut Atlas`,
     region: 'High Atlas',
     technique: 'knotted',
-    era: 'vintage',
     yearRange: 'c. 1960–1980',
     materials: 'Live-sheep wool pile, vegetable-indigo dye, cotton warp — three weaving techniques',
     dimensions: { w: 200, h: 300, unit: 'cm' },
@@ -315,7 +308,6 @@ export const rugs: Rug[] = [
     titleFr: `Tapis Fusion Arabe-Amazigh`,
     region: 'Boujad',
     technique: 'knotted',
-    era: 'contemporary',
     yearRange: 'c. 2015–2022',
     materials: 'Live-sheep wool pile, natural scarlet dye, cotton warp',
     dimensions: { w: 200, h: 300, unit: 'cm' },
@@ -363,7 +355,6 @@ export const rugs: Rug[] = [
     region: 'Zemour',
     tribe: 'Beni Zemmour',
     technique: 'flatweave',
-    era: 'vintage',
     yearRange: 'c. 1965–1980',
     materials: 'Hand-spun live-sheep wool, vegetable and natural dyes',
     dimensions: { w: 215, h: 400, unit: 'cm' },
@@ -407,7 +398,6 @@ export const rugs: Rug[] = [
     titleFr: `Azilal Abstrait Ivoire — Champ de Couleur`,
     region: 'Azilal',
     technique: 'knotted',
-    era: 'vintage',
     yearRange: 'c. 1975–1990',
     materials: 'Hand-spun live-sheep wool, natural and vegetable dyes',
     dimensions: { w: 250, h: 310, unit: 'cm' },
@@ -450,7 +440,6 @@ export const rugs: Rug[] = [
     titleFr: `Tapis Mrirt Vagues — Fréquences Terrestres`,
     region: 'Mrirt',
     technique: 'knotted',
-    era: 'vintage',
     yearRange: 'c. 1970–1985',
     materials: 'Hand-spun live-sheep wool, natural and vegetable dyes',
     dimensions: { w: 180, h: 240, unit: 'cm' },
@@ -491,7 +480,6 @@ export const rugs: Rug[] = [
     titleFr: `Tapis Encyclopédie Amazigh du Moyen Atlas`,
     region: 'Middle Atlas',
     technique: 'knotted',
-    era: 'vintage',
     yearRange: 'c. 1965–1980',
     materials: 'Hand-spun live-sheep wool, natural and vegetable dyes',
     dimensions: { w: 220, h: 290, unit: 'cm' },
@@ -538,7 +526,6 @@ export const rugs: Rug[] = [
     region: 'Zemour',
     tribe: 'Beni Zemmour',
     technique: 'flatweave',
-    era: 'vintage',
     yearRange: 'c. 1970–1985',
     materials: 'Hand-spun wool, natural undyed fleece, silver-grey and ivory tones',
     dimensions: { w: 200, h: 320, unit: 'cm' },
@@ -581,7 +568,6 @@ export const rugs: Rug[] = [
     titleFr: 'Beni Ourain Ivoire — Contours Géométriques',
     region: 'Beni Ourain',
     technique: 'knotted',
-    era: 'contemporary',
     yearRange: 'c. 2020–2025',
     materials: 'Live-sheep wool, natural undyed ivory fleece',
     dimensions: { w: 250, h: 310, unit: 'cm' },
@@ -621,7 +607,6 @@ export const rugs: Rug[] = [
     titleFr: 'Beni Ourain Ivoire — Treillis de Losanges',
     region: 'Beni Ourain',
     technique: 'knotted',
-    era: 'contemporary',
     yearRange: 'c. 2020–2025',
     materials: 'Live-sheep wool, natural undyed ivory fleece, charcoal wool',
     dimensions: { w: 250, h: 310, unit: 'cm' },

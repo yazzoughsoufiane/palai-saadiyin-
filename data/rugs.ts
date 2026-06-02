@@ -12,6 +12,9 @@ export type Region =
   | 'Middle Atlas'
   | 'Sahara'
   | 'Rabat'
+  | 'Ait Youssef'
+  | 'Ait Isaac'
+  | 'Ait Jaacob'
 
 export type Technique = 'knotted' | 'flatweave' | 'rag'
 
@@ -638,6 +641,286 @@ export const rugs: Rug[] = [
       details: [],
     },
     featured: false,
+  },
+
+  // ── 14 — Ait Youssef Diamond Lattice ──────────────────────────────────────
+  {
+    slug: 'ait-youssef-diamond-lattice',
+    title: 'Ait Youssef Diamond Lattice Carpet',
+    titleFr: 'Tapis à Treillis de Losanges Ait Youssef',
+    region: 'Middle Atlas',
+    tribe: 'Ait Youssef',
+    technique: 'knotted',
+    yearRange: 'c. 1955–1975',
+    materials: 'Wool pile on wool foundation, natural dyes — madder, saffron, walnut',
+    dimensions: { w: 150, h: 220, unit: 'cm' },
+    palette: ['#8B3A2E', '#C8843A', '#6B6B2E', '#F4EFE7', '#5C4A2E'],
+    inventoryNumber: 'CS-2026-014',
+    oneOfOne: true,
+    curatorialNote:
+      'A densely hand-knotted carpet from the Ait Youssef tribe of the Middle Atlas, woven on a warm madder-rose field. The central composition is a repeating diagonal diamond lattice enclosing small geometric star medallions in golden amber, olive green, and ivory — motifs drawn directly from the tattoo vocabulary of Ait Youssef women weavers. A lush outer border carries a continuous vine-and-flower motif in cream and deep rust. The wool, sheared from live sheep and spun by hand, retains a rich lanolin lustre. Vintage and one of a kind.',
+    curatorialNoteFr:
+      'Un tapis noué à la main de la tribu Ait Youssef du Moyen Atlas, tissé sur un fond madder-rosé. La composition centrale est un treillis diagonal de losanges enclosant de petits médaillons géométriques en ambre doré, vert olive et ivoire — des motifs tirés du vocabulaire des tatouages des femmes Ait Youssef. Une bordure extérieure luxuriante porte un motif de vigne en crème et rouille profonde. Laine de mouton vivant, filée à la main. Pièce unique.',
+    motifs: ['diamond lattice', 'star medallion', 'vine border', 'geometric rosette'],
+    images: {
+      primary: '/rugs/rug-14-editorial.png',
+      summerSide: '/rugs/rug-14-primary.jpg',
+      winterSide: '/rugs/rug-14-reverse.jpg',
+      details: [],
+    },
+    featured: true,
+  },
+
+  // ── 15 — Ait Isaac Garden Compartment ─────────────────────────────────────
+  {
+    slug: 'ait-isaac-garden-compartment',
+    title: 'Ait Isaac Garden Compartment Carpet',
+    titleFr: 'Tapis à Compartiments Jardin Ait Isaac',
+    region: 'Middle Atlas',
+    tribe: 'Ait Isaac',
+    technique: 'knotted',
+    yearRange: 'c. 1950–1970',
+    materials: 'Wool pile on wool foundation, natural dyes — plum berry, saffron, henna',
+    dimensions: { w: 155, h: 235, unit: 'cm' },
+    palette: ['#6B2D6B', '#7B9B6B', '#C8843A', '#F4EFE7', '#2A2A2A'],
+    inventoryNumber: 'CS-2026-015',
+    oneOfOne: true,
+    curatorialNote:
+      'An exceptional carpet from the Ait Isaac tribe, structured as a garden of compartments on a deep burgundy-plum ground. Each square section contains a distinct geometric flower or star — no two identical — drawn from the full symbolic repertoire of the tribe. A central elongated medallion anchors the composition. A visual diary of Amazigh tribal memory, woven one motif at a time from live-sheep wool and natural dyes. Vintage and one of a kind.',
+    curatorialNoteFr:
+      'Un tapis exceptionnel de la tribu Ait Isaac, structuré comme un jardin de compartiments sur un fond bordeaux-prune profond. Chaque section carrée contient une fleur ou une étoile géométrique distincte — aucune n\'est identique — tirée du répertoire symbolique complet de la tribu. Un médaillon central allongé ancre la composition. Un journal visuel de la mémoire tribale amazighe. Pièce unique.',
+    motifs: ['garden compartments', 'star flower', 'central medallion', 'geometric border'],
+    images: {
+      primary: '/rugs/rug-15-editorial.png',
+      summerSide: '/rugs/rug-15-primary.jpg',
+      winterSide: '/rugs/rug-15-reverse.jpg',
+      details: [],
+    },
+    featured: true,
+  },
+
+  // ── 16 — Ait Jaacob Quadrant Medallion ────────────────────────────────────
+  {
+    slug: 'ait-jaacob-quadrant-medallion',
+    title: 'Ait Jaacob Quadrant Medallion Carpet',
+    titleFr: 'Tapis à Médaillons en Quadrant Ait Jaacob',
+    region: 'Middle Atlas',
+    tribe: 'Ait Jaacob',
+    technique: 'knotted',
+    yearRange: 'c. 1960–1980',
+    materials: 'Wool pile on wool foundation, natural dyes — madder, saffron, indigo',
+    dimensions: { w: 165, h: 250, unit: 'cm' },
+    palette: ['#C84B2E', '#C8843A', '#2A2A2A', '#F4EFE7', '#8B3A2E'],
+    inventoryNumber: 'CS-2026-016',
+    oneOfOne: true,
+    curatorialNote:
+      'A vivid and commanding carpet from the Ait Jaacob tribe, woven in burnt orange and amber on a terra cotta ground. The field is organised into large rectangular panels, each containing bold octagonal medallion forms with geometric star interiors in deep charcoal and ivory. The outer border carries a dense animal and geometric frieze characteristic of the Ait Jaacob weaving tradition. The powerful palette speaks to the tribe\'s celebrated mastery of natural dye. Vintage and one of a kind.',
+    curatorialNoteFr:
+      'Un tapis éclatant de la tribu Ait Jaacob, tissé en orange brûlé et ambre sur fond terre cuite. Le champ est organisé en grands panneaux rectangulaires contenant chacun de boldies formes de médaillons octogonaux aux intérieurs en étoile géométrique. La bordure extérieure porte une frise animale dense. Pièce unique.',
+    motifs: ['octagonal medallion', 'quadrant panels', 'animal frieze', 'geometric star'],
+    images: {
+      primary: '/rugs/rug-16-editorial.png',
+      summerSide: '/rugs/rug-16-primary.jpg',
+      winterSide: '/rugs/rug-16-reverse.jpg',
+      details: [],
+    },
+    featured: false,
+  },
+
+  // ── 17 — Ait Youssef Twin Star ─────────────────────────────────────────────
+  {
+    slug: 'ait-youssef-twin-star',
+    title: 'Ait Youssef Twin Star Carpet',
+    titleFr: 'Tapis aux Deux Étoiles Ait Youssef',
+    region: 'Middle Atlas',
+    tribe: 'Ait Youssef',
+    technique: 'knotted',
+    yearRange: 'c. 1955–1975',
+    materials: 'Wool pile on wool foundation, natural dyes — madder, saffron, indigo',
+    dimensions: { w: 175, h: 280, unit: 'cm' },
+    palette: ['#D4785A', '#1A1715', '#D4B800', '#FFFFFF', '#C84B2E'],
+    inventoryNumber: 'CS-2026-017',
+    oneOfOne: true,
+    curatorialNote:
+      'A graphically arresting carpet from the Ait Youssef tribe, woven on a warm salmon-terracotta ground. Two large octagonal star medallions in jet black and bright saffron yellow dominate the central field, their bold geometry creating a striking visual rhythm that sits at the intersection of tribal tradition and pure abstract design. The wide ornamental border is filled with a dense grid of small geometric cartouches in black, yellow, and ivory. Vintage and one of a kind.',
+    curatorialNoteFr:
+      'Un tapis saisissant de la tribu Ait Youssef, tissé sur un fond saumon-terracotta. Deux grands médaillons étoilés octogonaux en noir de jais et jaune safran dominent le champ central, leur géométrie audacieuse se situant à l\'intersection de la tradition tribale et du design abstrait pur. Laine de mouton vivant, teintures naturelles. Pièce unique.',
+    motifs: ['twin star medallion', 'octagonal frame', 'cartouche border', 'geometric grid'],
+    images: {
+      primary: '/rugs/rug-17-editorial.png',
+      summerSide: '/rugs/rug-17-primary.jpg',
+      winterSide: '/rugs/rug-17-reverse.jpg',
+      details: [],
+    },
+    featured: true,
+  },
+
+  // ── 18 — Ait Isaac Middle Atlas Hanbel ────────────────────────────────────
+  {
+    slug: 'ait-isaac-hanbel-flatweave',
+    title: 'Ait Isaac Middle Atlas Hanbel',
+    titleFr: 'Hanbel du Moyen Atlas Ait Isaac',
+    region: 'Middle Atlas',
+    tribe: 'Ait Isaac',
+    technique: 'flatweave',
+    yearRange: 'c. 1950–1970',
+    materials: 'Flatwoven wool, natural dyes — walnut, saffron, madder',
+    dimensions: { w: 145, h: 295, unit: 'cm' },
+    palette: ['#5C3A1E', '#C8843A', '#F4EFE7', '#8B4513', '#2A2A2A'],
+    inventoryNumber: 'CS-2026-018',
+    oneOfOne: true,
+    curatorialNote:
+      'A rare flatweave hanbel from the Ait Isaac tribe of the Middle Atlas, woven in rich tobacco-brown and amber with horizontal registers of diamond and lozenge motifs in ivory and sienna. The top and bottom ends transition into broad flatwoven stripe bands — a structural feature unique to the flatweave tradition of the Atlas tribes. Lighter and more transportable than a knotted pile carpet, the hanbel was woven for both daily use and ceremonial occasions. Made entirely from live-sheep wool with natural plant dyes. Vintage and one of a kind.',
+    curatorialNoteFr:
+      'Un rare hanbel à tissage plat de la tribu Ait Isaac du Moyen Atlas, tissé en brun tabac riche et ambre avec des registres horizontaux de motifs en losange en ivoire et sienna. Les extrémités se transforment en larges bandes rayées — une caractéristique structurelle unique à la tradition du tissage plat des tribus de l\'Atlas. Laine de mouton vivant, teintures naturelles. Pièce unique.',
+    motifs: ['diamond register', 'lozenge motif', 'stripe band', 'flatweave selvedge'],
+    images: {
+      primary: '/rugs/rug-18-editorial.png',
+      summerSide: '/rugs/rug-18-primary.jpg',
+      winterSide: '/rugs/rug-18-reverse.jpg',
+      details: [],
+    },
+    featured: false,
+  },
+
+  // ── 19 — Ait Jaacob Diamond Field ─────────────────────────────────────────
+  {
+    slug: 'ait-jaacob-diamond-field',
+    title: 'Ait Jaacob Diamond Field Berber Carpet',
+    titleFr: 'Tapis Berbère à Champ de Losanges Ait Jaacob',
+    region: 'Middle Atlas',
+    tribe: 'Ait Jaacob',
+    technique: 'knotted',
+    yearRange: 'c. 1945–1965',
+    materials: 'Wool pile on wool foundation, natural dyes — rose madder, weld, indigo',
+    dimensions: { w: 200, h: 285, unit: 'cm' },
+    palette: ['#C49080', '#8B9B6B', '#7B9B9B', '#F4EFE7', '#8B3A2E'],
+    inventoryNumber: 'CS-2026-019',
+    oneOfOne: true,
+    curatorialNote:
+      'A large and soulful carpet from the Ait Jaacob tribe whose rose-terracotta ground carries the beautiful wear of decades of use. The full-field diamond lattice, rendered in dusty sage green, pale turquoise, and ivory, has developed a soft abrashed patina that no new piece can replicate. Each diamond contains nested geometric sub-motifs drawn from the protective symbol vocabulary of Ait Jaacob women weavers — signs worn on the face and hands for protection, identity, and blessing. Vintage and one of a kind.',
+    curatorialNoteFr:
+      'Un grand tapis plein d\'âme de la tribu Ait Jaacob, dont le fond rose-terracotta porte la belle usure de décennies d\'utilisation. Le treillis de losanges sur tout le champ, rendu en vert sauge poussiéreux, turquoise pâle et ivoire, a développé une patine abrashée douce qu\'aucune pièce neuve ne peut reproduire. Chaque losange contient des sous-motifs géométriques imbriqués. Pièce unique.',
+    motifs: ['full-field diamond lattice', 'nested geometric motif', 'protective symbol', 'abrashed field'],
+    images: {
+      primary: '/rugs/rug-19-editorial.png',
+      summerSide: '/rugs/rug-19-primary.jpg',
+      winterSide: '/rugs/rug-19-reverse.jpg',
+      details: [],
+    },
+    featured: false,
+  },
+
+  // ── 20 — Ait Youssef Aubergine Compartment ────────────────────────────────
+  {
+    slug: 'ait-youssef-aubergine-compartment',
+    title: 'Ait Youssef Aubergine Compartment Carpet',
+    titleFr: 'Tapis à Compartiments Aubergine Ait Youssef',
+    region: 'Middle Atlas',
+    tribe: 'Ait Youssef',
+    technique: 'knotted',
+    yearRange: 'c. 1955–1975',
+    materials: 'Wool pile on wool foundation, natural dyes — plum berry, saffron, walnut',
+    dimensions: { w: 170, h: 245, unit: 'cm' },
+    palette: ['#5C2D6B', '#F4EFE7', '#C8843A', '#6B4B2E', '#2A2A2A'],
+    inventoryNumber: 'CS-2026-020',
+    oneOfOne: true,
+    curatorialNote:
+      'A magnificent carpet from the Ait Youssef tribe in deep aubergine-purple, structured around a central prayer-niche medallion outlined in ivory and surrounded by a dense field of individual geometric compartments. Each compartment holds a distinct tribal symbol — crosses, eight-pointed stars, diamond formations — in ivory, saffron-orange, and warm brown. The outer border carries a precise geometric meander in black and ivory. Every motif in this piece corresponds to a protective symbol in the tattoo tradition of Amazigh women. Vintage and one of a kind.',
+    curatorialNoteFr:
+      'Un magnifique tapis de la tribu Ait Youssef en aubergine-violet profond, structuré autour d\'un médaillon central en forme de niche de prière entouré d\'un champ dense de compartiments géométriques individuels. Chaque compartiment renferme un symbole tribal distinct. La bordure extérieure porte un méandre géométrique précis. Pièce unique.',
+    motifs: ['prayer niche medallion', 'geometric compartments', 'eight-pointed star', 'meander border'],
+    images: {
+      primary: '/rugs/rug-20-editorial.png',
+      summerSide: '/rugs/rug-20-primary.jpg',
+      winterSide: '/rugs/rug-20-reverse.jpg',
+      details: [],
+    },
+    featured: false,
+  },
+
+  // ── 21 — Ait Isaac Cedar Grove Runner ─────────────────────────────────────
+  {
+    slug: 'ait-isaac-cedar-grove-runner',
+    title: 'Ait Isaac Cedar Grove Runner',
+    titleFr: 'Couloir à la Cédraie Ait Isaac',
+    region: 'Middle Atlas',
+    tribe: 'Ait Isaac',
+    technique: 'knotted',
+    yearRange: 'c. 1950–1970',
+    materials: 'Wool pile on wool foundation, natural dyes — madder, walnut hull',
+    dimensions: { w: 135, h: 320, unit: 'cm' },
+    palette: ['#8B2020', '#F4EFE7', '#2A2A2A', '#C8843A', '#8B3A2E'],
+    inventoryNumber: 'CS-2026-021',
+    oneOfOne: true,
+    curatorialNote:
+      'A long and visually hypnotic runner from the Ait Isaac tribe, woven on a deep crimson-madder ground and entirely covered in a repeating pattern of stylised cedar tree motifs in ivory and charcoal. The trees rise in tight rows across the full field — an ancient motif in Atlas weaving representing the cedar forests of the Middle Atlas, and the Amazigh ideas of growth, protection, and continuity. A bottom chevron band closes the composition with bold geometric energy. One of the most distinctive pieces in the collection. Vintage and one of a kind.',
+    curatorialNoteFr:
+      'Un long couloir hypnotisant de la tribu Ait Isaac, tissé sur un fond cramoisi-madder profond et entièrement recouvert d\'un motif répétitif d\'arbres de cèdre stylisés en ivoire et charbon. Les arbres s\'élèvent en rangées serrées — un motif ancien dans le tissage de l\'Atlas représentant les forêts de cèdres du Moyen Atlas. Pièce unique.',
+    motifs: ['cedar tree', 'repeating grove', 'chevron base', 'tightly packed field'],
+    images: {
+      primary: '/rugs/rug-21-editorial.png',
+      summerSide: '/rugs/rug-21-primary.jpg',
+      winterSide: '/rugs/rug-21-reverse.jpg',
+      details: [],
+    },
+    featured: false,
+  },
+
+  // ── 22 — Ait Jaacob Ruby Niche Ceremonial ─────────────────────────────────
+  {
+    slug: 'ait-jaacob-ruby-niche-ceremonial',
+    title: 'Ait Jaacob Ruby Niche Ceremonial Carpet',
+    titleFr: 'Tapis Cérémoniel à Niche Rubis Ait Jaacob',
+    region: 'Middle Atlas',
+    tribe: 'Ait Jaacob',
+    technique: 'knotted',
+    yearRange: 'c. 1945–1965',
+    materials: 'Wool pile on wool foundation, natural dyes — madder, pomegranate, henna',
+    dimensions: { w: 150, h: 290, unit: 'cm' },
+    palette: ['#8B1A1A', '#F4EFE7', '#C8843A', '#2A2A2A', '#4A8B8B'],
+    inventoryNumber: 'CS-2026-022',
+    oneOfOne: true,
+    curatorialNote:
+      'A deeply expressive ceremonial carpet from the Ait Jaacob tribe, woven in saturated ruby-crimson from live-sheep wool dyed with madder and pomegranate. The composition is built around a bold vertical axis of stacked ceremonial niche forms, each containing gestural sub-motifs — abstract shields, comb symbols, and protective talismanic marks — woven with the freedom and confidence of a master hand. The borders carry dense geometric marks in ivory and charcoal. The wild original fringes of teal, cream, and rust are untrimmed and entirely authentic. Vintage and one of a kind.',
+    curatorialNoteFr:
+      'Un tapis cérémoniel profondément expressif de la tribu Ait Jaacob, tissé en rouge rubis saturé à partir de laine de mouton vivant teinte à la garance et à la grenade. La composition est construite autour d\'un axe vertical audacieux de formes de niche cérémonielles empilées. Les franges originales sauvages en sarcelle, crème et rouille sont non taillées et entièrement authentiques. Pièce unique.',
+    motifs: ['stacked niche forms', 'ceremonial shield', 'comb symbol', 'talismanic mark'],
+    images: {
+      primary: '/rugs/rug-22-editorial.png',
+      summerSide: '/rugs/rug-22-primary.jpg',
+      winterSide: '/rugs/rug-22-reverse.jpg',
+      details: [],
+    },
+    featured: false,
+  },
+
+  // ── 23 — Ait Youssef Atlas Encyclopaedia ──────────────────────────────────
+  {
+    slug: 'ait-youssef-atlas-encyclopaedia',
+    title: 'Ait Youssef Atlas Encyclopaedia Carpet',
+    titleFr: 'Tapis Encyclopédie de l\'Atlas Ait Youssef',
+    region: 'Middle Atlas',
+    tribe: 'Ait Youssef',
+    technique: 'knotted',
+    yearRange: 'c. 1950–1970',
+    materials: 'Wool pile on wool foundation, natural dyes — madder, weld, indigo, walnut',
+    dimensions: { w: 185, h: 295, unit: 'cm' },
+    palette: ['#4A2010', '#C8843A', '#5C8B2E', '#F4EFE7', '#2A2A2A'],
+    inventoryNumber: 'CS-2026-023',
+    oneOfOne: true,
+    curatorialNote:
+      'The most complex piece in the collection — an extraordinary carpet from the Ait Youssef tribe that functions as a visual encyclopaedia of Amazigh geometric symbolism. The deep chocolate-brown field is covered in a dense all-over composition of diverse tribal motifs — eight-pointed stars, diamond lozenges, comb forms, cross-hatching, zigzag bands — in saffron-orange, apple green, ivory, sky blue, and dark charcoal. No two rows are alike. A large white starburst medallion anchors the central composition. Woven from live-sheep wool with natural plant dyes. Vintage and one of a kind.',
+    curatorialNoteFr:
+      'La pièce la plus complexe de la collection — un tapis extraordinaire de la tribu Ait Youssef qui fonctionne comme une encyclopédie visuelle du symbolisme géométrique amazigh. Le champ brun chocolat profond est recouvert d\'une composition dense de motifs tribaux divers — étoiles à huit branches, losanges, formes en peigne, hachures croisées, bandes en zigzag — en orange safran, vert pomme, ivoire, bleu ciel et charbon. Aucune rangée n\'est identique. Pièce unique.',
+    motifs: ['all-over symbolic field', 'eight-pointed star', 'diamond lozenge', 'comb motif', 'starburst medallion'],
+    images: {
+      primary: '/rugs/rug-23-editorial.png',
+      summerSide: '/rugs/rug-23-primary.jpg',
+      winterSide: '/rugs/rug-23-reverse.jpg',
+      details: [],
+    },
+    featured: true,
   },
 ]
 

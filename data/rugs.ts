@@ -692,8 +692,8 @@ export const rugs: Rug[] = [
     motifs: ['garden compartments', 'star flower', 'central medallion', 'geometric border'],
     images: {
       primary: '/rugs/rug-15-editorial.png',
-      summerSide: '/rugs/rug-15-primary.jpg',
-      winterSide: '/rugs/rug-15-reverse.jpg',
+      summerSide: '/rugs/rug-15-primary.png',
+      winterSide: '/rugs/rug-15-reverse.png',
       details: [],
     },
     featured: true,

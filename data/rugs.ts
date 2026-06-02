@@ -894,34 +894,6 @@ export const rugs: Rug[] = [
     },
     featured: false,
   },
-
-  // ── 23 — Ait Youssef Atlas Encyclopaedia ──────────────────────────────────
-  {
-    slug: 'ait-youssef-atlas-encyclopaedia',
-    title: 'Ait Youssef Atlas Encyclopaedia Carpet',
-    titleFr: 'Tapis Encyclopédie de l\'Atlas Ait Youssef',
-    region: 'Middle Atlas',
-    tribe: 'Ait Youssef',
-    technique: 'knotted',
-    yearRange: 'c. 1950–1970',
-    materials: 'Wool pile on wool foundation, natural dyes — madder, weld, indigo, walnut',
-    dimensions: { w: 185, h: 295, unit: 'cm' },
-    palette: ['#4A2010', '#C8843A', '#5C8B2E', '#F4EFE7', '#2A2A2A'],
-    inventoryNumber: 'CS-2026-023',
-    oneOfOne: true,
-    curatorialNote:
-      'The most complex piece in the collection — an extraordinary carpet from the Ait Youssef tribe that functions as a visual encyclopaedia of Amazigh geometric symbolism. The deep chocolate-brown field is covered in a dense all-over composition of diverse tribal motifs — eight-pointed stars, diamond lozenges, comb forms, cross-hatching, zigzag bands — in saffron-orange, apple green, ivory, sky blue, and dark charcoal. No two rows are alike. A large white starburst medallion anchors the central composition. Woven from live-sheep wool with natural plant dyes. Vintage and one of a kind.',
-    curatorialNoteFr:
-      'La pièce la plus complexe de la collection — un tapis extraordinaire de la tribu Ait Youssef qui fonctionne comme une encyclopédie visuelle du symbolisme géométrique amazigh. Le champ brun chocolat profond est recouvert d\'une composition dense de motifs tribaux divers — étoiles à huit branches, losanges, formes en peigne, hachures croisées, bandes en zigzag — en orange safran, vert pomme, ivoire, bleu ciel et charbon. Aucune rangée n\'est identique. Pièce unique.',
-    motifs: ['all-over symbolic field', 'eight-pointed star', 'diamond lozenge', 'comb motif', 'starburst medallion'],
-    images: {
-      primary: '/rugs/rug-23-editorial.png',
-      summerSide: '/rugs/rug-23-primary.jpg',
-      winterSide: '/rugs/rug-23-reverse.jpg',
-      details: [],
-    },
-    featured: true,
-  },
 ]
 
 // --- Image integrity: de-duplicate reversible faces -------------------------

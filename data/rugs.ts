@@ -387,7 +387,7 @@ export const rugs: Rug[] = [
     ],
     images: {
       primary: '/rugs/ps-2025-008-primary.jpg',
-      summerSide: '/rugs/WhatsApp Image 2026-05-17 at 07.03.04.jpeg',
+      summerSide: '/rugs/ps-2025-008-primary.jpg',
       winterSide: '/rugs/ps-2025-008-primary.jpg',
       details: [],
     },
@@ -595,9 +595,9 @@ export const rugs: Rug[] = [
       'sculptural relief carving',
     ],
     images: {
-      primary: '/rugs/ps-2025-013-primary.jpg.png',
-      summerSide: '/rugs/ps-2025-013-summer.jpg.jpeg',
-      winterSide: '/rugs/ps-2025-013-primary.jpg.png',
+      primary: '/rugs/ps-2025-013-primary.png',
+      summerSide: '/rugs/ps-2025-013-summer.jpg',
+      winterSide: '/rugs/ps-2025-013-primary.png',
       details: [],
     },
     featured: false,

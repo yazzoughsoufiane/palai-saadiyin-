@@ -12,7 +12,7 @@ export type Region =
   | 'Middle Atlas'
   | 'Sahara'
   | 'Rabat'
-  | 'Ait Youssef'
+  | 'Aït Youssi'
   | 'Ait Isaac'
   | 'Ait Jaacob'
 
@@ -649,7 +649,7 @@ export const rugs: Rug[] = [
     title: 'Aït Youssi',
     titleFr: 'Aït Youssi',
     region: 'Middle Atlas',
-    tribe: 'Ait Youssef',
+    tribe: 'Aït Youssi',
     technique: 'knotted',
     yearRange: 'c. 1955–1975',
     materials: 'Wool pile on wool foundation, natural dyes — madder, saffron, walnut',
@@ -658,9 +658,9 @@ export const rugs: Rug[] = [
     inventoryNumber: 'CS-2026-014',
     oneOfOne: true,
     curatorialNote:
-      'A densely hand-knotted carpet from the Ait Youssef tribe of the Middle Atlas, woven on a warm madder-rose field. The central composition is a repeating diagonal diamond lattice enclosing small geometric star medallions in golden amber, olive green, and ivory — motifs drawn directly from the tattoo vocabulary of Ait Youssef women weavers. A lush outer border carries a continuous vine-and-flower motif in cream and deep rust. The wool, sheared from live sheep and spun by hand, retains a rich lanolin lustre. Vintage and one of a kind.',
+      'A densely hand-knotted carpet from the Aït Youssi tribe of the Middle Atlas, woven on a warm madder-rose field. The central composition is a repeating diagonal diamond lattice enclosing small geometric star medallions in golden amber, olive green, and ivory — motifs drawn directly from the tattoo vocabulary of Aït Youssi women weavers. A lush outer border carries a continuous vine-and-flower motif in cream and deep rust. The wool, sheared from live sheep and spun by hand, retains a rich lanolin lustre. Vintage and one of a kind.',
     curatorialNoteFr:
-      'Un tapis noué à la main de la tribu Ait Youssef du Moyen Atlas, tissé sur un fond madder-rosé. La composition centrale est un treillis diagonal de losanges enclosant de petits médaillons géométriques en ambre doré, vert olive et ivoire — des motifs tirés du vocabulaire des tatouages des femmes Ait Youssef. Une bordure extérieure luxuriante porte un motif de vigne en crème et rouille profonde. Laine de mouton vivant, filée à la main. Pièce unique.',
+      'Un tapis noué à la main de la tribu Aït Youssi du Moyen Atlas, tissé sur un fond madder-rosé. La composition centrale est un treillis diagonal de losanges enclosant de petits médaillons géométriques en ambre doré, vert olive et ivoire — des motifs tirés du vocabulaire des tatouages des femmes Aït Youssi. Une bordure extérieure luxuriante porte un motif de vigne en crème et rouille profonde. Laine de mouton vivant, filée à la main. Pièce unique.',
     motifs: ['diamond lattice', 'star medallion', 'vine border', 'geometric rosette'],
     images: {
       primary: '/rugs/rug-14-editorial.png',
@@ -727,13 +727,13 @@ export const rugs: Rug[] = [
     featured: false,
   },
 
-  // ── 17 — Ait Youssef Twin Star ─────────────────────────────────────────────
+  // ── 17 — Aït Youssi Twin Star ─────────────────────────────────────────────
   {
-    slug: 'ait-youssef-twin-star',
-    title: 'Ait Youssef Twin Star Carpet',
-    titleFr: 'Tapis aux Deux Étoiles Ait Youssef',
+    slug: 'ait-youssi-twin-star',
+    title: 'Aït Youssi — Twin Star',
+    titleFr: 'Aït Youssi — Deux Étoiles',
     region: 'Middle Atlas',
-    tribe: 'Ait Youssef',
+    tribe: 'Aït Youssi',
     technique: 'knotted',
     yearRange: 'c. 1955–1975',
     materials: 'Wool pile on wool foundation, natural dyes — madder, saffron, indigo',
@@ -742,9 +742,9 @@ export const rugs: Rug[] = [
     inventoryNumber: 'CS-2026-017',
     oneOfOne: true,
     curatorialNote:
-      'A graphically arresting carpet from the Ait Youssef tribe, woven on a warm salmon-terracotta ground. Two large octagonal star medallions in jet black and bright saffron yellow dominate the central field, their bold geometry creating a striking visual rhythm that sits at the intersection of tribal tradition and pure abstract design. The wide ornamental border is filled with a dense grid of small geometric cartouches in black, yellow, and ivory. Vintage and one of a kind.',
+      'A graphically arresting carpet from the Aït Youssi tribe, woven on a warm salmon-terracotta ground. Two large octagonal star medallions in jet black and bright saffron yellow dominate the central field, their bold geometry creating a striking visual rhythm that sits at the intersection of tribal tradition and pure abstract design. The wide ornamental border is filled with a dense grid of small geometric cartouches in black, yellow, and ivory. Vintage and one of a kind.',
     curatorialNoteFr:
-      'Un tapis saisissant de la tribu Ait Youssef, tissé sur un fond saumon-terracotta. Deux grands médaillons étoilés octogonaux en noir de jais et jaune safran dominent le champ central, leur géométrie audacieuse se situant à l\'intersection de la tradition tribale et du design abstrait pur. Laine de mouton vivant, teintures naturelles. Pièce unique.',
+      'Un tapis saisissant de la tribu Aït Youssi, tissé sur un fond saumon-terracotta. Deux grands médaillons étoilés octogonaux en noir de jais et jaune safran dominent le champ central, leur géométrie audacieuse se situant à l\'intersection de la tradition tribale et du design abstrait pur. Laine de mouton vivant, teintures naturelles. Pièce unique.',
     motifs: ['twin star medallion', 'octagonal frame', 'cartouche border', 'geometric grid'],
     images: {
       primary: '/rugs/rug-17-editorial.png',
@@ -811,13 +811,13 @@ export const rugs: Rug[] = [
     featured: false,
   },
 
-  // ── 20 — Ait Youssef Aubergine Compartment ────────────────────────────────
+  // ── 20 — Aït Youssi Aubergine Compartment ────────────────────────────────
   {
-    slug: 'ait-youssef-aubergine-compartment',
-    title: 'Ait Youssef Aubergine Compartment Carpet',
-    titleFr: 'Tapis à Compartiments Aubergine Ait Youssef',
+    slug: 'ait-youssi-aubergine-compartment',
+    title: 'Aït Youssi — Aubergine Compartment',
+    titleFr: 'Aït Youssi — Compartiments Aubergine',
     region: 'Middle Atlas',
-    tribe: 'Ait Youssef',
+    tribe: 'Aït Youssi',
     technique: 'knotted',
     yearRange: 'c. 1955–1975',
     materials: 'Wool pile on wool foundation, natural dyes — plum berry, saffron, walnut',
@@ -826,9 +826,9 @@ export const rugs: Rug[] = [
     inventoryNumber: 'CS-2026-020',
     oneOfOne: true,
     curatorialNote:
-      'A magnificent carpet from the Ait Youssef tribe in deep aubergine-purple, structured around a central prayer-niche medallion outlined in ivory and surrounded by a dense field of individual geometric compartments. Each compartment holds a distinct tribal symbol — crosses, eight-pointed stars, diamond formations — in ivory, saffron-orange, and warm brown. The outer border carries a precise geometric meander in black and ivory. Every motif in this piece corresponds to a protective symbol in the tattoo tradition of Amazigh women. Vintage and one of a kind.',
+      'A magnificent carpet from the Aït Youssi tribe in deep aubergine-purple, structured around a central prayer-niche medallion outlined in ivory and surrounded by a dense field of individual geometric compartments. Each compartment holds a distinct tribal symbol — crosses, eight-pointed stars, diamond formations — in ivory, saffron-orange, and warm brown. The outer border carries a precise geometric meander in black and ivory. Every motif in this piece corresponds to a protective symbol in the tattoo tradition of Amazigh women. Vintage and one of a kind.',
     curatorialNoteFr:
-      'Un magnifique tapis de la tribu Ait Youssef en aubergine-violet profond, structuré autour d\'un médaillon central en forme de niche de prière entouré d\'un champ dense de compartiments géométriques individuels. Chaque compartiment renferme un symbole tribal distinct. La bordure extérieure porte un méandre géométrique précis. Pièce unique.',
+      'Un magnifique tapis de la tribu Aït Youssi en aubergine-violet profond, structuré autour d\'un médaillon central en forme de niche de prière entouré d\'un champ dense de compartiments géométriques individuels. Chaque compartiment renferme un symbole tribal distinct. La bordure extérieure porte un méandre géométrique précis. Pièce unique.',
     motifs: ['prayer niche medallion', 'geometric compartments', 'eight-pointed star', 'meander border'],
     images: {
       primary: '/rugs/rug-20-editorial.png',

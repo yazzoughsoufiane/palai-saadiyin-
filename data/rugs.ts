@@ -643,11 +643,11 @@ export const rugs: Rug[] = [
     featured: false,
   },
 
-  // ── 14 — Ait Youssef Diamond Lattice ──────────────────────────────────────
+  // ── 14 — Aït Youssi ───────────────────────────────────────────────────────
   {
-    slug: 'ait-youssef-diamond-lattice',
-    title: 'Ait Youssef Diamond Lattice Carpet',
-    titleFr: 'Tapis à Treillis de Losanges Ait Youssef',
+    slug: 'ait-youssi-diamond-lattice',
+    title: 'Aït Youssi',
+    titleFr: 'Aït Youssi',
     region: 'Middle Atlas',
     tribe: 'Ait Youssef',
     technique: 'knotted',
@@ -671,11 +671,11 @@ export const rugs: Rug[] = [
     featured: true,
   },
 
-  // ── 15 — Ait Isaac Garden Compartment ─────────────────────────────────────
+  // ── 15 — Aït Jacob ────────────────────────────────────────────────────────
   {
-    slug: 'ait-isaac-garden-compartment',
-    title: 'Ait Isaac Garden Compartment Carpet',
-    titleFr: 'Tapis à Compartiments Jardin Ait Isaac',
+    slug: 'ait-jacob-garden-compartment',
+    title: 'Aït Jacob',
+    titleFr: 'Aït Jacob',
     region: 'Middle Atlas',
     tribe: 'Ait Isaac',
     technique: 'knotted',
@@ -699,11 +699,11 @@ export const rugs: Rug[] = [
     featured: true,
   },
 
-  // ── 16 — Ait Jaacob Quadrant Medallion ────────────────────────────────────
+  // ── 16 — Medyouna ─────────────────────────────────────────────────────────
   {
-    slug: 'ait-jaacob-quadrant-medallion',
-    title: 'Ait Jaacob Quadrant Medallion Carpet',
-    titleFr: 'Tapis à Médaillons en Quadrant Ait Jaacob',
+    slug: 'medyouna-quadrant-medallion',
+    title: 'Medyouna',
+    titleFr: 'Medyouna',
     region: 'Middle Atlas',
     tribe: 'Ait Jaacob',
     technique: 'knotted',

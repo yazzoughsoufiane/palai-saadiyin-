@@ -62,7 +62,7 @@ export default function RugCard({ rug, priority = false, className = '' }: RugCa
           style={{
             x: springX,
             y: springY,
-            aspectRatio: `${rug.dimensions.w} / ${rug.dimensions.h}`,
+            aspectRatio: rug.format === 'couloir' ? '1 / 1' : `${rug.dimensions.w} / ${rug.dimensions.h}`,
           }}
         >
           <Image
@@ -98,3 +98,4 @@ export default function RugCard({ rug, priority = false, className = '' }: RugCa
     </motion.div>
   )
 }
+

@@ -18,6 +18,8 @@ export type Region =
 
 export type Technique = 'knotted' | 'flatweave' | 'rag'
 
+export type Format = 'grand tapis' | 'couloir'
+
 export interface Rug {
   slug: string
   title: string
@@ -25,6 +27,7 @@ export interface Rug {
   region: Region
   tribe?: string
   technique: Technique
+  format?: Format
   yearRange: string
   materials: string
   dimensions: { w: number; h: number; unit: 'cm' }
@@ -54,6 +57,14 @@ export function getFeaturedRugs(): Rug[] {
     .sort((a, b) => FEATURED_ORDER.indexOf(a.slug) - FEATURED_ORDER.indexOf(b.slug))
 }
 
+export function getRunners(): Rug[] {
+  return rugs.filter((r) => r.format === 'couloir')
+}
+
+export function getBigRugs(): Rug[] {
+  return rugs.filter((r) => r.format === 'grand tapis' || !r.format)
+}
+
 export const ALL_REGIONS: Region[] = [
   'Boujad',
   'Azilal',
@@ -66,6 +77,9 @@ export const ALL_REGIONS: Region[] = [
   'Middle Atlas',
   'Sahara',
   'Rabat',
+  'Aït Youssi',
+  'Ait Isaac',
+  'Ait Jaacob',
 ]
 
 
@@ -603,7 +617,7 @@ export const rugs: Rug[] = [
     featured: false,
   },
 
-  // ── 14 — Beni Ourain Ivory Tree ──────────────────────────────────────────
+  // ── 13b — Beni Ourain Ivory Tree ─────────────────────────────────────────
   {
     slug: 'beni-ourain-ivoire-losanges',
     title: 'Beni Ourain Ivory — Diamond Lattice',
@@ -677,7 +691,7 @@ export const rugs: Rug[] = [
     title: 'Aït Jacob',
     titleFr: 'Aït Jacob',
     region: 'Middle Atlas',
-    tribe: 'Ait Isaac',
+    tribe: 'Ait Jaacob',
     technique: 'knotted',
     yearRange: 'c. 1950–1970',
     materials: 'Wool pile on wool foundation, natural dyes — plum berry, saffron, henna',
@@ -686,9 +700,9 @@ export const rugs: Rug[] = [
     inventoryNumber: 'CS-2026-015',
     oneOfOne: true,
     curatorialNote:
-      'An exceptional carpet from the Ait Isaac tribe, structured as a garden of compartments on a deep burgundy-plum ground. Each square section contains a distinct geometric flower or star — no two identical — drawn from the full symbolic repertoire of the tribe. A central elongated medallion anchors the composition. A visual diary of Amazigh tribal memory, woven one motif at a time from live-sheep wool and natural dyes. Vintage and one of a kind.',
+      'An exceptional carpet from the Ait Jaacob tribe, structured as a garden of compartments on a deep burgundy-plum ground. Each square section contains a distinct geometric flower or star — no two identical — drawn from the full symbolic repertoire of the tribe. A central elongated medallion anchors the composition. A visual diary of Amazigh tribal memory, woven one motif at a time from live-sheep wool and natural dyes. Vintage and one of a kind.',
     curatorialNoteFr:
-      'Un tapis exceptionnel de la tribu Ait Isaac, structuré comme un jardin de compartiments sur un fond bordeaux-prune profond. Chaque section carrée contient une fleur ou une étoile géométrique distincte — aucune n\'est identique — tirée du répertoire symbolique complet de la tribu. Un médaillon central allongé ancre la composition. Un journal visuel de la mémoire tribale amazighe. Pièce unique.',
+      'Un tapis exceptionnel de la tribu Ait Jaacob, structuré comme un jardin de compartiments sur un fond bordeaux-prune profond. Chaque section carrée contient une fleur ou une étoile géométrique distincte — aucune n\'est identique — tirée du répertoire symbolique complet de la tribu. Un médaillon central allongé ancre la composition. Un journal visuel de la mémoire tribale amazighe. Pièce unique.',
     motifs: ['garden compartments', 'star flower', 'central medallion', 'geometric border'],
     images: {
       primary: '/rugs/rug-15-editorial.png',
@@ -894,7 +908,394 @@ export const rugs: Rug[] = [
     },
     featured: false,
   },
+
+  // ── 23 — Taznakht Stacked Medallion Runner ────────────────────────────────
+  {
+    slug: 'taznakht-stacked-medallion-runner',
+    title: 'Taznakht Stacked Medallion Runner',
+    titleFr: 'Couloir Taznakht à Médaillons Empilés',
+    region: 'Taznakht',
+    technique: 'flatweave',
+    yearRange: 'c. 1960–1980',
+    materials: 'Wool pile on wool foundation, natural dyes — madder, indigo, saffron, walnut',
+    dimensions: { w: 65, h: 280, unit: 'cm' },
+    palette: ['#8B1A1A', '#1A3A6B', '#C8843A', '#F4EFE7', '#2A2A2A', '#6B8B3A'],
+    inventoryNumber: 'CS-2026-023',
+    oneOfOne: true,
+    curatorialNote:
+      'A compelling Taznakht runner structured as a vertical sequence of four distinct medallion panels, each framed by its own narrow flatwoven stripe register. The composition alternates knotted pile medallions — a multi-layered diamond in crimson and gold, a bold navy octagon, a ruby-and-charcoal star, and a green-striped field panel — creating a visual rhythm reminiscent of a ceremonial procession. Between each medallion, ivory stripe registers carry small cross and diamond accent motifs. The outer guard border is a continuous zigzag in black and ivory. A masterclass in Taznakht compositional variety. Vintage and one of a kind.',
+    curatorialNoteFr:
+      'Un couloir Taznakht remarquable structuré en une séquence verticale de quatre panneaux de médaillons distincts, chacun encadré par son propre registre de bandes en tissage plat. La composition alterne des médaillons en poil noué — un losange multicouche en cramoisi et or, un octogone marine audacieux, une étoile rubis-charbon et un panneau à champ rayé vert — créant un rythme visuel rappelant une procession cérémonielle. Pièce unique.',
+    motifs: ['stacked medallion', 'octagonal star', 'diamond frieze', 'zigzag guard', 'stripe register'],
+    images: {
+      primary: '/rugs/rug-23-editorial.png',
+      summerSide: '/rugs/rug-23-primary.jpg',
+      winterSide: '',
+      details: [],
+    },
+    featured: false,
+  },
+
+  // ── 24 — High Atlas Grey Geometric Flatweave Runner ───────────────────────
+  {
+    slug: 'high-atlas-grey-geometric-runner',
+    title: 'High Atlas Grey Geometric Flatweave Runner',
+    titleFr: 'Couloir Géométrique Gris du Haut Atlas',
+    region: 'High Atlas',
+    technique: 'flatweave',
+    yearRange: 'c. 1965–1985',
+    materials: 'Flatwoven wool, natural dyes — walnut, iron oxide, undyed fleece',
+    dimensions: { w: 65, h: 310, unit: 'cm' },
+    palette: ['#8B8B7A', '#F4EFE7', '#5C5C4A', '#C8C0A8', '#2A2A2A'],
+    inventoryNumber: 'CS-2026-024',
+    oneOfOne: true,
+    curatorialNote:
+      'A long and finely woven High Atlas flatweave runner in a restrained two-tone palette of warm grey and ivory. The composition unfolds in horizontal registers of escalating geometric density: narrow stripe bands alternate with broad panels carrying nested diamond medallions, cross-rosette grids, eight-pointed stars and interlocking geometric tiles — each panel distinct, no two identical. The overall effect is architectural and meditative, the grey-on-ivory palette throwing the precision of the geometry into sharp relief. A beautiful example of High Atlas flatweave at its most refined. Vintage and one of a kind.',
+    curatorialNoteFr:
+      'Un long et finement tissé couloir du Haut Atlas en palette bicolore de gris chaud et ivoire. La composition se déroule en registres horizontaux de densité géométrique croissante : des bandes étroites alternent avec de larges panneaux portant des médaillons losangés imbriqués, des grilles de croix-rosettes et des étoiles à huit branches. Pièce unique.',
+    motifs: ['nested diamond medallion', 'cross-rosette grid', 'eight-pointed star', 'horizontal register', 'stripe band'],
+    images: {
+      primary: '/rugs/rug-24-editorial.png',
+      summerSide: '/rugs/rug-24-primary.jpg',
+      winterSide: '',
+      details: [],
+    },
+    featured: false,
+  },
+
+  // ── 25 — Boucherouite Patchwork Runner ────────────────────────────────────
+  {
+    slug: 'boucherouite-patchwork-runner',
+    title: 'Boucherouite Patchwork Runner',
+    titleFr: 'Couloir Patchwork Boucherouite',
+    region: 'Middle Atlas',
+    technique: 'rag',
+    yearRange: 'c. 1975–1995',
+    materials: 'Recycled textile fibres — cotton, wool, acrylic — hand-knotted on cotton warp',
+    dimensions: { w: 65, h: 290, unit: 'cm' },
+    palette: ['#8B3A8B', '#2A7A4A', '#C8843A', '#C8C0A8', '#5C5C5C', '#1A1A1A', '#F4EFE7'],
+    inventoryNumber: 'CS-2026-025',
+    oneOfOne: true,
+    curatorialNote:
+      'A vibrant Boucherouite patchwork runner woven from recycled textile fibres in a bold palette of plum, teal, saffron-gold, charcoal, ivory and sage. The composition is entirely improvisational — large irregular rectangular panels of solid colour are juxtaposed with dense geometric fills, chevron registers and open ivory zones, outlined in black to create a strong graphic structure. A saffron-yellow satin border frames the entire length, anchoring the exuberant patchwork within a single commanding line. The Boucherouite tradition transforms discarded fabric into living art. Vintage and one of a kind.',
+    curatorialNoteFr:
+      'Un couloir patchwork Boucherouite vibrant tissé à partir de fibres textiles recyclées dans une palette audacieuse de prune, sarcelle, or safran, charbon, ivoire et sauge. La composition est entièrement improvisée — de grands panneaux rectangulaires irréguliers de couleur unie sont juxtaposés à des remplissages géométriques denses et des registres en chevron. La tradition Boucherouite transforme les tissus récupérés en art vivant. Pièce unique.',
+    motifs: ['irregular colour panel', 'chevron register', 'satin border', 'geometric fill', 'improvisational patchwork'],
+    images: {
+      primary: '/rugs/rug-25-editorial.png',
+      summerSide: '/rugs/rug-25-primary.jpg',
+      winterSide: '',
+      details: [],
+    },
+    featured: false,
+  },
+
+  // ── 26 — Rabat Cobalt Blue Flatweave Runner ───────────────────────────────
+  {
+    slug: 'rabat-cobalt-flatweave-runner',
+    title: 'Rabat Cobalt Blue Flatweave Runner',
+    titleFr: 'Couloir Plat Bleu Cobalt de Rabat',
+    region: 'Rabat',
+    technique: 'flatweave',
+    yearRange: 'c. 1960–1980',
+    materials: 'Wool flatweave on cotton warp, natural indigo and synthetic dyes',
+    dimensions: { w: 70, h: 200, unit: 'cm' },
+    palette: ['#1A4A8B', '#2A2A2A', '#F4EFE7', '#8B3A1A', '#C8843A'],
+    inventoryNumber: 'CS-2026-026',
+    oneOfOne: true,
+    curatorialNote:
+      'A striking Rabat flatweave runner on a saturated cobalt-blue ground, entirely covered in a dense all-over pattern of repeating micro-motifs — elongated rectangular chain links, small eight-pointed stars, cross forms and diamond accents — rendered in ivory, charcoal, rust and amber. The horizontal rows of motifs are separated by fine black register lines, giving the surface the visual precision of embroidery. A narrow multi-colour guard border in black, white, rust and amber frames all four sides. The flatness of the weave and the depth of the indigo blue give this runner an almost textile-art quality. Vintage and one of a kind.',
+    curatorialNoteFr:
+      'Un couloir plat de Rabat remarquable sur fond bleu cobalt saturé, entièrement recouvert d\'un motif dense de micro-motifs répétitifs — chaînes rectangulaires allongées, petites étoiles à huit branches, croix et accents de losange — rendus en ivoire, charbon, rouille et ambre. La platitude du tissage et la profondeur du bleu indigo confèrent à ce couloir une qualité quasi artistique. Pièce unique.',
+    motifs: ['chain link register', 'eight-pointed star', 'cross form', 'micro-geometric field', 'guard border'],
+    images: {
+      primary: '/rugs/rug-26-editorial.png',
+      summerSide: '/rugs/rug-26-primary.jpg',
+      winterSide: '',
+      details: [],
+    },
+    featured: false,
+  },
+
+  // ── 27 — Beni Ourain Ivory Diamond Runner ────────────────────────────────
+  {
+    slug: 'beni-ourain-ivory-diamond-runner',
+    title: 'Beni Ourain Ivory Diamond Runner',
+    titleFr: 'Couloir Beni Ourain Ivoire à Losanges',
+    region: 'Beni Ourain',
+    technique: 'knotted',
+    yearRange: 'c. 2015–2024',
+    materials: 'Live-sheep wool, natural undyed ivory fleece, charcoal grey wool',
+    dimensions: { w: 75, h: 350, unit: 'cm' },
+    palette: ['#F8F4EC', '#E8E0CC', '#9A9A8A', '#C8C0A8'],
+    inventoryNumber: 'CS-2026-027',
+    oneOfOne: true,
+    curatorialNote:
+      'A long and serene Beni Ourain runner in natural undyed ivory, structured around the iconic open diamond lattice of the Middle Atlas Berber tradition. Soft grey lines trace a continuous diagonal grid of large open lozenges across the full length of the cloud-soft pile, with small dot accents marking the intersections. A narrow braided grey border closes both ends above the knotted fringes. The deep, plush pile and the purity of the natural two-tone palette make this runner an ideal companion to any interior — minimal, tactile, and quietly powerful. One of a kind.',
+    curatorialNoteFr:
+      'Un long et serein couloir Beni Ourain en ivoire naturel non teint, structuré autour du treillis de losanges ouverts iconique de la tradition berbère du Moyen Atlas. Des lignes gris doux tracent une grille diagonale continue de grands losanges ouverts sur toute la longueur du poil doux comme un nuage. La profondeur du poil et la pureté de la palette naturelle bicolore font de ce couloir un compagnon idéal pour tout intérieur. Pièce unique.',
+    motifs: ['diamond lattice', 'open lozenge', 'dot accent', 'braided border'],
+    images: {
+      primary: '/rugs/rug-27-editorial.png',
+      summerSide: '/rugs/rug-27-primary.jpg',
+      winterSide: '',
+      details: [],
+    },
+    featured: false,
+  },
+
+  // ── 28 — Zemmour Rainbow Diamond Kilim Runner ─────────────────────────────
+  {
+    slug: 'zemmour-rainbow-diamond-kilim-runner',
+    title: 'Zemmour Rainbow Diamond Kilim Runner',
+    titleFr: 'Couloir Kilim Zemmour Losanges Arc-en-Ciel',
+    region: 'Zemour',
+    tribe: 'Beni Zemmour',
+    technique: 'flatweave',
+    yearRange: 'c. 1965–1985',
+    materials: 'Hand-spun wool, vegetable and natural dyes',
+    dimensions: { w: 65, h: 420, unit: 'cm' },
+    palette: ['#C8001A', '#C8C000', '#C87800', '#6B8B3A', '#1A1A6B', '#8B8B8B', '#F4EFE7'],
+    inventoryNumber: 'CS-2026-028',
+    oneOfOne: true,
+    curatorialNote:
+      'A monumental Zemmour flatweave runner of extraordinary length, structured entirely around a single continuous motif — a full-field diagonal diamond lattice in an endlessly shifting palette of crimson, chartreuse-yellow, burnt amber, grey, navy and ivory. Each horizontal register changes colour combination, so that reading the piece from end to end is like watching a slow chromatic tide turn — the same geometry, endlessly recoloured. A narrow navy border with small white diamond accents closes both ends. An exceptional piece for a long hallway or staircase. Vintage and one of a kind.',
+    curatorialNoteFr:
+      'Un couloir plat Zemmour monumental d\'une longueur extraordinaire, entièrement structuré autour d\'un seul motif continu — un treillis de losanges diagonal sur tout le champ dans une palette sans cesse changeante de cramoisi, jaune chartreuse, ambre brûlé, gris, marine et ivoire. Chaque registre horizontal change de combinaison de couleurs, créant une marée chromatique lente. Pièce unique.',
+    motifs: ['full-field diamond lattice', 'shifting colour register', 'diagonal chevron fill', 'navy border'],
+    images: {
+      primary: '/rugs/rug-28-editorial.png',
+      summerSide: '/rugs/rug-28-primary.jpg',
+      winterSide: '',
+      details: [],
+    },
+    featured: false,
+  },
+
+  // ── 29 — Zemmour Encyclopaedic Patchwork Kilim Runner ─────────────────────
+  {
+    slug: 'zemmour-encyclopaedic-patchwork-runner',
+    title: 'Zemmour Encyclopaedic Patchwork Kilim Runner',
+    titleFr: 'Couloir Kilim Patchwork Encyclopédique Zemmour',
+    region: 'Zemour',
+    tribe: 'Beni Zemmour',
+    technique: 'flatweave',
+    yearRange: 'c. 1965–1985',
+    materials: 'Hand-spun wool, vegetable and natural dyes',
+    dimensions: { w: 70, h: 320, unit: 'cm' },
+    palette: ['#1A3A8B', '#8B2020', '#C8843A', '#F4EFE7', '#6B8B3A', '#5C3A5C', '#2A2A2A'],
+    inventoryNumber: 'CS-2026-029',
+    oneOfOne: true,
+    curatorialNote:
+      'A dazzling Zemmour patchwork kilim runner in which every square centimetre carries a different geometric vocabulary. The composition is organised as an irregular grid of autonomous panels — each a miniature flatweave in its own right — combining cobalt blue, deep crimson, olive green, burnt orange, ivory and plum in a sequence of chevron fields, checked grids, diagonal diamond lattices, striped registers and scattered star motifs. A saffron-yellow selvedge line frames the full length. The visual energy is relentless and joyful. An exceptional example of the Zemmour patchwork runner tradition. Vintage and one of a kind.',
+    curatorialNoteFr:
+      'Un couloir kilim patchwork Zemmour éblouissant dans lequel chaque centimètre carré porte un vocabulaire géométrique différent. La composition est organisée comme une grille irrégulière de panneaux autonomes — chacun un mini-kilim en soi — combinant bleu cobalt, rouge cramoisi, vert olive, orange brûlé, ivoire et prune. L\'énergie visuelle est incessante et joyeuse. Pièce unique.',
+    motifs: ['chevron field', 'checked grid', 'diagonal diamond', 'star motif', 'autonomous patchwork panel'],
+    images: {
+      primary: '/rugs/rug-29-editorial.png',
+      summerSide: '/rugs/rug-29-primary.jpg',
+      winterSide: '',
+      details: [],
+    },
+    featured: false,
+  },
+
+  // ── 30 — Zemmour Rose Diamond Flatweave Runner ────────────────────────────
+  {
+    slug: 'zemmour-rose-diamond-flatweave-runner',
+    title: 'Zemmour Rose Diamond Flatweave Runner',
+    titleFr: 'Couloir Plat Zemmour Losanges Rose',
+    region: 'Zemour',
+    tribe: 'Beni Zemmour',
+    technique: 'flatweave',
+    yearRange: 'c. 1965–1985',
+    materials: 'Hand-spun wool, vegetable and natural dyes',
+    dimensions: { w: 70, h: 310, unit: 'cm' },
+    palette: ['#C87878', '#1A3A8B', '#C8843A', '#8B8B8B', '#F4EFE7', '#2A2A2A', '#8B4A2E'],
+    inventoryNumber: 'CS-2026-030',
+    oneOfOne: true,
+    curatorialNote:
+      'A richly detailed Zemmour flatweave runner in which a full-field diagonal diamond lattice is rendered in a shifting palette of dusty rose, sky blue, saffron, grey and ivory — the colours changing register by register like a woven colour chart. The diamonds are filled with dense geometric sub-motifs: nested lozenges, cross-hatch fills and small star accents. A wide navy blue border with small white diamond repeats frames the top and bottom ends. The combination of structural precision and chromatic playfulness is characteristic of the finest Zemmour flatweave tradition. Vintage and one of a kind.',
+    curatorialNoteFr:
+      'Un couloir plat Zemmour richement détaillé dans lequel un treillis de losanges diagonal sur tout le champ est rendu dans une palette changeante de rose poussiéreux, bleu ciel, safran, gris et ivoire — les couleurs changeant registre par registre. Les losanges sont remplis de sous-motifs géométriques denses. Une large bordure bleu marine encadre les deux extrémités. Pièce unique.',
+    motifs: ['full-field diamond lattice', 'nested lozenge fill', 'cross-hatch', 'shifting colour register', 'navy border'],
+    images: {
+      primary: '/rugs/rug-30-editorial.png',
+      summerSide: '/rugs/rug-30-primary.jpg',
+      winterSide: '',
+      details: [],
+    },
+    featured: false,
+  },
+
+  // ── 31 — Placeholder Runner ───────────────────────────────────────────────
+  {
+    slug: 'berber-runner-31',
+    title: 'Berber Runner',
+    titleFr: 'Couloir Berbère',
+    region: 'Middle Atlas',
+    technique: 'knotted',
+    yearRange: 'c. 1960–1980',
+    materials: 'Live-sheep wool, natural dyes',
+    dimensions: { w: 70, h: 300, unit: 'cm' },
+    palette: ['#F4EFE7', '#9A9A8A', '#5C5C4A'],
+    inventoryNumber: 'CS-2026-031',
+    oneOfOne: true,
+    curatorialNote: 'A hand-knotted Berber runner from the Middle Atlas. One of a kind.',
+    curatorialNoteFr: 'Un couloir berbère noué à la main du Moyen Atlas. Pièce unique.',
+    motifs: ['geometric field'],
+    images: {
+      primary: '/rugs/rug-31-primary.jpg',
+      summerSide: '',
+      winterSide: '',
+      details: [],
+    },
+    featured: false,
+  },
+
+  // ── 32 — Placeholder Runner ───────────────────────────────────────────────
+  {
+    slug: 'berber-runner-32',
+    title: 'Berber Runner',
+    titleFr: 'Couloir Berbère',
+    region: 'Middle Atlas',
+    technique: 'knotted',
+    yearRange: 'c. 1960–1980',
+    materials: 'Live-sheep wool, natural dyes',
+    dimensions: { w: 70, h: 300, unit: 'cm' },
+    palette: ['#F4EFE7', '#9A9A8A', '#5C5C4A'],
+    inventoryNumber: 'CS-2026-032',
+    oneOfOne: true,
+    curatorialNote: 'A hand-knotted Berber runner from the Middle Atlas. One of a kind.',
+    curatorialNoteFr: 'Un couloir berbère noué à la main du Moyen Atlas. Pièce unique.',
+    motifs: ['geometric field'],
+    images: {
+      primary: '/rugs/rug-32-primary.jpg',
+      summerSide: '',
+      winterSide: '',
+      details: [],
+    },
+    featured: false,
+  },
+
+  // ── 33 — Beni Ourain Ivory Narrow Diamond Runner ──────────────────────────
+  {
+    slug: 'beni-ourain-ivory-narrow-diamond-runner',
+    title: 'Beni Ourain Ivory Narrow Diamond Runner',
+    titleFr: 'Couloir Étroit Beni Ourain Ivoire à Losanges',
+    region: 'Beni Ourain',
+    technique: 'knotted',
+    yearRange: 'c. 2015–2024',
+    materials: 'Live-sheep wool, natural undyed ivory fleece, grey wool',
+    dimensions: { w: 65, h: 330, unit: 'cm' },
+    palette: ['#F8F4EC', '#E8E0CC', '#9A9A8A'],
+    inventoryNumber: 'CS-2026-033',
+    oneOfOne: true,
+    curatorialNote:
+      'A slender and elegant Beni Ourain runner in pure natural ivory, its entire length traversed by a continuous open diamond lattice drawn in soft grey lines. The diamonds are generous and elongated, perfectly proportioned for the narrow format of the runner, creating a hypnotic vertical rhythm down the full length of the deep pile. A narrow braided grey border and knotted fringe close both ends. The wool is sheared from live Atlas sheep and retains a natural lanolin softness underfoot. This is the definitive Beni Ourain runner — timeless, versatile, and impossible to tire of. One of a kind.',
+    curatorialNoteFr:
+      'Un couloir Beni Ourain élancé et élégant en ivoire naturel pur, sa longueur entière traversée par un treillis de losanges ouverts continu tracé en lignes gris doux. Les losanges sont généreux et allongés, parfaitement proportionnés pour le format étroit du couloir. La laine est tondue sur des moutons vivants de l\'Atlas et conserve une douceur naturelle au toucher. Pièce unique.',
+    motifs: ['open diamond lattice', 'elongated lozenge', 'braided border', 'knotted fringe'],
+    images: {
+      primary: '/rugs/rug-33-editorial.png',
+      summerSide: '/rugs/rug-33-primary.jpg',
+      winterSide: '',
+      details: [],
+    },
+    featured: false,
+  },
+
+  // ── 34 — Beni Ourain Sky Blue Diamond Runner ──────────────────────────────
+  {
+    slug: 'beni-ourain-sky-blue-diamond-runner',
+    title: 'Beni Ourain Sky Blue Diamond Runner',
+    titleFr: 'Couloir Beni Ourain Bleu Ciel à Losanges',
+    region: 'Beni Ourain',
+    technique: 'knotted',
+    yearRange: 'c. 2015–2024',
+    materials: 'Live-sheep wool, vegetable-indigo dye',
+    dimensions: { w: 70, h: 320, unit: 'cm' },
+    palette: ['#A8C8D8', '#8BB0C0', '#C0D8E4', '#6890A0'],
+    inventoryNumber: 'CS-2026-034',
+    oneOfOne: true,
+    curatorialNote:
+      'An exceptional Beni Ourain runner in an all-over washed sky-blue, achieved through a gentle vegetable-indigo overdye on natural ivory wool — a contemporary interpretation of the classic Beni Ourain format. The open diamond lattice is carved into the deep pile rather than drawn in contrasting thread, creating a subtle tonal relief visible only as the light shifts across the surface. The result is a piece of rare atmospheric beauty — the geometry almost dissolves into the hazy blue ground, like a landscape seen through morning mist. No fringes; the runner terminates in a clean flatwoven selvedge. One of a kind.',
+    curatorialNoteFr:
+      'Un couloir Beni Ourain exceptionnel dans un bleu ciel lavé intégral, obtenu par une surteinture végétale indigo douce sur laine ivoire naturelle — une interprétation contemporaine du format classique Beni Ourain. Le treillis de losanges est sculpté dans le poil profond plutôt que tracé en fil contrastant, créant un relief tonal subtil. Le résultat est une pièce d\'une rare beauté atmosphérique. Pièce unique.',
+    motifs: ['tonal diamond relief', 'open lozenge', 'carved pile', 'washed indigo field'],
+    images: {
+      primary: '/rugs/rug-34-editorial.png',
+      summerSide: '/rugs/rug-34-primary.jpg',
+      winterSide: '',
+      details: [],
+    },
+    featured: false,
+  },
+
+  // ── 35 — Mrirt Grey Gradient Grid Runner ──────────────────────────────────
+  {
+    slug: 'mrirt-grey-gradient-grid-runner',
+    title: 'Mrirt Grey Gradient Grid Runner',
+    titleFr: 'Couloir Mrirt Grille Dégradé Gris',
+    region: 'Mrirt',
+    technique: 'knotted',
+    yearRange: 'c. 1970–1990',
+    materials: 'Live-sheep wool, natural undyed fleece — ivory and charcoal grey tones',
+    dimensions: { w: 75, h: 350, unit: 'cm' },
+    palette: ['#F4EFE7', '#C8C0A8', '#8B8B7A', '#5C5C4A', '#2A2A2A'],
+    inventoryNumber: 'CS-2026-035',
+    oneOfOne: true,
+    curatorialNote:
+      'A visually remarkable Mrirt runner in which the pile shifts from pure natural ivory at the top end to deep charcoal-grey at the base — a natural ombré gradient achieved not through dye but through the progressive substitution of undyed ivory wool for naturally dark fleece. The surface is structured as a simple square grid of ivory lines on the shifting grey ground, the regularity of the geometry amplifying the drama of the tonal transition. The long, silky pile — characteristic of the Mrirt weaving tradition — catches light differently along its length, making the gradient feel alive. Vintage and one of a kind.',
+    curatorialNoteFr:
+      'Un couloir Mrirt visuellement remarquable dans lequel le poil passe du blanc ivoire naturel pur à l\'extrémité supérieure au gris charbon profond à la base — un dégradé ombré naturel obtenu non pas par la teinture mais par la substitution progressive de laine ivoire non teinte pour une toison naturellement sombre. La surface est structurée comme une simple grille carrée de lignes ivoire sur le fond gris changeant. Pièce unique.',
+    motifs: ['natural ombré gradient', 'square grid', 'ivory line field', 'tonal shift'],
+    images: {
+      primary: '/rugs/rug-35-editorial.png',
+      summerSide: '/rugs/rug-35-primary.jpg',
+      winterSide: '',
+      details: [],
+    },
+    featured: false,
+  },
+
+  // ── 36 — Azilal Abstract Colour-Block Runner ──────────────────────────────
+  {
+    slug: 'azilal-abstract-colour-block-runner',
+    title: 'Azilal Abstract Colour-Block Runner',
+    titleFr: 'Couloir Azilal Abstrait Blocs de Couleur',
+    region: 'Azilal',
+    technique: 'knotted',
+    yearRange: 'c. 1980–2000',
+    materials: 'Live-sheep wool, vegetable and natural dyes',
+    dimensions: { w: 70, h: 280, unit: 'cm' },
+    palette: ['#C84A8B', '#2A7A4A', '#C8843A', '#F4EFE7', '#5C5C5C', '#C8C000'],
+    inventoryNumber: 'CS-2026-036',
+    oneOfOne: true,
+    curatorialNote:
+      'A joyfully exuberant Azilal runner in the spontaneous colour-field tradition of the High Atlas Berber women weavers. The composition is a free sequence of large irregular rectangular colour blocks — deep magenta-pink dominating, punctuated by panels of forest green, saffron-gold, ivory, charcoal and pale grey — each block outlined in black to create a bold graphic structure reminiscent of abstract painting. The upper section transitions to a more geometric register of green, yellow and grey on ivory. Knotted ivory fringes close both ends. A piece that transforms any hallway into a gallery. One of a kind.',
+    curatorialNoteFr:
+      'Un couloir Azilal joyeusement exubérant dans la tradition spontanée du champ de couleur des tisseuses berbères du Haut Atlas. La composition est une séquence libre de grands blocs de couleur rectangulaires irréguliers — le rose magenta profond dominant, ponctué de panneaux vert forêt, or safran, ivoire, charbon et gris pâle — chaque bloc contouré en noir pour créer une structure graphique audacieuse rappelant la peinture abstraite. Pièce unique.',
+    motifs: ['abstract colour block', 'free-form panel', 'bold outline contour', 'geometric upper register'],
+    images: {
+      primary: '/rugs/rug-36-editorial.png',
+      summerSide: '/rugs/rug-36-primary.jpg',
+      winterSide: '',
+      details: [],
+    },
+    featured: false,
+  },
 ]
+
+// --- Format auto-assignment -------------------------------------------------
+// Any piece with width ≤ 100 cm is classified as a couloir (runner).
+// Wider pieces default to grand tapis. The format field can be set manually
+// on any entry to override this heuristic.
+for (const r of rugs) {
+  if (!r.format) {
+    r.format = r.dimensions.w <= 100 ? 'couloir' : 'grand tapis'
+  }
+}
 
 // --- Image integrity: de-duplicate reversible faces -------------------------
 // A piece is only shown as "reversible / two faces" when it genuinely has a

@@ -99,3 +99,4 @@ export default function RugCard({ rug, priority = false, className = '' }: RugCa
   )
 }
 
+

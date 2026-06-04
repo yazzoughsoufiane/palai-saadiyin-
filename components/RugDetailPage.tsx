@@ -95,7 +95,7 @@ export default function RugDetailPage({ rug, prev, next }: RugDetailPageProps) {
             {/* Primary image — animated cross-fade on switch */}
             <div
               className="relative overflow-hidden bg-bone-dark"
-              style={{ aspectRatio: `${rug.dimensions.w} / ${rug.dimensions.h}` }}
+              style={{ aspectRatio: rug.format === "couloir" ? "1 / 1" : `${rug.dimensions.w} / ${rug.dimensions.h}` }}
             >
               <AnimatePresence mode="wait" initial={false}>
                 <motion.div
@@ -324,3 +324,4 @@ export default function RugDetailPage({ rug, prev, next }: RugDetailPageProps) {
     </>
   )
 }
+
